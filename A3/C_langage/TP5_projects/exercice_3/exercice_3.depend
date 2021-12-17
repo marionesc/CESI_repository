@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1639391617 source:c:\users\mario\desktop\git\cesi_repository\a3\c_langage\tp5_projects\exercice_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
