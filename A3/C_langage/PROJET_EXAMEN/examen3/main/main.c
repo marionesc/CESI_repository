@@ -4,7 +4,7 @@
 /*  en language C au sein du CESI Toulouse - cycle ingénieur                */
 /*  filières "Systèmes Electriques et Electroniques Embarqués"              */
 /*                                                                          */
-/*  CE MAIN EST MON EXERCICE DE L'EXAMEN 1 DU 04-03-22                      */
+/*  CE MAIN EST MON EXERCICE DE L'EXAMEN 3 DU 04-03-22                      */
 /*                                                                          */
 /*  Développeur     Marion ESCOUTELOUP                                      */
 /*  Github          maesc                                                   */

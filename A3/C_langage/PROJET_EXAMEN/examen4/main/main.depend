@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1646389310 source:c:\users\mario\desktop\github\cesi_repository\a3\c_langage\projet_examen\examen4\main\main.c
+	<stdio.h>
+	<stdlib.h>
+
