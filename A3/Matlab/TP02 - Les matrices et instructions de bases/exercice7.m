@@ -1,0 +1,1 @@
+## EXERCICE 7 :  Boucle for et convergences de suites 

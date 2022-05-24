@@ -16,14 +16,11 @@ load signal
 
 %--------------------------------------------------------------------------
 % Q1. CONSTRUIRE LA TRANSFORMEE DE FOURIER DU SIGNAL y(t)
-
-%...........................
-
+Y = fft(y);
 
 %--------------------------------------------------------------------------
-
-
 %----  Construction des limites des axes à l'affichage
+f = ((0:N-1)/N)*Fe; % f = [0 Fe]
 
 % limites des axes à l'affichage (spectre complet) 
 fmin = f(1);
@@ -55,7 +52,11 @@ subplot(3,1,1);
 %...........................
 %...........................
 %...........................
+plot(f, abs(Y))
 axis([fmin fmax Ymin Ymax]);
+title(' Spectre complet ');
+ylabel(' Amplitude ');
+xlabel(' Fréquence [Hz]');
 
 
 
@@ -71,7 +72,11 @@ subplot(3,1,2);
 %...........................
 %...........................
 %...........................
+plot(f, abs(Y))
 axis([fmin_z1 fmax_z1 Ymin Ymax]);
+title(' Spectre complet ');
+ylabel(' Amplitude ');
+xlabel(' Fréquence [Hz]');
 %---------------------------------------------------------------------------
 
 %---------------------------------------------------------------------------
@@ -85,5 +90,8 @@ subplot(3,1,3);
 %...........................
 %...........................
 %...........................
+plot(f, abs(Y))
 axis([fmin_z2 fmax_z2 Ymin Ymax]);
-
+title(' Spectre complet ');
+ylabel(' Amplitude ');
+xlabel(' Fréquence [Hz]');
