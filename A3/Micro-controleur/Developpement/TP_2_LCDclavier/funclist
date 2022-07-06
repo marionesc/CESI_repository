@@ -1,0 +1,16 @@
+_delai_ms: CODE, 1960 0 50
+___awdiv: CODE, 1604 0 188
+_init: CODE, 2102 0 40
+_Get_clav: CODE, 8 0 174
+_decod_clav: CODE, 1152 0 264
+___awmod: CODE, 1792 0 168
+_main: CODE, 186 0 682
+_init_interrupt: CODE, 2210 0 8
+__initialization: CODE, 2192 0 12
+_LCD_Clear: CODE, 2168 0 24
+_LCD_busy: CODE, 2010 0 46
+_decod_tab: CODE, 1416 0 188
+_read_eeprom: CODE, 2142 0 26
+_write_eeprom: CODE, 2056 0 46
+_init_aff_lcd: CODE, 868 0 284
+Total: 2200
