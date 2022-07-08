@@ -1,0 +1,21 @@
+_delai_ms: CODE, 2658 0 64
+___awdiv: CODE, 2024 0 188
+_acq: CODE, 2870 0 34
+_DAC_write: CODE, 2544 0 114
+___ftpack: CODE, 1374 0 238
+___awmod: CODE, 2212 0 168
+_main: CODE, 1612 0 208
+_aff_lcd_clav: CODE, 1094 0 280
+_ADC_read: CODE, 2782 0 44
+_writeLCD_number: CODE, 1820 0 204
+__initialization: CODE, 2966 0 6
+___lbtoft: CODE, 2826 0 44
+_get_val_clav: CODE, 8 0 140
+_I2C_Init: CODE, 2938 0 28
+_Init: CODE, 2722 0 60
+___ftmul: CODE, 472 0 318
+i2_acq: CODE, 2904 0 34
+___fttol: CODE, 790 0 304
+___ftge: CODE, 2380 0 164
+_init_aff_lcd: CODE, 152 0 320
+Total: 2960
