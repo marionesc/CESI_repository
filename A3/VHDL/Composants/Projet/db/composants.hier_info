@@ -1,0 +1,35 @@
+|tdregistre
+SLOAD => reg~1.OUTPUTSELECT
+SLOAD => reg[4].ENA
+SLOAD => reg[3].ENA
+SLOAD => reg[2].ENA
+SLOAD => reg[1].ENA
+SLOAD => reg[0].ENA
+SHIFT => reg~0.OUTPUTSELECT
+ESERIE => reg~0.DATAB
+ECHGT[0] => reg[0].DATAIN
+ECHGT[1] => reg[1].DATAIN
+ECHGT[2] => reg[2].DATAIN
+ECHGT[3] => reg[3].DATAIN
+ECHGT[4] => reg[4].DATAIN
+ECHGT[5] => reg~1.DATAB
+clk => reg[5].CLK
+clk => reg[4].CLK
+clk => reg[3].CLK
+clk => reg[2].CLK
+clk => reg[1].CLK
+clk => reg[0].CLK
+arazb => reg[5].ACLR
+arazb => reg[4].ACLR
+arazb => reg[3].ACLR
+arazb => reg[2].ACLR
+arazb => reg[1].ACLR
+arazb => reg[0].ACLR
+S[0] <= reg[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= reg[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= reg[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= reg[3].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= reg[4].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= reg[5].DB_MAX_OUTPUT_PORT_TYPE
+
+

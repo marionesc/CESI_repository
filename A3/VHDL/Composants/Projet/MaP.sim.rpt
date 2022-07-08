@@ -1,0 +1,672 @@
+Simulator report for MaP
+Mon Jan 20 00:03:03 2014
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 471 nodes    ;
+; Simulation Coverage         ;      91.93 % ;
+; Total Number of Transitions ; 36944        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                             ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Option                                                                                     ; Setting           ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Simulation mode                                                                            ; Functional        ; Timing        ;
+; Start time                                                                                 ; 0 ns              ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF              ;               ;
+; Vector input source                                                                        ; gest_can_gene.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                ; On            ;
+; Check outputs                                                                              ; Off               ; Off           ;
+; Report simulation coverage                                                                 ; On                ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                ; On            ;
+; Display missing 1-value coverage report                                                    ; On                ; On            ;
+; Display missing 0-value coverage report                                                    ; On                ; On            ;
+; Detect setup and hold time violations                                                      ; Off               ; Off           ;
+; Detect glitches                                                                            ; Off               ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off               ; Off           ;
+; Generate Signal Activity File                                                              ; Off               ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off               ; Off           ;
+; Group bus channels in simulation results                                                   ; Off               ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE        ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off               ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto              ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      91.93 % ;
+; Total nodes checked                                 ; 471          ;
+; Total output ports checked                          ; 471          ;
+; Total output ports with complete 1/0-value coverage ; 433          ;
+; Total output ports with no 1/0-value coverage       ; 37           ;
+; Total output ports with no 1-value coverage         ; 38           ;
+; Total output ports with no 0-value coverage         ; 37           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |gest_can_gene|cpt_dur~0         ; |gest_can_gene|cpt_dur~0         ; out              ;
+; |gest_can_gene|cpt_dur~1         ; |gest_can_gene|cpt_dur~1         ; out              ;
+; |gest_can_gene|ssb~0             ; |gest_can_gene|ssb~0             ; out              ;
+; |gest_can_gene|cpt_bit~0         ; |gest_can_gene|cpt_bit~0         ; out              ;
+; |gest_can_gene|cpt_bit~1         ; |gest_can_gene|cpt_bit~1         ; out              ;
+; |gest_can_gene|cpt_bit~2         ; |gest_can_gene|cpt_bit~2         ; out              ;
+; |gest_can_gene|cpt_bit~3         ; |gest_can_gene|cpt_bit~3         ; out              ;
+; |gest_can_gene|cpt_bit~4         ; |gest_can_gene|cpt_bit~4         ; out              ;
+; |gest_can_gene|reg_decal_txi~0   ; |gest_can_gene|reg_decal_txi~0   ; out              ;
+; |gest_can_gene|reg_decal_txi~1   ; |gest_can_gene|reg_decal_txi~1   ; out              ;
+; |gest_can_gene|reg_decal_txi~2   ; |gest_can_gene|reg_decal_txi~2   ; out              ;
+; |gest_can_gene|reg_decal_txi~3   ; |gest_can_gene|reg_decal_txi~3   ; out              ;
+; |gest_can_gene|reg_decal_txi~4   ; |gest_can_gene|reg_decal_txi~4   ; out              ;
+; |gest_can_gene|reg_decal_txi~5   ; |gest_can_gene|reg_decal_txi~5   ; out              ;
+; |gest_can_gene|reg_decal_txi~6   ; |gest_can_gene|reg_decal_txi~6   ; out              ;
+; |gest_can_gene|reg_decal_txi~7   ; |gest_can_gene|reg_decal_txi~7   ; out              ;
+; |gest_can_gene|reg_decal_rxi~0   ; |gest_can_gene|reg_decal_rxi~0   ; out              ;
+; |gest_can_gene|reg_decal_rxi~1   ; |gest_can_gene|reg_decal_rxi~1   ; out              ;
+; |gest_can_gene|reg_decal_rxi~2   ; |gest_can_gene|reg_decal_rxi~2   ; out              ;
+; |gest_can_gene|reg_decal_rxi~3   ; |gest_can_gene|reg_decal_rxi~3   ; out              ;
+; |gest_can_gene|reg_decal_rxi~4   ; |gest_can_gene|reg_decal_rxi~4   ; out              ;
+; |gest_can_gene|reg_decal_rxi~5   ; |gest_can_gene|reg_decal_rxi~5   ; out              ;
+; |gest_can_gene|reg_decal_rxi~6   ; |gest_can_gene|reg_decal_rxi~6   ; out              ;
+; |gest_can_gene|reg_decal_rxi~7   ; |gest_can_gene|reg_decal_rxi~7   ; out              ;
+; |gest_can_gene|reg_decal_rxi~8   ; |gest_can_gene|reg_decal_rxi~8   ; out              ;
+; |gest_can_gene|reg_decal_rxi~9   ; |gest_can_gene|reg_decal_rxi~9   ; out              ;
+; |gest_can_gene|reg_decal_rxi~10  ; |gest_can_gene|reg_decal_rxi~10  ; out              ;
+; |gest_can_gene|reg_decal_rxi~11  ; |gest_can_gene|reg_decal_rxi~11  ; out              ;
+; |gest_can_gene|reg_decal_rxi~12  ; |gest_can_gene|reg_decal_rxi~12  ; out              ;
+; |gest_can_gene|reg_decal_rxi~13  ; |gest_can_gene|reg_decal_rxi~13  ; out              ;
+; |gest_can_gene|reg_decal_rxi~14  ; |gest_can_gene|reg_decal_rxi~14  ; out              ;
+; |gest_can_gene|reg_decal_rxi~15  ; |gest_can_gene|reg_decal_rxi~15  ; out              ;
+; |gest_can_gene|etat~0            ; |gest_can_gene|etat~0            ; out              ;
+; |gest_can_gene|etat~1            ; |gest_can_gene|etat~1            ; out              ;
+; |gest_can_gene|etat~2            ; |gest_can_gene|etat~2            ; out              ;
+; |gest_can_gene|etat~3            ; |gest_can_gene|etat~3            ; out              ;
+; |gest_can_gene|reg_decal_rxi~16  ; |gest_can_gene|reg_decal_rxi~16  ; out              ;
+; |gest_can_gene|reg_decal_rxi~17  ; |gest_can_gene|reg_decal_rxi~17  ; out              ;
+; |gest_can_gene|reg_decal_rxi~18  ; |gest_can_gene|reg_decal_rxi~18  ; out              ;
+; |gest_can_gene|reg_decal_rxi~19  ; |gest_can_gene|reg_decal_rxi~19  ; out              ;
+; |gest_can_gene|reg_decal_rxi~20  ; |gest_can_gene|reg_decal_rxi~20  ; out              ;
+; |gest_can_gene|reg_decal_rxi~21  ; |gest_can_gene|reg_decal_rxi~21  ; out              ;
+; |gest_can_gene|reg_decal_rxi~22  ; |gest_can_gene|reg_decal_rxi~22  ; out              ;
+; |gest_can_gene|reg_decal_rxi~23  ; |gest_can_gene|reg_decal_rxi~23  ; out              ;
+; |gest_can_gene|reg_decal_rxi~24  ; |gest_can_gene|reg_decal_rxi~24  ; out              ;
+; |gest_can_gene|reg_decal_rxi~25  ; |gest_can_gene|reg_decal_rxi~25  ; out              ;
+; |gest_can_gene|reg_decal_rxi~26  ; |gest_can_gene|reg_decal_rxi~26  ; out              ;
+; |gest_can_gene|reg_decal_rxi~27  ; |gest_can_gene|reg_decal_rxi~27  ; out              ;
+; |gest_can_gene|reg_decal_rxi~28  ; |gest_can_gene|reg_decal_rxi~28  ; out              ;
+; |gest_can_gene|reg_decal_rxi~29  ; |gest_can_gene|reg_decal_rxi~29  ; out              ;
+; |gest_can_gene|reg_decal_rxi~30  ; |gest_can_gene|reg_decal_rxi~30  ; out              ;
+; |gest_can_gene|reg_decal_rxi~31  ; |gest_can_gene|reg_decal_rxi~31  ; out              ;
+; |gest_can_gene|cpt_bit~5         ; |gest_can_gene|cpt_bit~5         ; out              ;
+; |gest_can_gene|cpt_bit~6         ; |gest_can_gene|cpt_bit~6         ; out              ;
+; |gest_can_gene|cpt_bit~7         ; |gest_can_gene|cpt_bit~7         ; out              ;
+; |gest_can_gene|cpt_bit~8         ; |gest_can_gene|cpt_bit~8         ; out              ;
+; |gest_can_gene|cpt_bit~9         ; |gest_can_gene|cpt_bit~9         ; out              ;
+; |gest_can_gene|sclk~0            ; |gest_can_gene|sclk~0            ; out              ;
+; |gest_can_gene|reg_decal_rxi~32  ; |gest_can_gene|reg_decal_rxi~32  ; out              ;
+; |gest_can_gene|reg_decal_rxi~33  ; |gest_can_gene|reg_decal_rxi~33  ; out              ;
+; |gest_can_gene|reg_decal_rxi~34  ; |gest_can_gene|reg_decal_rxi~34  ; out              ;
+; |gest_can_gene|reg_decal_rxi~35  ; |gest_can_gene|reg_decal_rxi~35  ; out              ;
+; |gest_can_gene|reg_decal_rxi~36  ; |gest_can_gene|reg_decal_rxi~36  ; out              ;
+; |gest_can_gene|reg_decal_rxi~37  ; |gest_can_gene|reg_decal_rxi~37  ; out              ;
+; |gest_can_gene|reg_decal_rxi~38  ; |gest_can_gene|reg_decal_rxi~38  ; out              ;
+; |gest_can_gene|reg_decal_rxi~39  ; |gest_can_gene|reg_decal_rxi~39  ; out              ;
+; |gest_can_gene|reg_decal_rxi~40  ; |gest_can_gene|reg_decal_rxi~40  ; out              ;
+; |gest_can_gene|reg_decal_rxi~41  ; |gest_can_gene|reg_decal_rxi~41  ; out              ;
+; |gest_can_gene|reg_decal_rxi~42  ; |gest_can_gene|reg_decal_rxi~42  ; out              ;
+; |gest_can_gene|reg_decal_rxi~43  ; |gest_can_gene|reg_decal_rxi~43  ; out              ;
+; |gest_can_gene|reg_decal_rxi~44  ; |gest_can_gene|reg_decal_rxi~44  ; out              ;
+; |gest_can_gene|reg_decal_rxi~45  ; |gest_can_gene|reg_decal_rxi~45  ; out              ;
+; |gest_can_gene|reg_decal_rxi~46  ; |gest_can_gene|reg_decal_rxi~46  ; out              ;
+; |gest_can_gene|reg_decal_rxi~47  ; |gest_can_gene|reg_decal_rxi~47  ; out              ;
+; |gest_can_gene|cpt_bit~10        ; |gest_can_gene|cpt_bit~10        ; out              ;
+; |gest_can_gene|cpt_bit~11        ; |gest_can_gene|cpt_bit~11        ; out              ;
+; |gest_can_gene|cpt_bit~12        ; |gest_can_gene|cpt_bit~12        ; out              ;
+; |gest_can_gene|cpt_bit~13        ; |gest_can_gene|cpt_bit~13        ; out              ;
+; |gest_can_gene|cpt_bit~14        ; |gest_can_gene|cpt_bit~14        ; out              ;
+; |gest_can_gene|cpt_dur~2         ; |gest_can_gene|cpt_dur~2         ; out              ;
+; |gest_can_gene|cpt_dur~3         ; |gest_can_gene|cpt_dur~3         ; out              ;
+; |gest_can_gene|etat~5            ; |gest_can_gene|etat~5            ; out              ;
+; |gest_can_gene|etat~6            ; |gest_can_gene|etat~6            ; out              ;
+; |gest_can_gene|etat~7            ; |gest_can_gene|etat~7            ; out              ;
+; |gest_can_gene|reg_decal_txi~8   ; |gest_can_gene|reg_decal_txi~8   ; out              ;
+; |gest_can_gene|reg_decal_txi~9   ; |gest_can_gene|reg_decal_txi~9   ; out              ;
+; |gest_can_gene|reg_decal_txi~10  ; |gest_can_gene|reg_decal_txi~10  ; out              ;
+; |gest_can_gene|reg_decal_txi~11  ; |gest_can_gene|reg_decal_txi~11  ; out              ;
+; |gest_can_gene|reg_decal_txi~12  ; |gest_can_gene|reg_decal_txi~12  ; out              ;
+; |gest_can_gene|reg_decal_txi~13  ; |gest_can_gene|reg_decal_txi~13  ; out              ;
+; |gest_can_gene|reg_decal_txi~14  ; |gest_can_gene|reg_decal_txi~14  ; out              ;
+; |gest_can_gene|reg_decal_txi~15  ; |gest_can_gene|reg_decal_txi~15  ; out              ;
+; |gest_can_gene|reg_decal_rxi~48  ; |gest_can_gene|reg_decal_rxi~48  ; out              ;
+; |gest_can_gene|reg_decal_rxi~49  ; |gest_can_gene|reg_decal_rxi~49  ; out              ;
+; |gest_can_gene|reg_decal_rxi~50  ; |gest_can_gene|reg_decal_rxi~50  ; out              ;
+; |gest_can_gene|reg_decal_rxi~51  ; |gest_can_gene|reg_decal_rxi~51  ; out              ;
+; |gest_can_gene|reg_decal_rxi~52  ; |gest_can_gene|reg_decal_rxi~52  ; out              ;
+; |gest_can_gene|reg_decal_rxi~53  ; |gest_can_gene|reg_decal_rxi~53  ; out              ;
+; |gest_can_gene|reg_decal_rxi~54  ; |gest_can_gene|reg_decal_rxi~54  ; out              ;
+; |gest_can_gene|reg_decal_rxi~55  ; |gest_can_gene|reg_decal_rxi~55  ; out              ;
+; |gest_can_gene|reg_decal_rxi~56  ; |gest_can_gene|reg_decal_rxi~56  ; out              ;
+; |gest_can_gene|reg_decal_rxi~57  ; |gest_can_gene|reg_decal_rxi~57  ; out              ;
+; |gest_can_gene|reg_decal_rxi~58  ; |gest_can_gene|reg_decal_rxi~58  ; out              ;
+; |gest_can_gene|reg_decal_rxi~59  ; |gest_can_gene|reg_decal_rxi~59  ; out              ;
+; |gest_can_gene|reg_decal_rxi~60  ; |gest_can_gene|reg_decal_rxi~60  ; out              ;
+; |gest_can_gene|reg_decal_rxi~61  ; |gest_can_gene|reg_decal_rxi~61  ; out              ;
+; |gest_can_gene|reg_decal_rxi~62  ; |gest_can_gene|reg_decal_rxi~62  ; out              ;
+; |gest_can_gene|reg_decal_rxi~63  ; |gest_can_gene|reg_decal_rxi~63  ; out              ;
+; |gest_can_gene|cpt_bit~15        ; |gest_can_gene|cpt_bit~15        ; out              ;
+; |gest_can_gene|cpt_bit~16        ; |gest_can_gene|cpt_bit~16        ; out              ;
+; |gest_can_gene|cpt_bit~17        ; |gest_can_gene|cpt_bit~17        ; out              ;
+; |gest_can_gene|cpt_bit~18        ; |gest_can_gene|cpt_bit~18        ; out              ;
+; |gest_can_gene|cpt_bit~19        ; |gest_can_gene|cpt_bit~19        ; out              ;
+; |gest_can_gene|sclk~1            ; |gest_can_gene|sclk~1            ; out              ;
+; |gest_can_gene|reg_decal_txi~16  ; |gest_can_gene|reg_decal_txi~16  ; out              ;
+; |gest_can_gene|reg_decal_txi~17  ; |gest_can_gene|reg_decal_txi~17  ; out              ;
+; |gest_can_gene|reg_decal_txi~18  ; |gest_can_gene|reg_decal_txi~18  ; out              ;
+; |gest_can_gene|reg_decal_txi~19  ; |gest_can_gene|reg_decal_txi~19  ; out              ;
+; |gest_can_gene|reg_decal_txi~20  ; |gest_can_gene|reg_decal_txi~20  ; out              ;
+; |gest_can_gene|reg_decal_txi~21  ; |gest_can_gene|reg_decal_txi~21  ; out              ;
+; |gest_can_gene|reg_decal_txi~22  ; |gest_can_gene|reg_decal_txi~22  ; out              ;
+; |gest_can_gene|reg_decal_txi~23  ; |gest_can_gene|reg_decal_txi~23  ; out              ;
+; |gest_can_gene|reg_decal_rxi~64  ; |gest_can_gene|reg_decal_rxi~64  ; out              ;
+; |gest_can_gene|reg_decal_rxi~65  ; |gest_can_gene|reg_decal_rxi~65  ; out              ;
+; |gest_can_gene|reg_decal_rxi~66  ; |gest_can_gene|reg_decal_rxi~66  ; out              ;
+; |gest_can_gene|reg_decal_rxi~67  ; |gest_can_gene|reg_decal_rxi~67  ; out              ;
+; |gest_can_gene|reg_decal_rxi~68  ; |gest_can_gene|reg_decal_rxi~68  ; out              ;
+; |gest_can_gene|reg_decal_rxi~69  ; |gest_can_gene|reg_decal_rxi~69  ; out              ;
+; |gest_can_gene|reg_decal_rxi~70  ; |gest_can_gene|reg_decal_rxi~70  ; out              ;
+; |gest_can_gene|reg_decal_rxi~71  ; |gest_can_gene|reg_decal_rxi~71  ; out              ;
+; |gest_can_gene|reg_decal_rxi~72  ; |gest_can_gene|reg_decal_rxi~72  ; out              ;
+; |gest_can_gene|reg_decal_rxi~73  ; |gest_can_gene|reg_decal_rxi~73  ; out              ;
+; |gest_can_gene|reg_decal_rxi~74  ; |gest_can_gene|reg_decal_rxi~74  ; out              ;
+; |gest_can_gene|reg_decal_rxi~75  ; |gest_can_gene|reg_decal_rxi~75  ; out              ;
+; |gest_can_gene|reg_decal_rxi~76  ; |gest_can_gene|reg_decal_rxi~76  ; out              ;
+; |gest_can_gene|reg_decal_rxi~77  ; |gest_can_gene|reg_decal_rxi~77  ; out              ;
+; |gest_can_gene|reg_decal_rxi~78  ; |gest_can_gene|reg_decal_rxi~78  ; out              ;
+; |gest_can_gene|reg_decal_rxi~79  ; |gest_can_gene|reg_decal_rxi~79  ; out              ;
+; |gest_can_gene|cpt_bit~20        ; |gest_can_gene|cpt_bit~20        ; out              ;
+; |gest_can_gene|cpt_bit~21        ; |gest_can_gene|cpt_bit~21        ; out              ;
+; |gest_can_gene|cpt_bit~22        ; |gest_can_gene|cpt_bit~22        ; out              ;
+; |gest_can_gene|cpt_bit~23        ; |gest_can_gene|cpt_bit~23        ; out              ;
+; |gest_can_gene|cpt_bit~24        ; |gest_can_gene|cpt_bit~24        ; out              ;
+; |gest_can_gene|etat~8            ; |gest_can_gene|etat~8            ; out              ;
+; |gest_can_gene|etat~9            ; |gest_can_gene|etat~9            ; out              ;
+; |gest_can_gene|process_0~0       ; |gest_can_gene|process_0~0       ; out0             ;
+; |gest_can_gene|reg_decal_rxi~80  ; |gest_can_gene|reg_decal_rxi~80  ; out              ;
+; |gest_can_gene|reg_decal_txi~24  ; |gest_can_gene|reg_decal_txi~24  ; out              ;
+; |gest_can_gene|reg_decal_txi~25  ; |gest_can_gene|reg_decal_txi~25  ; out              ;
+; |gest_can_gene|reg_decal_txi~26  ; |gest_can_gene|reg_decal_txi~26  ; out              ;
+; |gest_can_gene|reg_decal_txi~27  ; |gest_can_gene|reg_decal_txi~27  ; out              ;
+; |gest_can_gene|reg_decal_txi~28  ; |gest_can_gene|reg_decal_txi~28  ; out              ;
+; |gest_can_gene|reg_decal_txi~29  ; |gest_can_gene|reg_decal_txi~29  ; out              ;
+; |gest_can_gene|reg_decal_txi~30  ; |gest_can_gene|reg_decal_txi~30  ; out              ;
+; |gest_can_gene|reg_decal_txi~31  ; |gest_can_gene|reg_decal_txi~31  ; out              ;
+; |gest_can_gene|process_0~1       ; |gest_can_gene|process_0~1       ; out0             ;
+; |gest_can_gene|sclk~2            ; |gest_can_gene|sclk~2            ; out              ;
+; |gest_can_gene|reg_decal_rxi~81  ; |gest_can_gene|reg_decal_rxi~81  ; out              ;
+; |gest_can_gene|reg_decal_rxi~82  ; |gest_can_gene|reg_decal_rxi~82  ; out              ;
+; |gest_can_gene|reg_decal_rxi~83  ; |gest_can_gene|reg_decal_rxi~83  ; out              ;
+; |gest_can_gene|reg_decal_rxi~84  ; |gest_can_gene|reg_decal_rxi~84  ; out              ;
+; |gest_can_gene|reg_decal_rxi~85  ; |gest_can_gene|reg_decal_rxi~85  ; out              ;
+; |gest_can_gene|reg_decal_rxi~86  ; |gest_can_gene|reg_decal_rxi~86  ; out              ;
+; |gest_can_gene|reg_decal_rxi~87  ; |gest_can_gene|reg_decal_rxi~87  ; out              ;
+; |gest_can_gene|reg_decal_rxi~88  ; |gest_can_gene|reg_decal_rxi~88  ; out              ;
+; |gest_can_gene|reg_decal_rxi~89  ; |gest_can_gene|reg_decal_rxi~89  ; out              ;
+; |gest_can_gene|reg_decal_rxi~90  ; |gest_can_gene|reg_decal_rxi~90  ; out              ;
+; |gest_can_gene|reg_decal_rxi~91  ; |gest_can_gene|reg_decal_rxi~91  ; out              ;
+; |gest_can_gene|reg_decal_rxi~92  ; |gest_can_gene|reg_decal_rxi~92  ; out              ;
+; |gest_can_gene|reg_decal_rxi~93  ; |gest_can_gene|reg_decal_rxi~93  ; out              ;
+; |gest_can_gene|reg_decal_rxi~94  ; |gest_can_gene|reg_decal_rxi~94  ; out              ;
+; |gest_can_gene|reg_decal_rxi~95  ; |gest_can_gene|reg_decal_rxi~95  ; out              ;
+; |gest_can_gene|reg_decal_rxi~96  ; |gest_can_gene|reg_decal_rxi~96  ; out              ;
+; |gest_can_gene|cpt_bit~25        ; |gest_can_gene|cpt_bit~25        ; out              ;
+; |gest_can_gene|cpt_bit~26        ; |gest_can_gene|cpt_bit~26        ; out              ;
+; |gest_can_gene|cpt_bit~27        ; |gest_can_gene|cpt_bit~27        ; out              ;
+; |gest_can_gene|cpt_bit~28        ; |gest_can_gene|cpt_bit~28        ; out              ;
+; |gest_can_gene|cpt_bit~29        ; |gest_can_gene|cpt_bit~29        ; out              ;
+; |gest_can_gene|reg_decal_txi~32  ; |gest_can_gene|reg_decal_txi~32  ; out              ;
+; |gest_can_gene|reg_decal_txi~33  ; |gest_can_gene|reg_decal_txi~33  ; out              ;
+; |gest_can_gene|reg_decal_txi~34  ; |gest_can_gene|reg_decal_txi~34  ; out              ;
+; |gest_can_gene|reg_decal_txi~35  ; |gest_can_gene|reg_decal_txi~35  ; out              ;
+; |gest_can_gene|reg_decal_txi~36  ; |gest_can_gene|reg_decal_txi~36  ; out              ;
+; |gest_can_gene|reg_decal_txi~37  ; |gest_can_gene|reg_decal_txi~37  ; out              ;
+; |gest_can_gene|reg_decal_txi~38  ; |gest_can_gene|reg_decal_txi~38  ; out              ;
+; |gest_can_gene|reg_decal_txi~39  ; |gest_can_gene|reg_decal_txi~39  ; out              ;
+; |gest_can_gene|cpt_dur~4         ; |gest_can_gene|cpt_dur~4         ; out              ;
+; |gest_can_gene|cpt_dur~5         ; |gest_can_gene|cpt_dur~5         ; out              ;
+; |gest_can_gene|cpt_dur~6         ; |gest_can_gene|cpt_dur~6         ; out              ;
+; |gest_can_gene|cpt_dur~7         ; |gest_can_gene|cpt_dur~7         ; out              ;
+; |gest_can_gene|etat~10           ; |gest_can_gene|etat~10           ; out              ;
+; |gest_can_gene|etat~11           ; |gest_can_gene|etat~11           ; out              ;
+; |gest_can_gene|etat~12           ; |gest_can_gene|etat~12           ; out              ;
+; |gest_can_gene|etat~13           ; |gest_can_gene|etat~13           ; out              ;
+; |gest_can_gene|etat~14           ; |gest_can_gene|etat~14           ; out              ;
+; |gest_can_gene|etat~15           ; |gest_can_gene|etat~15           ; out              ;
+; |gest_can_gene|etat~16           ; |gest_can_gene|etat~16           ; out              ;
+; |gest_can_gene|etat~17           ; |gest_can_gene|etat~17           ; out              ;
+; |gest_can_gene|ssb~1             ; |gest_can_gene|ssb~1             ; out              ;
+; |gest_can_gene|ssb~2             ; |gest_can_gene|ssb~2             ; out              ;
+; |gest_can_gene|cpt_dur[0]        ; |gest_can_gene|cpt_dur[0]        ; regout           ;
+; |gest_can_gene|etat.e0           ; |gest_can_gene|etat.e0           ; regout           ;
+; |gest_can_gene|etat.e1           ; |gest_can_gene|etat.e1           ; regout           ;
+; |gest_can_gene|etat.e2           ; |gest_can_gene|etat.e2           ; regout           ;
+; |gest_can_gene|etat.e3           ; |gest_can_gene|etat.e3           ; regout           ;
+; |gest_can_gene|sclk~reg0         ; |gest_can_gene|sclk~reg0         ; regout           ;
+; |gest_can_gene|ssb~reg0          ; |gest_can_gene|ssb~reg0          ; regout           ;
+; |gest_can_gene|reg_decal_rxi[15] ; |gest_can_gene|reg_decal_rxi[15] ; regout           ;
+; |gest_can_gene|reg_decal_rxi[14] ; |gest_can_gene|reg_decal_rxi[14] ; regout           ;
+; |gest_can_gene|reg_decal_rxi[13] ; |gest_can_gene|reg_decal_rxi[13] ; regout           ;
+; |gest_can_gene|reg_decal_rxi[12] ; |gest_can_gene|reg_decal_rxi[12] ; regout           ;
+; |gest_can_gene|reg_decal_rxi[11] ; |gest_can_gene|reg_decal_rxi[11] ; regout           ;
+; |gest_can_gene|reg_decal_rxi[10] ; |gest_can_gene|reg_decal_rxi[10] ; regout           ;
+; |gest_can_gene|reg_decal_rxi[9]  ; |gest_can_gene|reg_decal_rxi[9]  ; regout           ;
+; |gest_can_gene|reg_decal_rxi[8]  ; |gest_can_gene|reg_decal_rxi[8]  ; regout           ;
+; |gest_can_gene|reg_decal_rxi[7]  ; |gest_can_gene|reg_decal_rxi[7]  ; regout           ;
+; |gest_can_gene|reg_decal_rxi[6]  ; |gest_can_gene|reg_decal_rxi[6]  ; regout           ;
+; |gest_can_gene|reg_decal_rxi[5]  ; |gest_can_gene|reg_decal_rxi[5]  ; regout           ;
+; |gest_can_gene|reg_decal_rxi[4]  ; |gest_can_gene|reg_decal_rxi[4]  ; regout           ;
+; |gest_can_gene|reg_decal_rxi[3]  ; |gest_can_gene|reg_decal_rxi[3]  ; regout           ;
+; |gest_can_gene|reg_decal_rxi[2]  ; |gest_can_gene|reg_decal_rxi[2]  ; regout           ;
+; |gest_can_gene|reg_decal_rxi[1]  ; |gest_can_gene|reg_decal_rxi[1]  ; regout           ;
+; |gest_can_gene|reg_decal_rxi[0]  ; |gest_can_gene|reg_decal_rxi[0]  ; regout           ;
+; |gest_can_gene|reg_decal_txi[7]  ; |gest_can_gene|reg_decal_txi[7]  ; regout           ;
+; |gest_can_gene|reg_decal_txi[6]  ; |gest_can_gene|reg_decal_txi[6]  ; regout           ;
+; |gest_can_gene|reg_decal_txi[5]  ; |gest_can_gene|reg_decal_txi[5]  ; regout           ;
+; |gest_can_gene|reg_decal_txi[4]  ; |gest_can_gene|reg_decal_txi[4]  ; regout           ;
+; |gest_can_gene|reg_decal_txi[3]  ; |gest_can_gene|reg_decal_txi[3]  ; regout           ;
+; |gest_can_gene|reg_decal_txi[2]  ; |gest_can_gene|reg_decal_txi[2]  ; regout           ;
+; |gest_can_gene|reg_decal_txi[1]  ; |gest_can_gene|reg_decal_txi[1]  ; regout           ;
+; |gest_can_gene|reg_decal_txi[0]  ; |gest_can_gene|reg_decal_txi[0]  ; regout           ;
+; |gest_can_gene|cpt_bit[4]        ; |gest_can_gene|cpt_bit[4]        ; regout           ;
+; |gest_can_gene|cpt_bit[3]        ; |gest_can_gene|cpt_bit[3]        ; regout           ;
+; |gest_can_gene|cpt_bit[2]        ; |gest_can_gene|cpt_bit[2]        ; regout           ;
+; |gest_can_gene|cpt_bit[1]        ; |gest_can_gene|cpt_bit[1]        ; regout           ;
+; |gest_can_gene|cpt_bit[0]        ; |gest_can_gene|cpt_bit[0]        ; regout           ;
+; |gest_can_gene|cpt_dur[1]        ; |gest_can_gene|cpt_dur[1]        ; regout           ;
+; |gest_can_gene|arazb             ; |gest_can_gene|arazb             ; out              ;
+; |gest_can_gene|clk_10mhz         ; |gest_can_gene|clk_10mhz         ; out              ;
+; |gest_can_gene|go                ; |gest_can_gene|go                ; out              ;
+; |gest_can_gene|cpol              ; |gest_can_gene|cpol              ; out              ;
+; |gest_can_gene|cpha              ; |gest_can_gene|cpha              ; out              ;
+; |gest_can_gene|data_tx[0]        ; |gest_can_gene|data_tx[0]        ; out              ;
+; |gest_can_gene|data_tx[1]        ; |gest_can_gene|data_tx[1]        ; out              ;
+; |gest_can_gene|data_tx[2]        ; |gest_can_gene|data_tx[2]        ; out              ;
+; |gest_can_gene|data_tx[4]        ; |gest_can_gene|data_tx[4]        ; out              ;
+; |gest_can_gene|data_tx[5]        ; |gest_can_gene|data_tx[5]        ; out              ;
+; |gest_can_gene|data_tx[7]        ; |gest_can_gene|data_tx[7]        ; out              ;
+; |gest_can_gene|data_rx[0]        ; |gest_can_gene|data_rx[0]        ; pin_out          ;
+; |gest_can_gene|data_rx[1]        ; |gest_can_gene|data_rx[1]        ; pin_out          ;
+; |gest_can_gene|data_rx[2]        ; |gest_can_gene|data_rx[2]        ; pin_out          ;
+; |gest_can_gene|data_rx[3]        ; |gest_can_gene|data_rx[3]        ; pin_out          ;
+; |gest_can_gene|data_rx[4]        ; |gest_can_gene|data_rx[4]        ; pin_out          ;
+; |gest_can_gene|data_rx[5]        ; |gest_can_gene|data_rx[5]        ; pin_out          ;
+; |gest_can_gene|data_rx[6]        ; |gest_can_gene|data_rx[6]        ; pin_out          ;
+; |gest_can_gene|data_rx[7]        ; |gest_can_gene|data_rx[7]        ; pin_out          ;
+; |gest_can_gene|data_rx[8]        ; |gest_can_gene|data_rx[8]        ; pin_out          ;
+; |gest_can_gene|data_rx[9]        ; |gest_can_gene|data_rx[9]        ; pin_out          ;
+; |gest_can_gene|data_rx[10]       ; |gest_can_gene|data_rx[10]       ; pin_out          ;
+; |gest_can_gene|data_rx[11]       ; |gest_can_gene|data_rx[11]       ; pin_out          ;
+; |gest_can_gene|data_rx[12]       ; |gest_can_gene|data_rx[12]       ; pin_out          ;
+; |gest_can_gene|data_rx[13]       ; |gest_can_gene|data_rx[13]       ; pin_out          ;
+; |gest_can_gene|data_rx[14]       ; |gest_can_gene|data_rx[14]       ; pin_out          ;
+; |gest_can_gene|data_rx[15]       ; |gest_can_gene|data_rx[15]       ; pin_out          ;
+; |gest_can_gene|ssb               ; |gest_can_gene|ssb               ; pin_out          ;
+; |gest_can_gene|sclk              ; |gest_can_gene|sclk              ; pin_out          ;
+; |gest_can_gene|mosi              ; |gest_can_gene|mosi              ; pin_out          ;
+; |gest_can_gene|miso              ; |gest_can_gene|miso              ; out              ;
+; |gest_can_gene|etat~18           ; |gest_can_gene|etat~18           ; out0             ;
+; |gest_can_gene|etat~19           ; |gest_can_gene|etat~19           ; out0             ;
+; |gest_can_gene|Selector36~0      ; |gest_can_gene|Selector36~0      ; out0             ;
+; |gest_can_gene|Selector36~1      ; |gest_can_gene|Selector36~1      ; out0             ;
+; |gest_can_gene|Selector36~2      ; |gest_can_gene|Selector36~2      ; out0             ;
+; |gest_can_gene|Selector36~3      ; |gest_can_gene|Selector36~3      ; out0             ;
+; |gest_can_gene|etat~25           ; |gest_can_gene|etat~25           ; out0             ;
+; |gest_can_gene|etat~27           ; |gest_can_gene|etat~27           ; out0             ;
+; |gest_can_gene|Selector0~0       ; |gest_can_gene|Selector0~0       ; out0             ;
+; |gest_can_gene|Selector0~1       ; |gest_can_gene|Selector0~1       ; out0             ;
+; |gest_can_gene|Selector0~2       ; |gest_can_gene|Selector0~2       ; out0             ;
+; |gest_can_gene|Selector0~3       ; |gest_can_gene|Selector0~3       ; out0             ;
+; |gest_can_gene|Selector0~4       ; |gest_can_gene|Selector0~4       ; out0             ;
+; |gest_can_gene|Selector1~0       ; |gest_can_gene|Selector1~0       ; out0             ;
+; |gest_can_gene|Selector1~1       ; |gest_can_gene|Selector1~1       ; out0             ;
+; |gest_can_gene|Selector1~2       ; |gest_can_gene|Selector1~2       ; out0             ;
+; |gest_can_gene|Selector1~3       ; |gest_can_gene|Selector1~3       ; out0             ;
+; |gest_can_gene|Selector2~0       ; |gest_can_gene|Selector2~0       ; out              ;
+; |gest_can_gene|Selector2~1       ; |gest_can_gene|Selector2~1       ; out              ;
+; |gest_can_gene|Selector3~0       ; |gest_can_gene|Selector3~0       ; out0             ;
+; |gest_can_gene|Selector3~1       ; |gest_can_gene|Selector3~1       ; out0             ;
+; |gest_can_gene|Selector3~2       ; |gest_can_gene|Selector3~2       ; out0             ;
+; |gest_can_gene|Selector3~4       ; |gest_can_gene|Selector3~4       ; out0             ;
+; |gest_can_gene|Selector4~0       ; |gest_can_gene|Selector4~0       ; out0             ;
+; |gest_can_gene|Selector4~1       ; |gest_can_gene|Selector4~1       ; out0             ;
+; |gest_can_gene|Selector4~2       ; |gest_can_gene|Selector4~2       ; out0             ;
+; |gest_can_gene|Selector5~0       ; |gest_can_gene|Selector5~0       ; out0             ;
+; |gest_can_gene|Selector5~1       ; |gest_can_gene|Selector5~1       ; out0             ;
+; |gest_can_gene|Selector5~2       ; |gest_can_gene|Selector5~2       ; out0             ;
+; |gest_can_gene|Selector6~0       ; |gest_can_gene|Selector6~0       ; out0             ;
+; |gest_can_gene|Selector6~1       ; |gest_can_gene|Selector6~1       ; out0             ;
+; |gest_can_gene|Selector6~2       ; |gest_can_gene|Selector6~2       ; out0             ;
+; |gest_can_gene|Selector7~0       ; |gest_can_gene|Selector7~0       ; out0             ;
+; |gest_can_gene|Selector7~1       ; |gest_can_gene|Selector7~1       ; out0             ;
+; |gest_can_gene|Selector7~2       ; |gest_can_gene|Selector7~2       ; out0             ;
+; |gest_can_gene|Selector7~3       ; |gest_can_gene|Selector7~3       ; out0             ;
+; |gest_can_gene|Selector8~0       ; |gest_can_gene|Selector8~0       ; out0             ;
+; |gest_can_gene|Selector8~1       ; |gest_can_gene|Selector8~1       ; out0             ;
+; |gest_can_gene|Selector8~2       ; |gest_can_gene|Selector8~2       ; out0             ;
+; |gest_can_gene|Selector8~3       ; |gest_can_gene|Selector8~3       ; out0             ;
+; |gest_can_gene|Selector8~4       ; |gest_can_gene|Selector8~4       ; out0             ;
+; |gest_can_gene|Selector9~0       ; |gest_can_gene|Selector9~0       ; out0             ;
+; |gest_can_gene|Selector9~1       ; |gest_can_gene|Selector9~1       ; out0             ;
+; |gest_can_gene|Selector9~2       ; |gest_can_gene|Selector9~2       ; out0             ;
+; |gest_can_gene|Selector10~0      ; |gest_can_gene|Selector10~0      ; out0             ;
+; |gest_can_gene|Selector10~1      ; |gest_can_gene|Selector10~1      ; out0             ;
+; |gest_can_gene|Selector10~2      ; |gest_can_gene|Selector10~2      ; out0             ;
+; |gest_can_gene|Selector10~3      ; |gest_can_gene|Selector10~3      ; out0             ;
+; |gest_can_gene|Selector10~4      ; |gest_can_gene|Selector10~4      ; out0             ;
+; |gest_can_gene|Selector11~0      ; |gest_can_gene|Selector11~0      ; out0             ;
+; |gest_can_gene|Selector11~1      ; |gest_can_gene|Selector11~1      ; out0             ;
+; |gest_can_gene|Selector11~2      ; |gest_can_gene|Selector11~2      ; out0             ;
+; |gest_can_gene|Selector11~3      ; |gest_can_gene|Selector11~3      ; out0             ;
+; |gest_can_gene|Selector11~4      ; |gest_can_gene|Selector11~4      ; out0             ;
+; |gest_can_gene|Selector12~0      ; |gest_can_gene|Selector12~0      ; out0             ;
+; |gest_can_gene|Selector12~1      ; |gest_can_gene|Selector12~1      ; out0             ;
+; |gest_can_gene|Selector12~2      ; |gest_can_gene|Selector12~2      ; out0             ;
+; |gest_can_gene|Selector13~0      ; |gest_can_gene|Selector13~0      ; out0             ;
+; |gest_can_gene|Selector13~1      ; |gest_can_gene|Selector13~1      ; out0             ;
+; |gest_can_gene|Selector13~2      ; |gest_can_gene|Selector13~2      ; out0             ;
+; |gest_can_gene|Selector13~3      ; |gest_can_gene|Selector13~3      ; out0             ;
+; |gest_can_gene|Selector13~4      ; |gest_can_gene|Selector13~4      ; out0             ;
+; |gest_can_gene|Selector14~0      ; |gest_can_gene|Selector14~0      ; out0             ;
+; |gest_can_gene|Selector14~1      ; |gest_can_gene|Selector14~1      ; out0             ;
+; |gest_can_gene|Selector14~2      ; |gest_can_gene|Selector14~2      ; out0             ;
+; |gest_can_gene|Selector14~3      ; |gest_can_gene|Selector14~3      ; out0             ;
+; |gest_can_gene|Selector14~4      ; |gest_can_gene|Selector14~4      ; out0             ;
+; |gest_can_gene|Selector15~0      ; |gest_can_gene|Selector15~0      ; out0             ;
+; |gest_can_gene|Selector15~1      ; |gest_can_gene|Selector15~1      ; out0             ;
+; |gest_can_gene|Selector15~2      ; |gest_can_gene|Selector15~2      ; out0             ;
+; |gest_can_gene|Selector15~3      ; |gest_can_gene|Selector15~3      ; out0             ;
+; |gest_can_gene|Selector15~4      ; |gest_can_gene|Selector15~4      ; out0             ;
+; |gest_can_gene|Selector16~0      ; |gest_can_gene|Selector16~0      ; out0             ;
+; |gest_can_gene|Selector16~1      ; |gest_can_gene|Selector16~1      ; out0             ;
+; |gest_can_gene|Selector16~2      ; |gest_can_gene|Selector16~2      ; out0             ;
+; |gest_can_gene|Selector16~4      ; |gest_can_gene|Selector16~4      ; out0             ;
+; |gest_can_gene|Selector17~0      ; |gest_can_gene|Selector17~0      ; out0             ;
+; |gest_can_gene|Selector17~1      ; |gest_can_gene|Selector17~1      ; out0             ;
+; |gest_can_gene|Selector17~2      ; |gest_can_gene|Selector17~2      ; out0             ;
+; |gest_can_gene|Selector17~4      ; |gest_can_gene|Selector17~4      ; out0             ;
+; |gest_can_gene|Selector18~0      ; |gest_can_gene|Selector18~0      ; out0             ;
+; |gest_can_gene|Selector18~1      ; |gest_can_gene|Selector18~1      ; out0             ;
+; |gest_can_gene|Selector18~2      ; |gest_can_gene|Selector18~2      ; out0             ;
+; |gest_can_gene|Selector18~4      ; |gest_can_gene|Selector18~4      ; out0             ;
+; |gest_can_gene|Selector19~0      ; |gest_can_gene|Selector19~0      ; out0             ;
+; |gest_can_gene|Selector19~1      ; |gest_can_gene|Selector19~1      ; out0             ;
+; |gest_can_gene|Selector19~2      ; |gest_can_gene|Selector19~2      ; out0             ;
+; |gest_can_gene|Selector19~4      ; |gest_can_gene|Selector19~4      ; out0             ;
+; |gest_can_gene|Selector20~0      ; |gest_can_gene|Selector20~0      ; out0             ;
+; |gest_can_gene|Selector20~1      ; |gest_can_gene|Selector20~1      ; out0             ;
+; |gest_can_gene|Selector20~2      ; |gest_can_gene|Selector20~2      ; out0             ;
+; |gest_can_gene|Selector21~0      ; |gest_can_gene|Selector21~0      ; out0             ;
+; |gest_can_gene|Selector21~1      ; |gest_can_gene|Selector21~1      ; out0             ;
+; |gest_can_gene|Selector21~2      ; |gest_can_gene|Selector21~2      ; out0             ;
+; |gest_can_gene|Selector21~4      ; |gest_can_gene|Selector21~4      ; out0             ;
+; |gest_can_gene|Selector22~0      ; |gest_can_gene|Selector22~0      ; out0             ;
+; |gest_can_gene|Selector22~1      ; |gest_can_gene|Selector22~1      ; out0             ;
+; |gest_can_gene|Selector22~2      ; |gest_can_gene|Selector22~2      ; out0             ;
+; |gest_can_gene|Selector22~4      ; |gest_can_gene|Selector22~4      ; out0             ;
+; |gest_can_gene|Selector23~0      ; |gest_can_gene|Selector23~0      ; out0             ;
+; |gest_can_gene|Selector23~1      ; |gest_can_gene|Selector23~1      ; out0             ;
+; |gest_can_gene|Selector23~2      ; |gest_can_gene|Selector23~2      ; out0             ;
+; |gest_can_gene|Selector23~4      ; |gest_can_gene|Selector23~4      ; out0             ;
+; |gest_can_gene|Selector24~0      ; |gest_can_gene|Selector24~0      ; out0             ;
+; |gest_can_gene|Selector24~1      ; |gest_can_gene|Selector24~1      ; out0             ;
+; |gest_can_gene|Selector24~2      ; |gest_can_gene|Selector24~2      ; out0             ;
+; |gest_can_gene|Selector24~4      ; |gest_can_gene|Selector24~4      ; out0             ;
+; |gest_can_gene|Selector25~0      ; |gest_can_gene|Selector25~0      ; out0             ;
+; |gest_can_gene|Selector25~1      ; |gest_can_gene|Selector25~1      ; out0             ;
+; |gest_can_gene|Selector25~2      ; |gest_can_gene|Selector25~2      ; out0             ;
+; |gest_can_gene|Selector25~4      ; |gest_can_gene|Selector25~4      ; out0             ;
+; |gest_can_gene|Selector26~0      ; |gest_can_gene|Selector26~0      ; out0             ;
+; |gest_can_gene|Selector26~1      ; |gest_can_gene|Selector26~1      ; out0             ;
+; |gest_can_gene|Selector26~2      ; |gest_can_gene|Selector26~2      ; out0             ;
+; |gest_can_gene|Selector26~4      ; |gest_can_gene|Selector26~4      ; out0             ;
+; |gest_can_gene|Selector27~0      ; |gest_can_gene|Selector27~0      ; out0             ;
+; |gest_can_gene|Selector27~1      ; |gest_can_gene|Selector27~1      ; out0             ;
+; |gest_can_gene|Selector27~2      ; |gest_can_gene|Selector27~2      ; out0             ;
+; |gest_can_gene|Selector27~4      ; |gest_can_gene|Selector27~4      ; out0             ;
+; |gest_can_gene|Selector28~0      ; |gest_can_gene|Selector28~0      ; out0             ;
+; |gest_can_gene|Selector28~1      ; |gest_can_gene|Selector28~1      ; out0             ;
+; |gest_can_gene|Selector28~2      ; |gest_can_gene|Selector28~2      ; out0             ;
+; |gest_can_gene|Selector28~4      ; |gest_can_gene|Selector28~4      ; out0             ;
+; |gest_can_gene|Selector29~0      ; |gest_can_gene|Selector29~0      ; out0             ;
+; |gest_can_gene|Selector29~1      ; |gest_can_gene|Selector29~1      ; out0             ;
+; |gest_can_gene|Selector29~2      ; |gest_can_gene|Selector29~2      ; out0             ;
+; |gest_can_gene|Selector29~4      ; |gest_can_gene|Selector29~4      ; out0             ;
+; |gest_can_gene|Selector30~0      ; |gest_can_gene|Selector30~0      ; out0             ;
+; |gest_can_gene|Selector30~1      ; |gest_can_gene|Selector30~1      ; out0             ;
+; |gest_can_gene|Selector30~2      ; |gest_can_gene|Selector30~2      ; out0             ;
+; |gest_can_gene|Selector30~4      ; |gest_can_gene|Selector30~4      ; out0             ;
+; |gest_can_gene|Selector31~0      ; |gest_can_gene|Selector31~0      ; out0             ;
+; |gest_can_gene|Selector31~1      ; |gest_can_gene|Selector31~1      ; out0             ;
+; |gest_can_gene|Selector31~2      ; |gest_can_gene|Selector31~2      ; out0             ;
+; |gest_can_gene|Selector31~3      ; |gest_can_gene|Selector31~3      ; out0             ;
+; |gest_can_gene|Selector31~4      ; |gest_can_gene|Selector31~4      ; out0             ;
+; |gest_can_gene|Selector32~0      ; |gest_can_gene|Selector32~0      ; out0             ;
+; |gest_can_gene|Selector32~1      ; |gest_can_gene|Selector32~1      ; out0             ;
+; |gest_can_gene|Selector32~4      ; |gest_can_gene|Selector32~4      ; out0             ;
+; |gest_can_gene|Selector33~0      ; |gest_can_gene|Selector33~0      ; out0             ;
+; |gest_can_gene|Selector33~3      ; |gest_can_gene|Selector33~3      ; out0             ;
+; |gest_can_gene|Selector33~4      ; |gest_can_gene|Selector33~4      ; out0             ;
+; |gest_can_gene|Selector34~0      ; |gest_can_gene|Selector34~0      ; out0             ;
+; |gest_can_gene|Selector34~1      ; |gest_can_gene|Selector34~1      ; out0             ;
+; |gest_can_gene|Selector34~2      ; |gest_can_gene|Selector34~2      ; out0             ;
+; |gest_can_gene|Selector34~3      ; |gest_can_gene|Selector34~3      ; out0             ;
+; |gest_can_gene|Selector35~0      ; |gest_can_gene|Selector35~0      ; out0             ;
+; |gest_can_gene|Selector35~1      ; |gest_can_gene|Selector35~1      ; out0             ;
+; |gest_can_gene|Selector35~2      ; |gest_can_gene|Selector35~2      ; out0             ;
+; |gest_can_gene|Selector35~4      ; |gest_can_gene|Selector35~4      ; out0             ;
+; |gest_can_gene|Selector36~4      ; |gest_can_gene|Selector36~4      ; out0             ;
+; |gest_can_gene|Selector36~5      ; |gest_can_gene|Selector36~5      ; out0             ;
+; |gest_can_gene|Selector36~6      ; |gest_can_gene|Selector36~6      ; out0             ;
+; |gest_can_gene|Selector36~7      ; |gest_can_gene|Selector36~7      ; out0             ;
+; |gest_can_gene|Selector36~8      ; |gest_can_gene|Selector36~8      ; out0             ;
+; |gest_can_gene|Add0~0            ; |gest_can_gene|Add0~0            ; out0             ;
+; |gest_can_gene|Add0~1            ; |gest_can_gene|Add0~1            ; out0             ;
+; |gest_can_gene|Add0~2            ; |gest_can_gene|Add0~2            ; out0             ;
+; |gest_can_gene|Add0~3            ; |gest_can_gene|Add0~3            ; out0             ;
+; |gest_can_gene|Add0~4            ; |gest_can_gene|Add0~4            ; out0             ;
+; |gest_can_gene|Add0~5            ; |gest_can_gene|Add0~5            ; out0             ;
+; |gest_can_gene|Add0~6            ; |gest_can_gene|Add0~6            ; out0             ;
+; |gest_can_gene|Add1~0            ; |gest_can_gene|Add1~0            ; out0             ;
+; |gest_can_gene|Equal0~0          ; |gest_can_gene|Equal0~0          ; out0             ;
+; |gest_can_gene|Equal1~0          ; |gest_can_gene|Equal1~0          ; out0             ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                     ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |gest_can_gene|etat~4       ; |gest_can_gene|etat~4       ; out              ;
+; |gest_can_gene|data_tx[3]   ; |gest_can_gene|data_tx[3]   ; out              ;
+; |gest_can_gene|data_tx[6]   ; |gest_can_gene|data_tx[6]   ; out              ;
+; |gest_can_gene|Selector1~4  ; |gest_can_gene|Selector1~4  ; out0             ;
+; |gest_can_gene|Selector3~3  ; |gest_can_gene|Selector3~3  ; out0             ;
+; |gest_can_gene|Selector4~3  ; |gest_can_gene|Selector4~3  ; out0             ;
+; |gest_can_gene|Selector4~4  ; |gest_can_gene|Selector4~4  ; out0             ;
+; |gest_can_gene|Selector5~3  ; |gest_can_gene|Selector5~3  ; out0             ;
+; |gest_can_gene|Selector5~4  ; |gest_can_gene|Selector5~4  ; out0             ;
+; |gest_can_gene|Selector6~3  ; |gest_can_gene|Selector6~3  ; out0             ;
+; |gest_can_gene|Selector6~4  ; |gest_can_gene|Selector6~4  ; out0             ;
+; |gest_can_gene|Selector7~4  ; |gest_can_gene|Selector7~4  ; out0             ;
+; |gest_can_gene|Selector9~3  ; |gest_can_gene|Selector9~3  ; out0             ;
+; |gest_can_gene|Selector9~4  ; |gest_can_gene|Selector9~4  ; out0             ;
+; |gest_can_gene|Selector12~3 ; |gest_can_gene|Selector12~3 ; out0             ;
+; |gest_can_gene|Selector12~4 ; |gest_can_gene|Selector12~4 ; out0             ;
+; |gest_can_gene|Selector16~3 ; |gest_can_gene|Selector16~3 ; out0             ;
+; |gest_can_gene|Selector17~3 ; |gest_can_gene|Selector17~3 ; out0             ;
+; |gest_can_gene|Selector18~3 ; |gest_can_gene|Selector18~3 ; out0             ;
+; |gest_can_gene|Selector19~3 ; |gest_can_gene|Selector19~3 ; out0             ;
+; |gest_can_gene|Selector20~3 ; |gest_can_gene|Selector20~3 ; out0             ;
+; |gest_can_gene|Selector20~4 ; |gest_can_gene|Selector20~4 ; out0             ;
+; |gest_can_gene|Selector21~3 ; |gest_can_gene|Selector21~3 ; out0             ;
+; |gest_can_gene|Selector22~3 ; |gest_can_gene|Selector22~3 ; out0             ;
+; |gest_can_gene|Selector23~3 ; |gest_can_gene|Selector23~3 ; out0             ;
+; |gest_can_gene|Selector24~3 ; |gest_can_gene|Selector24~3 ; out0             ;
+; |gest_can_gene|Selector25~3 ; |gest_can_gene|Selector25~3 ; out0             ;
+; |gest_can_gene|Selector26~3 ; |gest_can_gene|Selector26~3 ; out0             ;
+; |gest_can_gene|Selector27~3 ; |gest_can_gene|Selector27~3 ; out0             ;
+; |gest_can_gene|Selector28~3 ; |gest_can_gene|Selector28~3 ; out0             ;
+; |gest_can_gene|Selector29~3 ; |gest_can_gene|Selector29~3 ; out0             ;
+; |gest_can_gene|Selector30~3 ; |gest_can_gene|Selector30~3 ; out0             ;
+; |gest_can_gene|Selector32~2 ; |gest_can_gene|Selector32~2 ; out0             ;
+; |gest_can_gene|Selector32~3 ; |gest_can_gene|Selector32~3 ; out0             ;
+; |gest_can_gene|Selector33~1 ; |gest_can_gene|Selector33~1 ; out0             ;
+; |gest_can_gene|Selector33~2 ; |gest_can_gene|Selector33~2 ; out0             ;
+; |gest_can_gene|Selector34~4 ; |gest_can_gene|Selector34~4 ; out0             ;
+; |gest_can_gene|Selector35~3 ; |gest_can_gene|Selector35~3 ; out0             ;
++-----------------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                     ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |gest_can_gene|data_tx[3]   ; |gest_can_gene|data_tx[3]   ; out              ;
+; |gest_can_gene|data_tx[6]   ; |gest_can_gene|data_tx[6]   ; out              ;
+; |gest_can_gene|Selector1~4  ; |gest_can_gene|Selector1~4  ; out0             ;
+; |gest_can_gene|Selector3~3  ; |gest_can_gene|Selector3~3  ; out0             ;
+; |gest_can_gene|Selector4~3  ; |gest_can_gene|Selector4~3  ; out0             ;
+; |gest_can_gene|Selector4~4  ; |gest_can_gene|Selector4~4  ; out0             ;
+; |gest_can_gene|Selector5~3  ; |gest_can_gene|Selector5~3  ; out0             ;
+; |gest_can_gene|Selector5~4  ; |gest_can_gene|Selector5~4  ; out0             ;
+; |gest_can_gene|Selector6~3  ; |gest_can_gene|Selector6~3  ; out0             ;
+; |gest_can_gene|Selector6~4  ; |gest_can_gene|Selector6~4  ; out0             ;
+; |gest_can_gene|Selector7~4  ; |gest_can_gene|Selector7~4  ; out0             ;
+; |gest_can_gene|Selector9~3  ; |gest_can_gene|Selector9~3  ; out0             ;
+; |gest_can_gene|Selector9~4  ; |gest_can_gene|Selector9~4  ; out0             ;
+; |gest_can_gene|Selector12~3 ; |gest_can_gene|Selector12~3 ; out0             ;
+; |gest_can_gene|Selector12~4 ; |gest_can_gene|Selector12~4 ; out0             ;
+; |gest_can_gene|Selector16~3 ; |gest_can_gene|Selector16~3 ; out0             ;
+; |gest_can_gene|Selector17~3 ; |gest_can_gene|Selector17~3 ; out0             ;
+; |gest_can_gene|Selector18~3 ; |gest_can_gene|Selector18~3 ; out0             ;
+; |gest_can_gene|Selector19~3 ; |gest_can_gene|Selector19~3 ; out0             ;
+; |gest_can_gene|Selector20~3 ; |gest_can_gene|Selector20~3 ; out0             ;
+; |gest_can_gene|Selector20~4 ; |gest_can_gene|Selector20~4 ; out0             ;
+; |gest_can_gene|Selector21~3 ; |gest_can_gene|Selector21~3 ; out0             ;
+; |gest_can_gene|Selector22~3 ; |gest_can_gene|Selector22~3 ; out0             ;
+; |gest_can_gene|Selector23~3 ; |gest_can_gene|Selector23~3 ; out0             ;
+; |gest_can_gene|Selector24~3 ; |gest_can_gene|Selector24~3 ; out0             ;
+; |gest_can_gene|Selector25~3 ; |gest_can_gene|Selector25~3 ; out0             ;
+; |gest_can_gene|Selector26~3 ; |gest_can_gene|Selector26~3 ; out0             ;
+; |gest_can_gene|Selector27~3 ; |gest_can_gene|Selector27~3 ; out0             ;
+; |gest_can_gene|Selector28~3 ; |gest_can_gene|Selector28~3 ; out0             ;
+; |gest_can_gene|Selector29~3 ; |gest_can_gene|Selector29~3 ; out0             ;
+; |gest_can_gene|Selector30~3 ; |gest_can_gene|Selector30~3 ; out0             ;
+; |gest_can_gene|Selector32~2 ; |gest_can_gene|Selector32~2 ; out0             ;
+; |gest_can_gene|Selector32~3 ; |gest_can_gene|Selector32~3 ; out0             ;
+; |gest_can_gene|Selector33~1 ; |gest_can_gene|Selector33~1 ; out0             ;
+; |gest_can_gene|Selector33~2 ; |gest_can_gene|Selector33~2 ; out0             ;
+; |gest_can_gene|Selector34~4 ; |gest_can_gene|Selector34~4 ; out0             ;
+; |gest_can_gene|Selector35~3 ; |gest_can_gene|Selector35~3 ; out0             ;
++-----------------------------+-----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Mon Jan 20 00:03:03 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Mise_au_point -c MaP
+Info: Using vector source file "F:/Mes Docs/Boulot/ER 2EN/Dictaphone/Travail/gest_can_gene.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of gest_can_gene.vwf called MaP.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      91.93 %
+Info: Number of transitions in simulation is 36944
+Info: Vector file gest_can_gene.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 184 megabytes
+    Info: Processing ended: Mon Jan 20 00:03:03 2014
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

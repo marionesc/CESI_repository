@@ -1,0 +1,11 @@
+library	ieee;
+use	ieee.std_logic_1164.all;
+
+package tp_package is
+component deco7seg is
+	port (	en		: in std_logic;
+			E 		: in   std_logic_vector(3 downto 0);
+         	segment 	: out std_logic_vector(6 downto 0)
+         );
+end component;
+end tp_package;

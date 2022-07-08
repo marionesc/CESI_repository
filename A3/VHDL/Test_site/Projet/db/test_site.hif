@@ -1,0 +1,194 @@
+Quartus II 64-Bit
+Version 11.1 Build 259 01/25/2012 Service Pack 2.11 SJ Full Version
+15
+1593
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level1
+0
+0
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Maquette_TP
+# storage
+db|test_site.(0).cnf
+db|test_site.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|cesi|cesi26|escouteloup_marion|projets_vhdl|test_site|sources|maquette_tp.vhd
+556a3dfe6ab126ecfec176d5aa652881
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|cesi|cesi26|escouteloup_marion|projets_vhdl|composants|sources|tp_package.vhd
+a55c5931c126b5963583444e3935f3c2
+}
+# macro_sequence
+
+# end
+# entity
+mux4v1
+# storage
+db|test_site.(2).cnf
+db|test_site.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|cesi|cesi26|escouteloup_marion|projets_vhdl|composants|sources|mux4v1.vhd
+232ff9a6d5eb83e9bcd7fc88f2142b6c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+2
+PARAMETER_SIGNED_DEC
+USR
+ constraint(sel)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(info0)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(info1)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(info2)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(info3)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(smux)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mux4v1:u0_mux4v1
+}
+# macro_sequence
+
+# end
+# entity
+deco1p4
+# storage
+db|test_site.(3).cnf
+db|test_site.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|cesi|cesi26|escouteloup_marion|projets_vhdl|composants|sources|deco1p4.vhd
+cae23c9ca5e65add1ad06ff7df7af6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(sel)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(s_deco_var)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s_deco_prio)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+deco1p4:u0_deco1p4
+}
+# macro_sequence
+
+# end
+# entity
+Maquette_TP2
+# storage
+db|test_site.(1).cnf
+db|test_site.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|cesi|cesi26|escouteloup_marion|projets_vhdl|test_site|sources|maquette_tp2.vhd
+827584c9c8043333c586eccac3ecca
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|cesi|cesi26|escouteloup_marion|projets_vhdl|composants|sources|tp_package.vhd
+a55c5931c126b5963583444e3935f3c2
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+
