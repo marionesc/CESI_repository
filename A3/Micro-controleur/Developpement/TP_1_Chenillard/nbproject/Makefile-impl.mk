@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=TP_1_Chenillard_V3.X
+PROJECTNAME=TP_1_Chenillard
 
 # Active Configuration
 DEFAULTCONF=default

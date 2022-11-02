@@ -4,23 +4,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define _XTAL_FREQ 11059200
+
+
 void Init(void){
- // Obligatoire :Bus externe
- MEMCON=0xA0; //Address de l'EEPROM
- MEMCONbits.EBDIS = 0; //Activation de l'EEPROM
- //Iterruptions
- RCONbits.IPEN = 0; //Interruptions prioritées a 1nv
- INTCONbits.PEIE = 0; //Interruptions peripheriques activées
- INTCONbits.GIE = 1; //Interruptions globales activées
- INTCONbits.INT0IE = 1; //Interruptions externes sur INTO activées
- INTCONbits.INT0IF = 0; //acquittement init
-// Obligatoire : Désactivation des fonctions analogiques
- ANCON0=0x00;
- ANCON1=0x00;
- ANCON2=0x00;
- TRISD=0x00; // 0 => PORTD en sortie
- TRISH=0xFF; // 1 => PORTH en entrée
- TRISG=0x00;
+     // Obligatoire :Bus externe
+ MEMCON=0xA0;               //Address de l'EEPROM
+ MEMCONbits.EBDIS = 0;      //Activation de l'EEPROM
+        
+    //Interruptions
+ RCONbits.IPEN      = 0;    //Interruptions prioritées a 1nv
+ INTCONbits.PEIE    = 0;    //Interruptions peripheriques activées
+ INTCONbits.GIE     = 1;    //Interruptions globales activées
+ INTCONbits.INT0IE  = 1;    //Interruptions externes sur INTO activées
+ INTCONbits.INT0IF  = 0;    //acquittement init
+ 
+    // OBLIGATOIRE : Désactivation des fonctions analogiques
+ ANCON0 = 0x00;
+ ANCON1 = 0x00;
+ ANCON2 = 0x00;
+ TRISD  = 0x00;         // 0 => PORTD en sortie
+ TRISH  = 0xFF;         // 1 => PORTH en entrée
+ TRISG  = 0x00;
 
 }
 int Eeprom_read(unsigned char addr){
@@ -53,8 +57,7 @@ void Eeprom_write(unsigned char addr, unsigned char data){
     EECON1bits.WREN = 0; // Inhibits write cycles to Flash program/data EEPROM
     INTCONbits.GIEH = 1; // active interruption globale
 }
-void I2C_Init(void)
-{
+void I2C_Init(void){
     SSP1STAT = 0x00;
     SSP1CON1 = 0x00;
     SSP1CON1bits.SSPEN = 1; // Enables the serial port and configures the SDAx and SCLx pins as the serial port pins
