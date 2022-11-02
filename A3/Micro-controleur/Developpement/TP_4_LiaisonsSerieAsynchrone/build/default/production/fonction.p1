@@ -55,6 +55,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISH `Vuc ~T0 @X0 0 e@3993 ]
 "11492
 [v _TRISG `Vuc ~T0 @X0 0 e@3992 ]
+"887
+[v _TXSTA2 `Vuc ~T0 @X0 0 e@3873 ]
+"1015
+[v _RCSTA2 `Vuc ~T0 @X0 0 e@3874 ]
+"742
+[v _BAUDCON2 `Vuc ~T0 @X0 0 e@3872 ]
+"723
+[v _SPBRGH2 `Vuc ~T0 @X0 0 e@3871 ]
+"704
+[v _SPBRG2 `Vuc ~T0 @X0 0 e@3870 ]
 "5511
 [v _EEADR `Vuc ~T0 @X0 0 e@3938 ]
 [s S543 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -105,10 +115,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v __delay `(v ~T0 @X0 0 ef1`ul ]
 [p i __delay ]
 [; ;fonction.h: 24: void Init (void);
-[; ;fonction.h: 25: void Eeprom_write(unsigned char addr, unsigned char data);
-[; ;fonction.h: 26: int Eeprom_read(unsigned char addr);
-[; ;fonction.h: 27: void I2C_Init();
-[; ;fonction.h: 28: void delai_ms(unsigned char val);
+[; ;fonction.h: 25: void Init_UART2(void);
+[; ;fonction.h: 26: void Eeprom_write(unsigned char addr, unsigned char data);
+[; ;fonction.h: 27: int Eeprom_read(unsigned char addr);
+[; ;fonction.h: 28: void I2C_Init();
+[; ;fonction.h: 29: void delai_ms(unsigned char val);
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9347,199 +9358,223 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 109: extern char * ltoa(char * buf, long val, int base);
 [; ;stdlib.h: 110: extern char * ultoa(char * buf, unsigned long val, int base);
 [; ;stdlib.h: 112: extern char * ftoa(float f, int * status);
-"7 fonction.c
+"12 fonction.c
 [v _Init `(v ~T0 @X0 1 ef ]
 {
-[; ;fonction.c: 7: void Init(void){
+[; ;fonction.c: 12: void Init(void){
 [e :U _Init ]
 [f ]
-[; ;fonction.c: 9: MEMCON=0xA0;
-"9
-[e = _MEMCON -> -> 160 `i `uc ]
-[; ;fonction.c: 10: MEMCONbits.EBDIS = 0;
-"10
-[e = . . _MEMCONbits 0 4 -> -> 0 `i `uc ]
-[; ;fonction.c: 12: RCONbits.IPEN = 0;
-"12
-[e = . . _RCONbits 6 7 -> -> 0 `i `uc ]
-[; ;fonction.c: 13: INTCONbits.PEIE = 0;
-"13
-[e = . . _INTCONbits 1 6 -> -> 0 `i `uc ]
-[; ;fonction.c: 14: INTCONbits.GIE = 1;
+[; ;fonction.c: 14: MEMCON = 0xA0;
 "14
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;fonction.c: 15: INTCONbits.INT0IE = 1;
+[e = _MEMCON -> -> 160 `i `uc ]
+[; ;fonction.c: 15: MEMCONbits.EBDIS = 0;
 "15
-[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-[; ;fonction.c: 16: INTCONbits.INT0IF = 0;
-"16
-[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-[; ;fonction.c: 18: ANCON0=0x00;
+[e = . . _MEMCONbits 0 4 -> -> 0 `i `uc ]
+[; ;fonction.c: 18: RCONbits.IPEN = 0;
 "18
-[e = _ANCON0 -> -> 0 `i `uc ]
-[; ;fonction.c: 19: ANCON1=0x00;
+[e = . . _RCONbits 6 7 -> -> 0 `i `uc ]
+[; ;fonction.c: 19: INTCONbits.PEIE = 0;
 "19
-[e = _ANCON1 -> -> 0 `i `uc ]
-[; ;fonction.c: 20: ANCON2=0x00;
+[e = . . _INTCONbits 1 6 -> -> 0 `i `uc ]
+[; ;fonction.c: 20: INTCONbits.GIE = 1;
 "20
-[e = _ANCON2 -> -> 0 `i `uc ]
-[; ;fonction.c: 21: TRISD=0x00;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;fonction.c: 21: INTCONbits.INT0IE = 1;
 "21
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;fonction.c: 22: TRISH=0xFF;
+[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
+[; ;fonction.c: 22: INTCONbits.INT0IF = 0;
 "22
-[e = _TRISH -> -> 255 `i `uc ]
-[; ;fonction.c: 23: TRISG=0x00;
-"23
-[e = _TRISG -> -> 0 `i `uc ]
-[; ;fonction.c: 25: }
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+[; ;fonction.c: 25: ANCON0 = 0x00;
 "25
+[e = _ANCON0 -> -> 0 `i `uc ]
+[; ;fonction.c: 26: ANCON1 = 0x00;
+"26
+[e = _ANCON1 -> -> 0 `i `uc ]
+[; ;fonction.c: 27: ANCON2 = 0x00;
+"27
+[e = _ANCON2 -> -> 0 `i `uc ]
+[; ;fonction.c: 28: TRISD = 0x00;
+"28
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;fonction.c: 29: TRISH = 0xFF;
+"29
+[e = _TRISH -> -> 255 `i `uc ]
+[; ;fonction.c: 32: TRISG = 0x04;
+"32
+[e = _TRISG -> -> 4 `i `uc ]
+[; ;fonction.c: 33: }
+"33
 [e :UE 1243 ]
 }
-"26
+"39
+[v _Init_UART2 `(v ~T0 @X0 1 ef ]
+{
+[; ;fonction.c: 39: void Init_UART2(void){
+[e :U _Init_UART2 ]
+[f ]
+[; ;fonction.c: 40: TXSTA2 = 0x20;
+"40
+[e = _TXSTA2 -> -> 32 `i `uc ]
+[; ;fonction.c: 41: RCSTA2 = 0x90;
+"41
+[e = _RCSTA2 -> -> 144 `i `uc ]
+[; ;fonction.c: 43: BAUDCON2 = 0x00;
+"43
+[e = _BAUDCON2 -> -> 0 `i `uc ]
+[; ;fonction.c: 45: SPBRGH2 = 0;
+"45
+[e = _SPBRGH2 -> -> 0 `i `uc ]
+[; ;fonction.c: 46: SPBRG2 = 17;
+"46
+[e = _SPBRG2 -> -> 17 `i `uc ]
+[; ;fonction.c: 47: }
+"47
+[e :UE 1244 ]
+}
+"53
 [v _Eeprom_read `(i ~T0 @X0 1 ef1`uc ]
 {
-[; ;fonction.c: 26: int Eeprom_read(unsigned char addr){
+[; ;fonction.c: 53: int Eeprom_read(unsigned char addr){
 [e :U _Eeprom_read ]
 [v _addr `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;fonction.c: 28: EEADR = addr;
-"28
+[; ;fonction.c: 55: EEADR = addr;
+"55
 [e = _EEADR _addr ]
-[; ;fonction.c: 29: EECON1bits.EEPGD = 0;
-"29
+[; ;fonction.c: 56: EECON1bits.EEPGD = 0;
+"56
 [e = . . _EECON1bits 0 7 -> -> 0 `i `uc ]
-[; ;fonction.c: 30: EECON1bits.CFGS = 0;
-"30
+[; ;fonction.c: 57: EECON1bits.CFGS = 0;
+"57
 [e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
-[; ;fonction.c: 31: EECON1bits.RD = 1;
-"31
+[; ;fonction.c: 58: EECON1bits.RD = 1;
+"58
 [e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
-[; ;fonction.c: 34: while(EECON1bits.RD);
-"34
-[e $U 1245  ]
-[e :U 1246 ]
-[e :U 1245 ]
-[e $ != -> . . _EECON1bits 0 0 `i -> -> -> 0 `i `Vuc `i 1246  ]
+[; ;fonction.c: 61: while(EECON1bits.RD);
+"61
+[e $U 1246  ]
 [e :U 1247 ]
-[; ;fonction.c: 36: return EEDATA;
-"36
+[e :U 1246 ]
+[e $ != -> . . _EECON1bits 0 0 `i -> -> -> 0 `i `Vuc `i 1247  ]
+[e :U 1248 ]
+[; ;fonction.c: 62: return EEDATA;
+"62
 [e ) -> _EEDATA `i ]
-[e $UE 1244  ]
-[; ;fonction.c: 37: }
-"37
-[e :UE 1244 ]
+[e $UE 1245  ]
+[; ;fonction.c: 63: }
+"63
+[e :UE 1245 ]
 }
-"38
+"71
 [v _Eeprom_write `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;fonction.c: 38: void Eeprom_write(unsigned char addr, unsigned char data){
+[; ;fonction.c: 71: void Eeprom_write(unsigned char addr, unsigned char data){
 [e :U _Eeprom_write ]
 [v _addr `uc ~T0 @X0 1 r1 ]
 [v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;fonction.c: 40: EEADR = addr;
-"40
+[; ;fonction.c: 73: EEADR = addr;
+"73
 [e = _EEADR _addr ]
-[; ;fonction.c: 41: EEDATA = data;
-"41
+[; ;fonction.c: 74: EEDATA = data;
+"74
 [e = _EEDATA _data ]
-[; ;fonction.c: 42: EECON1bits.EEPGD = 0;
-"42
+[; ;fonction.c: 75: EECON1bits.EEPGD = 0;
+"75
 [e = . . _EECON1bits 0 7 -> -> 0 `i `uc ]
-[; ;fonction.c: 43: EECON1bits.CFGS = 0;
-"43
+[; ;fonction.c: 76: EECON1bits.CFGS = 0;
+"76
 [e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
-[; ;fonction.c: 44: EECON1bits.WREN = 1;
-"44
+[; ;fonction.c: 77: EECON1bits.WREN = 1;
+"77
 [e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
-[; ;fonction.c: 45: INTCONbits.GIEH = 0;
-"45
+[; ;fonction.c: 78: INTCONbits.GIEH = 0;
+"78
 [e = . . _INTCONbits 2 2 -> -> 0 `i `uc ]
-[; ;fonction.c: 46: EECON2 = 0x55;
-"46
+[; ;fonction.c: 79: EECON2 = 0x55;
+"79
 [e = _EECON2 -> -> 85 `i `uc ]
-[; ;fonction.c: 47: EECON2 = 0xAA;
-"47
+[; ;fonction.c: 80: EECON2 = 0xAA;
+"80
 [e = _EECON2 -> -> 170 `i `uc ]
-[; ;fonction.c: 48: EECON1bits.WR = 1;
-"48
+[; ;fonction.c: 81: EECON1bits.WR = 1;
+"81
 [e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
-[; ;fonction.c: 51: while(EECON1bits.WR);
-"51
-[e $U 1249  ]
-[e :U 1250 ]
-[e :U 1249 ]
-[e $ != -> . . _EECON1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1250  ]
+[; ;fonction.c: 84: while(EECON1bits.WR);
+"84
+[e $U 1250  ]
 [e :U 1251 ]
-[; ;fonction.c: 53: EECON1bits.WREN = 0;
-"53
+[e :U 1250 ]
+[e $ != -> . . _EECON1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1251  ]
+[e :U 1252 ]
+[; ;fonction.c: 86: EECON1bits.WREN = 0;
+"86
 [e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
-[; ;fonction.c: 54: INTCONbits.GIEH = 1;
-"54
+[; ;fonction.c: 87: INTCONbits.GIEH = 1;
+"87
 [e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;fonction.c: 55: }
-"55
-[e :UE 1248 ]
+[; ;fonction.c: 88: }
+"88
+[e :UE 1249 ]
 }
-"57
+"94
 [v _I2C_Init `(v ~T0 @X0 1 ef ]
 {
-[; ;fonction.c: 56: void I2C_Init(void)
-[; ;fonction.c: 57: {
+[; ;fonction.c: 94: void I2C_Init(void){
 [e :U _I2C_Init ]
 [f ]
-[; ;fonction.c: 58: SSP1STAT = 0x00;
-"58
+[; ;fonction.c: 95: SSP1STAT = 0x00;
+"95
 [e = _SSP1STAT -> -> 0 `i `uc ]
-[; ;fonction.c: 59: SSP1CON1 = 0x00;
-"59
+[; ;fonction.c: 96: SSP1CON1 = 0x00;
+"96
 [e = _SSP1CON1 -> -> 0 `i `uc ]
-[; ;fonction.c: 60: SSP1CON1bits.SSPEN = 1;
-"60
+[; ;fonction.c: 97: SSP1CON1bits.SSPEN = 1;
+"97
 [e = . . _SSP1CON1bits 0 2 -> -> 1 `i `uc ]
-[; ;fonction.c: 61: SSP1CON1bits.SSPM = 0x08;
-"61
+[; ;fonction.c: 98: SSP1CON1bits.SSPM = 0x08;
+"98
 [e = . . _SSP1CON1bits 0 0 -> -> 8 `i `uc ]
-[; ;fonction.c: 62: SSP1CON2 = 0x00;
-"62
+[; ;fonction.c: 99: SSP1CON2 = 0x00;
+"99
 [e = _SSP1CON2 -> -> 0 `i `uc ]
-[; ;fonction.c: 63: SSP1ADD = 0x1A;
-"63
+[; ;fonction.c: 100: SSP1ADD = 0x1A;
+"100
 [e = _SSP1ADD -> -> 26 `i `uc ]
-[; ;fonction.c: 64: }
-"64
-[e :UE 1252 ]
+[; ;fonction.c: 101: }
+"101
+[e :UE 1253 ]
 }
-"65
+"107
 [v _delai_ms `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;fonction.c: 65: void delai_ms(unsigned char val){
+[; ;fonction.c: 107: void delai_ms(unsigned char val){
 [e :U _delai_ms ]
 [v _val `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;fonction.c: 69: for (int j=0;j<val;j++) {
-"69
+[; ;fonction.c: 111: for (int j=0;j<val;j++) {
+"111
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 0 `i ]
-[e $U 1257  ]
-[e :U 1254 ]
-{
-[; ;fonction.c: 70: _delay((unsigned long)((1)*(11059200/4000.0)));
-"70
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-"71
-}
-"69
-[e ++ _j -> 1 `i ]
-[e :U 1257 ]
-[e $ < _j -> _val `i 1254  ]
+[e $U 1258  ]
 [e :U 1255 ]
-"71
+{
+[; ;fonction.c: 112: _delay((unsigned long)((1)*(11059200/4000.0)));
+"112
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+"113
 }
-[; ;fonction.c: 71: }
-[; ;fonction.c: 72: }
-"72
-[e :UE 1253 ]
+"111
+[e ++ _j -> 1 `i ]
+[e :U 1258 ]
+[e $ < _j -> _val `i 1255  ]
+[e :U 1256 ]
+"113
+}
+[; ;fonction.c: 113: }
+[; ;fonction.c: 114: }
+"114
+[e :UE 1254 ]
 }

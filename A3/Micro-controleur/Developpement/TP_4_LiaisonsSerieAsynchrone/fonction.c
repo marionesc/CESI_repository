@@ -11,7 +11,7 @@
  */
 void Init(void){
     // Obligatoire :Bus externe
-    MEMCON = 0xA0;               //Address de l'EEPROM
+    MEMCON = 0xA0;             //Address de l'EEPROM
     MEMCONbits.EBDIS = 0;      //Activation de l'EEPROM
         
     //Interruptions
@@ -27,15 +27,23 @@ void Init(void){
     ANCON2 = 0x00;
     TRISD  = 0x00;         // 0 => PORTD en sortie
     TRISH  = 0xFF;         // 1 => PORTH en entrée
-    TRISG  = 0x00;
+    
+    // OBLIGATOIRE : configuration de la liaison serie
+    TRISG = 0x04;         // TX-G1 en sortie 0 et RX-G2 en entree 1
 }
 
-/**Initialisation des parametres de communications par liaisons serie
+/**Initialisation des parametres de communications par liaisons serie UART
  * @param addr
  * @return 
  */
-void Init_liaison_serie(){
+void Init_UART2(void){
+    TXSTA2 = 0x20;  // Configuration de TX2 en sortie
+    RCSTA2 = 0x90;  // Configuration de RX2 en entree
     
+    BAUDCON2 = 0x00;
+    
+    SPBRGH2 = 0;
+    SPBRG2 = 17;
 }
 
 /**Initialisation des ports d acces a la ressources epprom pour de la lecture
@@ -104,3 +112,4 @@ __delay_ms( val) ;
         __delay_ms(1);
     }
 }
+

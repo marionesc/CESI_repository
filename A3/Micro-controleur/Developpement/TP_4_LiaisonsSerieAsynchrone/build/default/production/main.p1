@@ -4,59 +4,26 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Init `(v ~T0 @X0 0 ef ]
 "28 LCD.h
 [v _init_aff_lcd `(v ~T0 @X0 0 ef ]
-"27
+"25 fonction.h
+[v _Init_UART2 `(v ~T0 @X0 0 ef ]
+"24 interruption.h
+[v _Init_interruption `(v ~T0 @X0 0 ef ]
+"27 LCD.h
 [v _acq `(v ~T0 @X0 0 ef ]
-"27 fonction.h
-[v _I2C_Init `(v ~T0 @X0 0 ef ]
-"3 CNA.h
-[v _ADC_read `(uc ~T0 @X0 0 ef1`i ]
-"4
-[v _DAC_write `(v ~T0 @X0 0 ef1`uc ]
-"32 LCD.h
-[v _writeLCD_number `(v ~T0 @X0 0 ef1`i ]
-[s S610 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S610 . RG0 RG1 RG2 RG3 RG4 RG5 ]
-[s S611 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S611 . CCP3 C3OUT C3INA C3INB C3INC ]
-[s S612 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S612 . PA3 TX2 RX2 PD3 PD1 ]
-[s S613 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S613 . . AN19 AN18 AN17 AN16 ]
-[s S614 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S614 . . CK2 DT2 CCP4 CCP5 ]
-[s S615 :4 `uc 1 :1 `uc 1 ]
-[n S615 . . T7CKI ]
-[s S616 :4 `uc 1 :1 `uc 1 ]
-[n S616 . . T5G ]
-[s S617 :4 `uc 1 :1 `uc 1 ]
-[n S617 . . RTCC ]
-[s S618 :1 `uc 1 :1 `uc 1 ]
-[n S618 . . C3OUTG ]
-[s S619 :6 `uc 1 :1 `uc 1 ]
-[n S619 . . RG6 ]
-[s S620 :7 `uc 1 :1 `uc 1 ]
-[n S620 . . RG7 ]
-[s S621 :5 `uc 1 :1 `uc 1 ]
-[n S621 . . RJPU ]
-[u S609 `S610 1 `S611 1 `S612 1 `S613 1 `S614 1 `S615 1 `S616 1 `S617 1 `S618 1 `S619 1 `S620 1 `S621 1 ]
-[n S609 . . . . . . . . . . . . . ]
-"9514 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _PORTGbits `VS609 ~T0 @X0 0 e@3974 ]
 "28 fonction.h
-[v _delai_ms `(v ~T0 @X0 0 ef1`uc ]
-[s S746 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S746 . TMR1IF TMR2IF TMR1GIF SSP1IF TX1IF RC1IF ADIF PSPIF ]
-[s S747 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S747 . . SSPIF TXIF RCIF ]
-[u S745 `S746 1 `S747 1 ]
-[n S745 . . . ]
-"11896 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _PIR1bits `VS745 ~T0 @X0 0 e@3998 ]
+[v _I2C_Init `(v ~T0 @X0 0 ef ]
+"666 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
+[v _TXREG2 `Vuc ~T0 @X0 0 e@3868 ]
+"4 get_keyboard.h
+[v _get_keyboard_f `(uc ~T0 @X0 0 ef ]
+"31 LCD.h
+[v _aff_lcd `(v ~T0 @X0 0 ef1`uc ]
 [; ;fonction.h: 24: void Init (void);
-[; ;fonction.h: 25: void Eeprom_write(unsigned char addr, unsigned char data);
-[; ;fonction.h: 26: int Eeprom_read(unsigned char addr);
-[; ;fonction.h: 27: void I2C_Init();
-[; ;fonction.h: 28: void delai_ms(unsigned char val);
+[; ;fonction.h: 25: void Init_UART2(void);
+[; ;fonction.h: 26: void Eeprom_write(unsigned char addr, unsigned char data);
+[; ;fonction.h: 27: int Eeprom_read(unsigned char addr);
+[; ;fonction.h: 28: void I2C_Init();
+[; ;fonction.h: 29: void delai_ms(unsigned char val);
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9223,78 +9190,74 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;clav.h: 5: unsigned char high_priority interrupt get_val_clav ();
 [; ;CNA.h: 3: unsigned char ADC_read(int channel);
 [; ;CNA.h: 4: void DAC_write(unsigned char value);
-"19 main.c
+[; ;get_keyboard.h: 4: unsigned char get_keyboard_f(void);
+[; ;uart.h: 23: void set_UART1(unsigned char set_message);
+[; ;uart.h: 24: void set_UART1_hyper(unsigned char set_message);
+[; ;uart.h: 26: void set_UART2(unsigned char set_message);
+[; ;uart.h: 27: void set_UART2_pc(unsigned char set_message);
+[; ;interruption.h: 24: void Init_interruption(void);
+"22 main.c
+[v _keyboard_value `uc ~T0 @X0 1 e ]
+[; ;main.c: 22: unsigned char keyboard_value;
+"23
+[v _keyboard_flag `i ~T0 @X0 1 e ]
+[i _keyboard_flag
+-> 0 `i
+]
+[; ;main.c: 23: int keyboard_flag = 0;
+"25
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 19: void main(void) {
+[; ;main.c: 25: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 20: Init();
-"20
+[; ;main.c: 26: Init();
+"26
 [e ( _Init ..  ]
-[; ;main.c: 21: init_aff_lcd();
-"21
+[; ;main.c: 27: init_aff_lcd();
+"27
 [e ( _init_aff_lcd ..  ]
-[; ;main.c: 22: acq();
-"22
+[; ;main.c: 28: Init_UART2();
+"28
+[e ( _Init_UART2 ..  ]
+[; ;main.c: 29: Init_interruption();
+"29
+[e ( _Init_interruption ..  ]
+[; ;main.c: 31: acq();
+"31
 [e ( _acq ..  ]
-[; ;main.c: 23: I2C_Init();
-"23
+[; ;main.c: 32: I2C_Init();
+"32
 [e ( _I2C_Init ..  ]
-[; ;main.c: 24: while (1) {
-"24
+[; ;main.c: 33: while (1) {
+"33
 [e :U 1240 ]
 {
-"25
-[v _value `d ~T0 @X0 1 a ]
-[; ;main.c: 25: double value = ADC_read(0);
-[e = _value -> ( _ADC_read (1 -> 0 `i `d ]
-[; ;main.c: 26: DAC_write(value);
-"26
-[e ( _DAC_write (1 -> _value `uc ]
-[; ;main.c: 27: value = (value*1000*(5/255));
-"27
-[e = _value * * _value -> -> 1000 `i `d -> / -> 5 `i -> 255 `i `d ]
-[; ;main.c: 28: writeLCD_number(value);
-"28
-[e ( _writeLCD_number (1 -> _value `i ]
-[; ;main.c: 29: if (value > 255 * 0.7) {
-"29
-[e $ ! > _value * -> -> 255 `i `d .0.7 1242  ]
-{
-[; ;main.c: 30: PORTGbits.RG0 = 1;
-"30
-[e = . . _PORTGbits 0 0 -> -> 1 `i `uc ]
-"31
-}
-[; ;main.c: 31: } else {
-[e $U 1243  ]
-[e :U 1242 ]
-{
-[; ;main.c: 32: PORTGbits.RG0 = 0;
-"32
-[e = . . _PORTGbits 0 0 -> -> 0 `i `uc ]
-"33
-}
-[e :U 1243 ]
-[; ;main.c: 33: }
-[; ;main.c: 34: delai_ms(100);
+[; ;main.c: 34: if (keyboard_flag == 1){
 "34
-[e ( _delai_ms (1 -> -> 100 `i `uc ]
-[; ;main.c: 35: PIR1bits.ADIF = 0;
+[e $ ! == _keyboard_flag -> 1 `i 1242  ]
+{
+[; ;main.c: 35: TXREG2 = get_keyboard_f();
 "35
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 36: return;
+[e = _TXREG2 ( _get_keyboard_f ..  ]
+[; ;main.c: 36: aff_lcd(0x05);
 "36
-[e $UE 1238  ]
+[e ( _aff_lcd (1 -> -> 5 `i `uc ]
+[; ;main.c: 37: keyboard_flag = 0;
 "37
+[e = _keyboard_flag -> 0 `i ]
+"38
+}
+[e :U 1242 ]
+"39
 }
 [e :U 1239 ]
-"24
+"33
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;main.c: 37: }
 [; ;main.c: 38: }
-"38
+[; ;main.c: 39: }
+[; ;main.c: 40: }
+"40
 [e :UE 1238 ]
 }

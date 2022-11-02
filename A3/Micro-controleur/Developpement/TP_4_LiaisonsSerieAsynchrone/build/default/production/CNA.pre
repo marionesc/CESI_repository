@@ -11942,24 +11942,3 @@ ADCON0bits.ADON = 0;
 return ADRESH;
 }
 
-
-void DAC_write(unsigned char value) {
-SSP1CON2bits.SEN = 1;
-while (PIR1bits.SSP1IF == 0) {}
-PIR1bits.SSP1IF = 0;
-SSP1BUF = 0x90;
-while (SSP1CON2bits.ACKSTAT == 1) {};
-while (PIR1bits.SSP1IF == 0) {}
-PIR1bits.SSP1IF = 0;
-SSP1BUF = 0x40;
-while (SSP1CON2bits.ACKSTAT == 1) {};
-while (PIR1bits.SSP1IF == 0) {}
-PIR1bits.SSP1IF = 0;
-SSP1BUF = value;
-while (SSP1CON2bits.ACKSTAT == 1) {};
-while (PIR1bits.SSP1IF == 0) {}
-PIR1bits.SSP1IF = 0;
-SSP1CON2bits.PEN = 1;
-while (PIR1bits.SSP1IF == 0) {}
-PIR1bits.SSP1IF = 0;
-}

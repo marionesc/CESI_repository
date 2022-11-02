@@ -22,24 +22,28 @@ unsigned char ADC_read(int channel){
 }
 
 //fonction de conversion digital/analogique via le bus I2C
+/*
 void DAC_write(unsigned char value) {
-    SSP1CON2bits.SEN = 1; // Envoi du bit de start
+    SSP1CON2bits.SEN = 1;                        // Envoi du bit de start
     while (PIR1bits.SSP1IF == 0) {}
     PIR1bits.SSP1IF = 0;
-    SSP1BUF = 0x90; // adresse du convertisseur dig/ana
-    while (SSP1CON2bits.ACKSTAT == 1) {}; // tant que acquittement du convertisseur non reçu
+    SSP1BUF = 0x90;                             // adresse du convertisseur D-A
+    
+    while (SSP1CON2bits.ACKSTAT == 1) {};       // tant que acquittement du convertisseur non reçu
     while (PIR1bits.SSP1IF == 0) {}
     PIR1bits.SSP1IF = 0;
-    SSP1BUF = 0x40; // bits de contrôle
-    while (SSP1CON2bits.ACKSTAT == 1) {}; // tant que acquittement du convertisseur non reçu
-    while (PIR1bits.SSP1IF == 0) {}
+    SSP1BUF = 0x40;                             // bits de contrôle
+    
+    while(SSP1CON2bits.ACKSTAT == 1){};       // tant que acquittement du convertisseur non reçu
+    while(PIR1bits.SSP1IF == 0){};
     PIR1bits.SSP1IF = 0;
-    SSP1BUF = value; // bits de do
-    nnées 0 à 255
-    while (SSP1CON2bits.ACKSTAT == 1) {}; // tant que acquittement du convertisseur non reçu
-    while (PIR1bits.SSP1IF == 0) {}
+    SSP1BUF = value;                            // bits de données 0 à 255
+    
+    while (SSP1CON2bits.ACKSTAT == 1){};       // tant que acquittement du convertisseur non reçu
+    while (PIR1bits.SSP1IF == 0){};
     PIR1bits.SSP1IF = 0;
-    SSP1CON2bits.PEN = 1; // Envoi du bit de stop
+    SSP1CON2bits.PEN = 1;                       // Envoi du bit de stop
     while (PIR1bits.SSP1IF == 0) {}
     PIR1bits.SSP1IF = 0;
 }
+*/

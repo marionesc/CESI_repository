@@ -11,29 +11,31 @@
 #include "LCD.h"
 #include "clav.h"
 #include "CNA.h"
+#include "get_keyboard.h"
+#include "uart.h"
+#include "interruption.h"
 
 
 #define _XTAL_FREQ 11059200
 
+// GLOBAL VALUE
+unsigned char keyboard_value;
+int keyboard_flag = 0;
 
 void main(void) {
     Init();
     init_aff_lcd();
+    Init_UART2();
+    Init_interruption();
+    
     acq();
     I2C_Init();
     while (1) {
-        double value = ADC_read(0); // TP3
-        DAC_write(value);
-        value = (value*1000*(5/255));
-        writeLCD_number(value);
-        if (value > 255 * 0.7) {
-            PORTGbits.RG0 = 1;
-        } else {
-            PORTGbits.RG0 = 0;
+        if (keyboard_flag == 1){
+            TXREG2 = get_keyboard_f();
+            aff_lcd(0x05);
+            keyboard_flag = 0;
         }
-        delai_ms(100);
-        PIR1bits.ADIF = 0; // clear ADC interrupt flag
-        return;
     }
 }
 

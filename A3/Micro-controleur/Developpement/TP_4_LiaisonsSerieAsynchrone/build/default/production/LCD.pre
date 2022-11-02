@@ -11935,7 +11935,7 @@ void aff_lcd(char c);
 void writeLCD_number(int number);
 int conversion_echelle(int min_echelle,int max_echelle,int min_aff,int max_aff,int value);
 
-# 21 "LCD.c"
+# 22 "LCD.c"
 void set_ddram(unsigned char addr) {
 LCD_FUNC = 0x40 & addr;
 }

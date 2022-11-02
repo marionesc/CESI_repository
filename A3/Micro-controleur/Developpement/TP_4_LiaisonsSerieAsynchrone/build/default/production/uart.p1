@@ -1,7 +1,16 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"144 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18.h
-[v __delay `(v ~T0 @X0 0 ef1`ul ]
-[p i __delay ]
+"21705 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
+[v _TX1IF `Vb ~T0 @X0 0 e@31988 ]
+"13426
+[v _TXREG1 `Vuc ~T0 @X0 0 e@4013 ]
+"666
+[v _TXREG2 `Vuc ~T0 @X0 0 e@3868 ]
+"8 uart.c
+[v _keyboard_flag `i ~T0 @X0 0 e ]
+"4 get_keyboard.h
+[v _get_keyboard_f `(uc ~T0 @X0 0 ef ]
+"27 LCD.h
+[v _acq `(v ~T0 @X0 0 ef ]
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9140,6 +9149,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 144: extern void _delay(unsigned long);
 [; ;pic18.h: 146: extern void _delaywdt(unsigned long);
 [; ;pic18.h: 148: extern void _delay3(unsigned char);
+[; ;get_keyboard.h: 4: unsigned char get_keyboard_f(void);
 "24 LCD.h
 [v _LCD_FUNC `Fuc ~T0 @X0 1 e@1703936 ]
 [; ;LCD.h: 24: far unsigned char LCD_FUNC@0x1A0000;
@@ -9159,404 +9169,159 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD.h: 31: void aff_lcd(char c);
 [; ;LCD.h: 32: void writeLCD_number(int number);
 [; ;LCD.h: 33: int conversion_echelle(int min_echelle,int max_echelle,int min_aff,int max_aff,int value);
-"22 LCD.c
-[v _set_ddram `(v ~T0 @X0 1 ef1`uc ]
+[; ;fonction.h: 24: void Init (void);
+[; ;fonction.h: 25: void Init_UART2(void);
+[; ;fonction.h: 26: void Eeprom_write(unsigned char addr, unsigned char data);
+[; ;fonction.h: 27: int Eeprom_read(unsigned char addr);
+[; ;fonction.h: 28: void I2C_Init();
+[; ;fonction.h: 29: void delai_ms(unsigned char val);
+[; ;uart.h: 23: void set_UART1(unsigned char set_message);
+[; ;uart.h: 24: void set_UART1_hyper(unsigned char set_message);
+[; ;uart.h: 26: void set_UART2(unsigned char set_message);
+[; ;uart.h: 27: void set_UART2_pc(unsigned char set_message);
+[; ;uart.c: 7: extern unsigned char keyboard_value;
+[; ;uart.c: 8: extern int keyboard_flag;
+"17 uart.c
+[v _set_UART1 `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;LCD.c: 22: void set_ddram(unsigned char addr) {
-[e :U _set_ddram ]
-[v _addr `uc ~T0 @X0 1 r1 ]
+[; ;uart.c: 17: void set_UART1(unsigned char set_message){
+[e :U _set_UART1 ]
+[v _set_message `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;LCD.c: 23: LCD_FUNC = 0x40 & addr;
-"23
-[e = _LCD_FUNC -> & -> 64 `i -> _addr `i `uc ]
-[; ;LCD.c: 24: }
-"24
+[; ;uart.c: 18: while(TX1IF == 0);
+"18
+[e $U 1239  ]
+[e :U 1240 ]
+[e :U 1239 ]
+[e $ == -> _TX1IF `i -> 0 `i 1240  ]
+[e :U 1241 ]
+[; ;uart.c: 19: TXREG1 = set_message;
+"19
+[e = _TXREG1 _set_message ]
+[; ;uart.c: 20: }
+"20
 [e :UE 1238 ]
 }
+"26
+[v _set_UART1_hyper `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;uart.c: 26: void set_UART1_hyper(unsigned char set_message){
+[e :U _set_UART1_hyper ]
+[v _set_message `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;uart.c: 27: if (set_message != 0x00){
 "27
-[v _char_to_ascii `(uc ~T0 @X0 1 ef1`uc ]
+[e $ ! != -> _set_message `i -> 0 `i 1243  ]
 {
-[; ;LCD.c: 27: char char_to_ascii(char c){
-[e :U _char_to_ascii ]
-[v _c `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;LCD.c: 28: return c + 48;
+[; ;uart.c: 28: set_UART1(set_message);
 "28
-[e ) -> + -> _c `i -> 48 `i `uc ]
-[e $UE 1239  ]
-[; ;LCD.c: 29: }
+[e ( _set_UART1 (1 _set_message ]
 "29
-[e :UE 1239 ]
 }
-"31
-[v _init_aff_lcd `(v ~T0 @X0 1 ef ]
-{
-[; ;LCD.c: 31: void init_aff_lcd(void) {
-[e :U _init_aff_lcd ]
-[f ]
-[; ;LCD.c: 32: _delay((unsigned long)((10)*(11059200/4000.0)));
-"32
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 33: LCD_FUNC = 0x38;
-"33
-[e = _LCD_FUNC -> -> 56 `i `uc ]
-[; ;LCD.c: 34: _delay((unsigned long)((5)*(11059200/4000.0)));
-"34
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 35: LCD_FUNC = 0x38;
-"35
-[e = _LCD_FUNC -> -> 56 `i `uc ]
-[; ;LCD.c: 36: _delay((unsigned long)((1)*(11059200/4000.0)));
-"36
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 37: LCD_FUNC = 0x38;
-"37
-[e = _LCD_FUNC -> -> 56 `i `uc ]
-[; ;LCD.c: 38: _delay((unsigned long)((1)*(11059200/4000.0)));
-"38
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 39: LCD_FUNC = 0x38;
-"39
-[e = _LCD_FUNC -> -> 56 `i `uc ]
-[; ;LCD.c: 40: _delay((unsigned long)((1)*(11059200/4000.0)));
-"40
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 41: LCD_FUNC = 0x14;
-"41
-[e = _LCD_FUNC -> -> 20 `i `uc ]
-[; ;LCD.c: 42: _delay((unsigned long)((1)*(11059200/4000.0)));
-"42
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 43: LCD_FUNC = 0x0E;
-"43
-[e = _LCD_FUNC -> -> 14 `i `uc ]
-[; ;LCD.c: 44: _delay((unsigned long)((1)*(11059200/4000.0)));
-"44
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 45: LCD_FUNC = 0x06;
-"45
-[e = _LCD_FUNC -> -> 6 `i `uc ]
-[; ;LCD.c: 46: _delay((unsigned long)((1)*(11059200/4000.0)));
-"46
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 47: LCD_FUNC = 0x02;
-"47
-[e = _LCD_FUNC -> -> 2 `i `uc ]
-[; ;LCD.c: 48: _delay((unsigned long)((2)*(11059200/4000.0)));
-"48
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 49: LCD_FUNC = 0x01;
-"49
-[e = _LCD_FUNC -> -> 1 `i `uc ]
-[; ;LCD.c: 50: _delay((unsigned long)((2)*(11059200/4000.0)));
-"50
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 51: }
-"51
-[e :UE 1240 ]
-}
-"53
-[v _acq `(v ~T0 @X0 1 ef ]
-{
-[; ;LCD.c: 53: void acq(void) {
-[e :U _acq ]
-[f ]
-[; ;LCD.c: 54: while ((LCD_FUNC & 0x80) == 0x80);
-"54
-[e $U 1242  ]
 [e :U 1243 ]
-[e :U 1242 ]
-[e $ == & -> _LCD_FUNC `i -> 128 `i -> 128 `i 1243  ]
-[e :U 1244 ]
-[; ;LCD.c: 55: }
-"55
-[e :UE 1241 ]
+[; ;uart.c: 29: }
+[; ;uart.c: 30: }
+"30
+[e :UE 1242 ]
 }
-"57
-[v _aff_lcd `(v ~T0 @X0 1 ef1`uc ]
+"39
+[v _set_UART2 `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;LCD.c: 57: void aff_lcd(char c) {
-[e :U _aff_lcd ]
-[v _c `uc ~T0 @X0 1 r1 ]
+[; ;uart.c: 39: void set_UART2(unsigned char set_message){
+[e :U _set_UART2 ]
+[v _set_message `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;LCD.c: 58: LCD_FUNC = 0x01;
-"58
-[e = _LCD_FUNC -> -> 1 `i `uc ]
-[; ;LCD.c: 59: acq();
-"59
-[e ( _acq ..  ]
-[; ;LCD.c: 60: LCD_DATA = c;
-"60
-[e = _LCD_DATA _c ]
-[; ;LCD.c: 61: acq();
-"61
-[e ( _acq ..  ]
-[; ;LCD.c: 62: }
-"62
-[e :UE 1245 ]
-}
-"64
-[v _aff_lcd_clav `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;LCD.c: 64: void aff_lcd_clav(unsigned char c) {
-[e :U _aff_lcd_clav ]
-[v _c `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;LCD.c: 66: c = c & 0x0F;
-"66
-[e = _c -> & -> _c `i -> 15 `i `uc ]
-[; ;LCD.c: 67: switch (c) {
-"67
-[e $U 1248  ]
-{
-[; ;LCD.c: 68: case 10:
-"68
-[e :U 1249 ]
-[; ;LCD.c: 69: break;
-"69
-[e $U 1247  ]
-[; ;LCD.c: 71: case 11:
-"71
-[e :U 1250 ]
-[; ;LCD.c: 72: break;
-"72
-[e $U 1247  ]
-[; ;LCD.c: 74: case 12 :
-"74
-[e :U 1251 ]
-[; ;LCD.c: 75: LCD_FUNC = 0x10;
-"75
-[e = _LCD_FUNC -> -> 16 `i `uc ]
-[; ;LCD.c: 76: _delay((unsigned long)((2)*(11059200/4000.0)));
-"76
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 77: acq();
-"77
-[e ( _acq ..  ]
-[; ;LCD.c: 78: break;
-"78
-[e $U 1247  ]
-[; ;LCD.c: 80: case 13 :
-"80
-[e :U 1252 ]
-[; ;LCD.c: 81: LCD_FUNC = 0x14;
-"81
-[e = _LCD_FUNC -> -> 20 `i `uc ]
-[; ;LCD.c: 82: _delay((unsigned long)((2)*(11059200/4000.0)));
-"82
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 83: acq();
-"83
-[e ( _acq ..  ]
-[; ;LCD.c: 84: break;
-"84
-[e $U 1247  ]
-[; ;LCD.c: 86: case 14 :
-"86
-[e :U 1253 ]
-[; ;LCD.c: 87: LCD_FUNC = 0x01;
-"87
-[e = _LCD_FUNC -> -> 1 `i `uc ]
-[; ;LCD.c: 88: _delay((unsigned long)((2)*(11059200/4000.0)));
-"88
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 89: acq();
-"89
-[e ( _acq ..  ]
-[; ;LCD.c: 90: LCD_FUNC = 0x02;
-"90
-[e = _LCD_FUNC -> -> 2 `i `uc ]
-[; ;LCD.c: 91: _delay((unsigned long)((2)*(11059200/4000.0)));
-"91
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 92: acq();
-"92
-[e ( _acq ..  ]
-[; ;LCD.c: 93: break;
-"93
-[e $U 1247  ]
-[; ;LCD.c: 95: case 15 :
-"95
-[e :U 1254 ]
-[; ;LCD.c: 96: LCD_FUNC = 0b0011000000;
-"96
-[e = _LCD_FUNC -> -> 192 `i `uc ]
-[; ;LCD.c: 97: _delay((unsigned long)((2)*(11059200/4000.0)));
-"97
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-[; ;LCD.c: 98: acq();
-"98
-[e ( _acq ..  ]
-[; ;LCD.c: 99: break;
-"99
-[e $U 1247  ]
-[; ;LCD.c: 101: default :
-"101
-[e :U 1255 ]
-[; ;LCD.c: 102: LCD_DATA = c + 48;
-"102
-[e = _LCD_DATA -> + -> _c `i -> 48 `i `uc ]
-[; ;LCD.c: 103: acq();
-"103
-[e ( _acq ..  ]
-[; ;LCD.c: 104: break;
-"104
-[e $U 1247  ]
-"105
-}
-[; ;LCD.c: 105: }
-[e $U 1247  ]
-"67
-[e :U 1248 ]
-[e [\ _c , $ -> -> 10 `i `uc 1249
- , $ -> -> 11 `i `uc 1250
- , $ -> -> 12 `i `uc 1251
- , $ -> -> 13 `i `uc 1252
- , $ -> -> 14 `i `uc 1253
- , $ -> -> 15 `i `uc 1254
- 1255 ]
-"105
+[; ;uart.c: 40: while(TX1IF == 0);
+"40
+[e $U 1245  ]
+[e :U 1246 ]
+[e :U 1245 ]
+[e $ == -> _TX1IF `i -> 0 `i 1246  ]
 [e :U 1247 ]
-[; ;LCD.c: 106: }
-"106
-[e :UE 1246 ]
+[; ;uart.c: 41: TXREG2 = set_message;
+"41
+[e = _TXREG2 _set_message ]
+[; ;uart.c: 42: }
+"42
+[e :UE 1244 ]
 }
-"108
-[v _writeLCD `(v ~T0 @X0 1 ef1`*uc ]
+"48
+[v _set_UART2_pc `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;LCD.c: 108: void writeLCD(char phrase[]) {
-[e :U _writeLCD ]
-[v _phrase `*uc ~T0 @X0 1 r1 ]
+[; ;uart.c: 48: void set_UART2_pc(unsigned char set_message){
+[e :U _set_UART2_pc ]
+[v _set_message `uc ~T0 @X0 1 r1 ]
 [f ]
-"109
-[v _j `i ~T0 @X0 1 a ]
-[; ;LCD.c: 109: int j = 0;
-[e = _j -> 0 `i ]
-[; ;LCD.c: 110: LCD_FUNC = 0x01;
-"110
-[e = _LCD_FUNC -> -> 1 `i `uc ]
-[; ;LCD.c: 111: acq();
-"111
-[e ( _acq ..  ]
-[; ;LCD.c: 112: while (phrase[j] != '\0') {
-"112
-[e $U 1257  ]
-[e :U 1258 ]
+[; ;uart.c: 49: if (set_message != 0x00){
+"49
+[e $ ! != -> _set_message `i -> 0 `i 1249  ]
 {
-[; ;LCD.c: 113: LCD_DATA = phrase[j];
-"113
-[e = _LCD_DATA *U + _phrase * -> _j `x -> -> # *U _phrase `i `x ]
-[; ;LCD.c: 114: acq();
-"114
-[e ( _acq ..  ]
-[; ;LCD.c: 115: j++;
-"115
-[e ++ _j -> 1 `i ]
-"116
+[; ;uart.c: 50: set_UART2(set_message);
+"50
+[e ( _set_UART2 (1 _set_message ]
+"51
 }
-[e :U 1257 ]
-"112
-[e $ != -> *U + _phrase * -> _j `x -> -> # *U _phrase `i `x `ui -> 0 `ui 1258  ]
-[e :U 1259 ]
-[; ;LCD.c: 116: }
-[; ;LCD.c: 117: j = 0;
-"117
-[e = _j -> 0 `i ]
-[; ;LCD.c: 119: }
-"119
-[e :UE 1256 ]
+[e :U 1249 ]
+[; ;uart.c: 51: }
+[; ;uart.c: 52: }
+"52
+[e :UE 1248 ]
 }
-"121
-[v _conversion_echelle `(i ~T0 @X0 1 ef5`i`i`i`i`i ]
+"54
+[v _keyboard_treatment `(v ~T0 @X0 1 ef ]
 {
-[; ;LCD.c: 121: int conversion_echelle(int min_echelle,int max_echelle,int min_aff,int max_aff,int value){
-[e :U _conversion_echelle ]
-[v _min_echelle `i ~T0 @X0 1 r1 ]
-[v _max_echelle `i ~T0 @X0 1 r2 ]
-[v _min_aff `i ~T0 @X0 1 r3 ]
-[v _max_aff `i ~T0 @X0 1 r4 ]
-[v _value `i ~T0 @X0 1 r5 ]
+[; ;uart.c: 54: void keyboard_treatment(void){
+[e :U _keyboard_treatment ]
 [f ]
-"122
-[v _conversion `i ~T0 @X0 1 a ]
-[; ;LCD.c: 122: int conversion = 0;
-[e = _conversion -> 0 `i ]
-[; ;LCD.c: 123: conversion = ((max_aff - min_aff) / (max_echelle - min_echelle))*value;
-"123
-[e = _conversion * / - _max_aff _min_aff - _max_echelle _min_echelle _value ]
-[; ;LCD.c: 124: return conversion;
-"124
-[e ) _conversion ]
-[e $UE 1260  ]
-[; ;LCD.c: 125: }
-"125
-[e :UE 1260 ]
-}
-"129
-[v _writeLCD_number `(v ~T0 @X0 1 ef1`i ]
+"55
+[v _data `uc ~T0 @X0 1 a ]
+[; ;uart.c: 55: unsigned char data;
+[; ;uart.c: 56: if (keyboard_flag == 1){
+"56
+[e $ ! == _keyboard_flag -> 1 `i 1251  ]
 {
-[; ;LCD.c: 129: void writeLCD_number(int number) {
-[e :U _writeLCD_number ]
-[v _number `i ~T0 @X0 1 r1 ]
-[f ]
-"130
-[v _i `i ~T0 @X0 1 a ]
-[; ;LCD.c: 130: int i = 0;
-[e = _i -> 0 `i ]
-"131
-[v _number_string `uc ~T0 @X0 -> 10 `i a ]
-[; ;LCD.c: 131: char number_string[10];
-[; ;LCD.c: 132: LCD_FUNC = 0x01;
-"132
-[e = _LCD_FUNC -> -> 1 `i `uc ]
-[; ;LCD.c: 133: acq();
-"133
+[; ;uart.c: 57: data = get_keyboard_f();
+"57
+[e = _data ( _get_keyboard_f ..  ]
+[; ;uart.c: 59: if (data == 0x3F){
+"59
+[e $ ! == -> _data `i -> 63 `i 1252  ]
+{
+[; ;uart.c: 60: set_UART2(0x0D);
+"60
+[e ( _set_UART2 (1 -> -> 13 `i `uc ]
+[; ;uart.c: 61: set_UART2(0x0A);
+"61
+[e ( _set_UART2 (1 -> -> 10 `i `uc ]
+[; ;uart.c: 62: acq();
+"62
 [e ( _acq ..  ]
-[; ;LCD.c: 134: while (number > 0) {
-"134
-[e $U 1262  ]
-[e :U 1263 ]
-{
-[; ;LCD.c: 135: number_string[i] = number % 10 + 48;
-"135
-[e = *U + &U _number_string * -> -> _i `ui `ux -> -> # *U &U _number_string `ui `ux -> + % _number -> 10 `i -> 48 `i `uc ]
-[; ;LCD.c: 136: number = number / 10;
-"136
-[e = _number / _number -> 10 `i ]
-[; ;LCD.c: 137: i++;
-"137
-[e ++ _i -> 1 `i ]
-"138
+"63
 }
-[e :U 1262 ]
-"134
-[e $ > _number -> 0 `i 1263  ]
-[e :U 1264 ]
-[; ;LCD.c: 138: }
-[; ;LCD.c: 139: for (i = i - 1; i >= 0; i--) {
-"139
+[; ;uart.c: 63: }
+[e $U 1253  ]
+"64
+[e :U 1252 ]
+[; ;uart.c: 64: else{
 {
-[e = _i - _i -> 1 `i ]
-[e $ >= _i -> 0 `i 1265  ]
-[e $U 1266  ]
-[e :U 1265 ]
-{
-[; ;LCD.c: 140: LCD_DATA = number_string[i];
-"140
-[e = _LCD_DATA *U + &U _number_string * -> -> _i `ui `ux -> -> # *U &U _number_string `ui `ux ]
-[; ;LCD.c: 141: acq();
-"141
+[; ;uart.c: 65: set_UART2(data);
+"65
+[e ( _set_UART2 (1 _data ]
+[; ;uart.c: 66: set_UART2_pc(data);
+"66
+[e ( _set_UART2_pc (1 _data ]
+[; ;uart.c: 67: acq();
+"67
 [e ( _acq ..  ]
-"142
+"68
 }
-"139
-[e -- _i -> 1 `i ]
-[e $ >= _i -> 0 `i 1265  ]
-[e :U 1266 ]
-"142
+[e :U 1253 ]
+"69
 }
-[; ;LCD.c: 142: }
-[; ;LCD.c: 143: }
-"143
-[e :UE 1261 ]
+[e :U 1251 ]
+[; ;uart.c: 68: }
+[; ;uart.c: 69: }
+[; ;uart.c: 70: }
+"70
+[e :UE 1250 ]
 }
