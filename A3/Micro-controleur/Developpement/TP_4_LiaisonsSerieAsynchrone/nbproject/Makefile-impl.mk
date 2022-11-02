@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=TP_3_potarEtLCD
+PROJECTNAME=TP_4_LiaisonsSerieAsynchrone
 
 # Active Configuration
 DEFAULTCONF=default

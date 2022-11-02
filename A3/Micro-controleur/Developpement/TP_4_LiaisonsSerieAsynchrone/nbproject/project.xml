@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Potar_V2</name>
-            <creation-uuid>c9b5f259-ff1a-4f04-bb3c-1ba8929b1ee0</creation-uuid>
+            <name>TP_4_LiaisonSerieAsynchrone</name>
+            <creation-uuid>4ce61964-6f87-41e5-a527-3bed0f97932b</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
