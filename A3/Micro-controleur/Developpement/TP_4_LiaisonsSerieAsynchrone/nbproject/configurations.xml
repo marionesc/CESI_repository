@@ -4,14 +4,13 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>clav.h</itemPath>
-      <itemPath>fonction.h</itemPath>
-      <itemPath>LCD.h</itemPath>
       <itemPath>CNA.h</itemPath>
       <itemPath>xc.h</itemPath>
       <itemPath>uart.h</itemPath>
-      <itemPath>get_keyboard.h</itemPath>
-      <itemPath>interruption.h</itemPath>
+      <itemPath>initialization.h</itemPath>
+      <itemPath>eeprom.h</itemPath>
+      <itemPath>keyboard.h</itemPath>
+      <itemPath>screen_lcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,15 +19,14 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>clav.c</itemPath>
       <itemPath>CNA.c</itemPath>
       <itemPath>configuration.c</itemPath>
-      <itemPath>fonction.c</itemPath>
-      <itemPath>LCD.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>uart.c</itemPath>
-      <itemPath>get_keyboard.c</itemPath>
-      <itemPath>interruption.c</itemPath>
+      <itemPath>initialization.c</itemPath>
+      <itemPath>eeprom.c</itemPath>
+      <itemPath>keyboard.c</itemPath>
+      <itemPath>screen_lcd.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

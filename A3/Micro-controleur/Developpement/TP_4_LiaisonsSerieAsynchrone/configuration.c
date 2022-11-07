@@ -1,3 +1,13 @@
+/* 
+ * File:   configuration.c
+ * Author: marion Escouteloup & Clement CHABANIS
+ * GitHub: maesc & 
+ * compileur : xc8 V1_1.12
+ * 
+ * Created on 2022-11-3rd
+ *      Last update : 
+ */
+
 
 #pragma config CONFIG1L = 0x1D
 #pragma config CONFIG1H = 0x03 //HS_OSC

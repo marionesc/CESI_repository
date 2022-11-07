@@ -1,5 +1,5 @@
 /* 
- * File:   CNA.h
+ * File:   eeprom.h
  * Author: marion Escouteloup & Clement CHABANIS
  * GitHub: maesc & 
  * compileur : xc8 V1_1.12
@@ -8,7 +8,9 @@
  *      Last update : 2022-11-07
  */
 
+#ifndef EEPROM_H
+#define	EEPROM_H
 
-unsigned char ADC_read(int channel);
-void DAC_write(unsigned char value);
+int read_eeprom(unsigned char addr);
+void write_eeprom(unsigned char addr, unsigned char data); 
 

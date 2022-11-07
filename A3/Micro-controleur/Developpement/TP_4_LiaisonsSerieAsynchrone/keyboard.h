@@ -1,5 +1,5 @@
 /* 
- * File:   CNA.h
+ * File:   keyboard.h
  * Author: marion Escouteloup & Clement CHABANIS
  * GitHub: maesc & 
  * compileur : xc8 V1_1.12
@@ -8,7 +8,8 @@
  *      Last update : 2022-11-07
  */
 
+#ifndef KEYBOARD_H
+#define	KEYBOARD_H
 
-unsigned char ADC_read(int channel);
-void DAC_write(unsigned char value);
-
+unsigned char high_priority interrupt get_keyboard(void);
+//void high_priority interrupt get_val_clav (); 

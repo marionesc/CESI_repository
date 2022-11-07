@@ -14,6 +14,6 @@ unsigned char mem_touche = 0;
 
 unsigned char high_priority interrupt get_val_clav (){ // interrupt sur appui d'une touche clavier
    aff_lcd_clav(Clavier);
-    INTCONbits.INT0IF = 0;
-    return 0;
+   INTCONbits.INT0IF = 0;
+   return 0;
 }
