@@ -1,4 +1,119 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"144 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18.h
+[v __delay `(v ~T0 @X0 0 ef1`ul ]
+[p i __delay ]
+"55 C:\Program Files (x86)\Microchip\xc8\v1.12\include\string.h
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+[; ;stdio.h: 8: typedef int ptrdiff_t;
+[; ;stdio.h: 9: typedef unsigned size_t;
+[; ;stdio.h: 10: typedef unsigned short wchar_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 23: extern int errno;
+[; ;stdio.h: 54: struct __prbuf
+[; ;stdio.h: 55: {
+[; ;stdio.h: 56: char * ptr;
+[; ;stdio.h: 57: void (* func)(char);
+[; ;stdio.h: 58: };
+[; ;conio.h: 17: extern int errno;
+[; ;conio.h: 20: extern void init_uart(void);
+[; ;conio.h: 22: extern char getch(void);
+[; ;conio.h: 23: extern char getche(void);
+[; ;conio.h: 24: extern void putch(char);
+[; ;conio.h: 25: extern void ungetch(char);
+[; ;conio.h: 27: extern __bit kbhit(void);
+[; ;conio.h: 31: extern char * cgets(char *);
+[; ;conio.h: 32: extern void cputs(const char *);
+[; ;stdio.h: 99: extern int cprintf(char *, ...);
+[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 194: extern char * gets(char *);
+[; ;stdio.h: 195: extern int puts(const char *);
+[; ;stdio.h: 196: extern int scanf(const char *, ...);
+[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...);
+[; ;stdio.h: 198: extern int vprintf(const char *, va_list);
+[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap);
+[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list);
+[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 206: extern int printf(const char *, ...);
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: int rem;
+[; ;stdlib.h: 29: int quot;
+[; ;stdlib.h: 30: } div_t;
+[; ;stdlib.h: 31: typedef struct {
+[; ;stdlib.h: 32: unsigned rem;
+[; ;stdlib.h: 33: unsigned quot;
+[; ;stdlib.h: 34: } udiv_t;
+[; ;stdlib.h: 35: typedef struct {
+[; ;stdlib.h: 36: long quot;
+[; ;stdlib.h: 37: long rem;
+[; ;stdlib.h: 38: } ldiv_t;
+[; ;stdlib.h: 39: typedef struct {
+[; ;stdlib.h: 40: unsigned long quot;
+[; ;stdlib.h: 41: unsigned long rem;
+[; ;stdlib.h: 42: } uldiv_t;
+[; ;stdlib.h: 65: extern double atof(const char *);
+[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 67: extern int atoi(const char *);
+[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 69: extern long atol(const char *);
+[; ;stdlib.h: 70: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 72: extern int rand(void);
+[; ;stdlib.h: 73: extern void srand(unsigned int);
+[; ;stdlib.h: 74: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 75: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 77: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 87: extern void * malloc(size_t);
+[; ;stdlib.h: 88: extern void free(void *);
+[; ;stdlib.h: 89: extern void * realloc(void *, size_t);
+[; ;stdlib.h: 91: extern void abort(void);
+[; ;stdlib.h: 92: extern void exit(int);
+[; ;stdlib.h: 93: extern int atexit(void (*)(void));
+[; ;stdlib.h: 94: extern char * getenv(const char *);
+[; ;stdlib.h: 95: extern char ** environ;
+[; ;stdlib.h: 96: extern int system(char *);
+[; ;stdlib.h: 97: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 98: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 99: extern int abs(int);
+[; ;stdlib.h: 100: extern long labs(long);
+[; ;stdlib.h: 103: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 104: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 109: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 110: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 112: extern char * ftoa(float f, int * status);
+[; ;string.h: 22: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 23: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 24: extern void * memset(void *, int, size_t);
+[; ;string.h: 35: extern char * strcat(char *, const char *);
+[; ;string.h: 36: extern char * strcpy(char *, const char *);
+[; ;string.h: 37: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 38: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strdup(const char *);
+[; ;string.h: 40: extern char * strtok(char *, const char *);
+[; ;string.h: 43: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 44: extern int strcmp(const char *, const char *);
+[; ;string.h: 45: extern int stricmp(const char *, const char *);
+[; ;string.h: 46: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 47: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 49: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 50: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 51: extern size_t strspn(const char *, const char *);
+[; ;string.h: 52: extern char * strstr(const char *, const char *);
+[; ;string.h: 53: extern char * stristr(const char *, const char *);
+[; ;string.h: 54: extern char * strerror(int);
+[; ;string.h: 55: extern size_t strlen(const char *);
+[; ;string.h: 56: extern char * strchr(const char *, int);
+[; ;string.h: 57: extern char * strichr(const char *, int);
+[; ;string.h: 58: extern char * strrchr(const char *, int);
+[; ;string.h: 59: extern char * strrichr(const char *, int);
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -8381,9 +8496,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;EEP.h: 36: void Busy_eep ( void );
 [; ;EEP.h: 37: unsigned char Read_b_eep( unsigned int badd );
 [; ;EEP.h: 38: void Write_b_eep( unsigned int badd, unsigned char bdata );
-[; ;stddef.h: 2: typedef int ptrdiff_t;
-[; ;stddef.h: 3: typedef unsigned size_t;
-[; ;stddef.h: 4: typedef unsigned short wchar_t;
 [; ;stddef.h: 13: extern int errno;
 [; ;GenericTypeDefs.h: 65: typedef enum _BOOL { FALSE = 0, TRUE } BOOL;
 [; ;GenericTypeDefs.h: 68: typedef enum _BIT { CLEAR = 0, SET } BIT;
@@ -9137,27 +9249,362 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 144: extern void _delay(unsigned long);
 [; ;pic18.h: 146: extern void _delaywdt(unsigned long);
 [; ;pic18.h: 148: extern void _delay3(unsigned char);
-[; ;get_keyboard.h: 4: unsigned char get_keyboard_f(void);
-"4 get_keyboard.c
-[v _CLAV `Fuc ~T0 @X0 1 e@1572864 ]
-[; ;get_keyboard.c: 4: far unsigned char CLAV @0x180000;
-"6
-[v _get_keyboard_f `(uc ~T0 @X0 1 ef ]
+[; ;initialization.h: 13: void Init(void);
+[; ;initialization.h: 14: void I2C_Init(void);
+[; ;initialization.h: 15: void Init_interuption(void);
+[; ;initialization.h: 18: void delai_ms(unsigned char val);
+[; ;initialization.h: 19: char char_to_ascii(char data);
+[; ;initialization.h: 20: int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value);
+[; ;eeprom.h: 12: int read_eeprom(unsigned char addr);
+[; ;eeprom.h: 13: void write_eeprom(unsigned char addr, unsigned char data);
+[; ;keyboard.h: 11: unsigned char get_keyboard();
+[; ;screen_lcd.h: 4: void init_screen_lcd(void);
+[; ;screen_lcd.h: 7: void acq(void);
+[; ;screen_lcd.h: 8: void set_ddram(unsigned char addr);
+[; ;screen_lcd.h: 9: void screen_action(unsigned char keyboard);
+[; ;screen_lcd.h: 10: void screen_word_write(char *word);
+[; ;screen_lcd.h: 11: void screen_number_write(int number);
+[; ;uart.h: 2: void Init_UART1(void);
+[; ;uart.h: 3: void set_UART1(unsigned char set_message);
+[; ;uart.h: 4: void set_UART1_hyper(unsigned char set_message);
+[; ;uart.h: 7: void Init_UART2(void);
+[; ;uart.h: 8: void set_UART2(unsigned char set_message);
+[; ;uart.h: 9: void set_UART2_pc(unsigned char set_message);
+[; ;uart.h: 12: void keyboard_treatment(void);
+[; ;CNA.h: 12: unsigned char ADC_read(int channel);
+[; ;CNA.h: 13: void DAC_write(unsigned char value);
+"44 screen_lcd.c
+[v _LCD_FUNC `Fuc ~T0 @X0 1 e@1703936 ]
+[; ;screen_lcd.c: 44: far unsigned char LCD_FUNC @0x1A0000;
+"45
+[v _LCD_DATA `Fuc ~T0 @X0 1 e@1703938 ]
+[; ;screen_lcd.c: 45: far unsigned char LCD_DATA @0x1A0002;
+"56
+[v _init_screen_lcd `(v ~T0 @X0 1 ef ]
 {
-[; ;get_keyboard.c: 6: unsigned char get_keyboard_f(void){
-[e :U _get_keyboard_f ]
+[; ;screen_lcd.c: 56: void init_screen_lcd(void) {
+[e :U _init_screen_lcd ]
 [f ]
-"7
-[v _keyboard_value `uc ~T0 @X0 1 a ]
-[; ;get_keyboard.c: 7: unsigned char keyboard_value;
-[; ;get_keyboard.c: 8: keyboard_value = CLAV&0x0F + 0x30;
-"8
-[e = _keyboard_value -> & -> _CLAV `i + -> 15 `i -> 48 `i `uc ]
-[; ;get_keyboard.c: 10: return keyboard_value;
-"10
-[e ) _keyboard_value ]
-[e $UE 1238  ]
-[; ;get_keyboard.c: 11: }
-"11
-[e :UE 1238 ]
+[; ;screen_lcd.c: 57: _delay((unsigned long)((10)*(11059200/4000.0))); LCD_FUNC = 0x38;
+"57
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e = _LCD_FUNC -> -> 56 `i `uc ]
+[; ;screen_lcd.c: 58: _delay((unsigned long)((5)*(11059200/4000.0))); LCD_FUNC = 0x38;
+"58
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e = _LCD_FUNC -> -> 56 `i `uc ]
+[; ;screen_lcd.c: 59: _delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x38;
+"59
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e = _LCD_FUNC -> -> 56 `i `uc ]
+[; ;screen_lcd.c: 60: _delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x38;
+"60
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e = _LCD_FUNC -> -> 56 `i `uc ]
+[; ;screen_lcd.c: 61: _delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x14;
+"61
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e = _LCD_FUNC -> -> 20 `i `uc ]
+[; ;screen_lcd.c: 62: _delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x0E;
+"62
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e = _LCD_FUNC -> -> 14 `i `uc ]
+[; ;screen_lcd.c: 63: _delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x06;
+"63
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e = _LCD_FUNC -> -> 6 `i `uc ]
+[; ;screen_lcd.c: 64: _delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x02;
+"64
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e = _LCD_FUNC -> -> 2 `i `uc ]
+[; ;screen_lcd.c: 65: _delay((unsigned long)((2)*(11059200/4000.0))); LCD_FUNC = 0x01;
+"65
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e = _LCD_FUNC -> -> 1 `i `uc ]
+[; ;screen_lcd.c: 66: _delay((unsigned long)((2)*(11059200/4000.0)));
+"66
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[; ;screen_lcd.c: 67: }
+"67
+[e :UE 1243 ]
+}
+"75
+[v _acq `(v ~T0 @X0 1 ef ]
+{
+[; ;screen_lcd.c: 75: void acq(void) {
+[e :U _acq ]
+[f ]
+[; ;screen_lcd.c: 76: while ((LCD_FUNC & 0x80) == 0x80);
+"76
+[e $U 1245  ]
+[e :U 1246 ]
+[e :U 1245 ]
+[e $ == & -> _LCD_FUNC `i -> 128 `i -> 128 `i 1246  ]
+[e :U 1247 ]
+[; ;screen_lcd.c: 77: }
+"77
+[e :UE 1244 ]
+}
+"85
+[v _set_ddram `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;screen_lcd.c: 85: void set_ddram(unsigned char addr) {
+[e :U _set_ddram ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;screen_lcd.c: 86: LCD_FUNC = 0x40 & addr;
+"86
+[e = _LCD_FUNC -> & -> 64 `i -> _addr `i `uc ]
+[; ;screen_lcd.c: 87: }
+"87
+[e :UE 1248 ]
+}
+"94
+[v _screen_action `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;screen_lcd.c: 94: void screen_action(unsigned char keyboard) {
+[e :U _screen_action ]
+[v _keyboard `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;screen_lcd.c: 95: keyboard = keyboard & 0x0F;
+"95
+[e = _keyboard -> & -> _keyboard `i -> 15 `i `uc ]
+[; ;screen_lcd.c: 97: switch (keyboard) {
+"97
+[e $U 1251  ]
+{
+[; ;screen_lcd.c: 99: case 10 : break;
+"99
+[e :U 1252 ]
+[e $U 1250  ]
+[; ;screen_lcd.c: 100: case 11 : break;
+"100
+[e :U 1253 ]
+[e $U 1250  ]
+[; ;screen_lcd.c: 102: case 12 :
+"102
+[e :U 1254 ]
+[; ;screen_lcd.c: 103: LCD_FUNC = 0x10;
+"103
+[e = _LCD_FUNC -> -> 16 `i `uc ]
+[; ;screen_lcd.c: 104: _delay((unsigned long)((2)*(11059200/4000.0))); acq();
+"104
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e ( _acq ..  ]
+[; ;screen_lcd.c: 105: break;
+"105
+[e $U 1250  ]
+[; ;screen_lcd.c: 107: case 13 :
+"107
+[e :U 1255 ]
+[; ;screen_lcd.c: 108: LCD_FUNC = 0x14;
+"108
+[e = _LCD_FUNC -> -> 20 `i `uc ]
+[; ;screen_lcd.c: 109: _delay((unsigned long)((2)*(11059200/4000.0))); acq();
+"109
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e ( _acq ..  ]
+[; ;screen_lcd.c: 110: break;
+"110
+[e $U 1250  ]
+[; ;screen_lcd.c: 112: case 14 :
+"112
+[e :U 1256 ]
+[; ;screen_lcd.c: 113: LCD_FUNC = 0x01;
+"113
+[e = _LCD_FUNC -> -> 1 `i `uc ]
+[; ;screen_lcd.c: 114: _delay((unsigned long)((2)*(11059200/4000.0))); acq();
+"114
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e ( _acq ..  ]
+[; ;screen_lcd.c: 116: LCD_FUNC = 0x02;
+"116
+[e = _LCD_FUNC -> -> 2 `i `uc ]
+[; ;screen_lcd.c: 117: _delay((unsigned long)((2)*(11059200/4000.0))); acq();
+"117
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[e ( _acq ..  ]
+[; ;screen_lcd.c: 118: break;
+"118
+[e $U 1250  ]
+[; ;screen_lcd.c: 120: case 15 :
+"120
+[e :U 1257 ]
+[; ;screen_lcd.c: 121: LCD_FUNC = 0b0011000000;
+"121
+[e = _LCD_FUNC -> -> 192 `i `uc ]
+[; ;screen_lcd.c: 122: _delay((unsigned long)((2)*(11059200/4000.0)));
+"122
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+[; ;screen_lcd.c: 123: acq();
+"123
+[e ( _acq ..  ]
+[; ;screen_lcd.c: 124: break;
+"124
+[e $U 1250  ]
+[; ;screen_lcd.c: 126: default :
+"126
+[e :U 1258 ]
+[; ;screen_lcd.c: 127: LCD_DATA = keyboard + 48;
+"127
+[e = _LCD_DATA -> + -> _keyboard `i -> 48 `i `uc ]
+[; ;screen_lcd.c: 128: acq();
+"128
+[e ( _acq ..  ]
+[; ;screen_lcd.c: 129: break;
+"129
+[e $U 1250  ]
+"130
+}
+[; ;screen_lcd.c: 130: }
+[e $U 1250  ]
+"97
+[e :U 1251 ]
+[e [\ _keyboard , $ -> -> 10 `i `uc 1252
+ , $ -> -> 11 `i `uc 1253
+ , $ -> -> 12 `i `uc 1254
+ , $ -> -> 13 `i `uc 1255
+ , $ -> -> 14 `i `uc 1256
+ , $ -> -> 15 `i `uc 1257
+ 1258 ]
+"130
+[e :U 1250 ]
+[; ;screen_lcd.c: 131: }
+"131
+[e :UE 1249 ]
+}
+"138
+[v _screen_word_write `(v ~T0 @X0 1 ef1`*uc ]
+{
+[; ;screen_lcd.c: 138: void screen_word_write(char *word) {
+[e :U _screen_word_write ]
+[v _word `*uc ~T0 @X0 1 r1 ]
+[f ]
+"139
+[v _word_length `i ~T0 @X0 1 a ]
+[; ;screen_lcd.c: 139: int word_length = strlen(word);
+[e = _word_length -> ( _strlen (1 -> _word `*Cuc `i ]
+[; ;screen_lcd.c: 141: LCD_FUNC = 0x01;
+"141
+[e = _LCD_FUNC -> -> 1 `i `uc ]
+[; ;screen_lcd.c: 142: acq();
+"142
+[e ( _acq ..  ]
+[; ;screen_lcd.c: 143: if(word_length == 1){
+"143
+[e $ ! == _word_length -> 1 `i 1260  ]
+{
+[; ;screen_lcd.c: 144: LCD_DATA = word;
+"144
+[e = _LCD_DATA -> _word `Fuc ]
+[; ;screen_lcd.c: 145: acq();
+"145
+[e ( _acq ..  ]
+"146
+}
+[; ;screen_lcd.c: 146: }
+[e $U 1261  ]
+"147
+[e :U 1260 ]
+[; ;screen_lcd.c: 147: else{
+{
+[; ;screen_lcd.c: 148: for(int j = 1; j < word_length; j++){
+"148
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 1 `i ]
+[e $U 1265  ]
+[e :U 1262 ]
+{
+[; ;screen_lcd.c: 149: LCD_DATA = word[j];
+"149
+[e = _LCD_DATA *U + _word * -> _j `x -> -> # *U _word `i `x ]
+[; ;screen_lcd.c: 150: acq();
+"150
+[e ( _acq ..  ]
+"151
+}
+"148
+[e ++ _j -> 1 `i ]
+[e :U 1265 ]
+[e $ < _j _word_length 1262  ]
+[e :U 1263 ]
+"151
+}
+"152
+}
+[e :U 1261 ]
+[; ;screen_lcd.c: 151: }
+[; ;screen_lcd.c: 152: }
+[; ;screen_lcd.c: 153: }
+"153
+[e :UE 1259 ]
+}
+"160
+[v _screen_number_write `(v ~T0 @X0 1 ef1`i ]
+{
+[; ;screen_lcd.c: 160: void screen_number_write(int number){
+[e :U _screen_number_write ]
+[v _number `i ~T0 @X0 1 r1 ]
+[f ]
+"161
+[v _i `i ~T0 @X0 1 a ]
+[; ;screen_lcd.c: 161: int i = 0;
+[e = _i -> 0 `i ]
+"162
+[v _number_string `uc ~T0 @X0 -> 10 `i a ]
+[; ;screen_lcd.c: 162: char number_string[10];
+[; ;screen_lcd.c: 163: LCD_FUNC = 0x01;
+"163
+[e = _LCD_FUNC -> -> 1 `i `uc ]
+[; ;screen_lcd.c: 164: acq();
+"164
+[e ( _acq ..  ]
+[; ;screen_lcd.c: 165: while (number > 0) {
+"165
+[e $U 1267  ]
+[e :U 1268 ]
+{
+[; ;screen_lcd.c: 166: number_string[i] = number % 10 + 48;
+"166
+[e = *U + &U _number_string * -> -> _i `ui `ux -> -> # *U &U _number_string `ui `ux -> + % _number -> 10 `i -> 48 `i `uc ]
+[; ;screen_lcd.c: 167: number = number / 10;
+"167
+[e = _number / _number -> 10 `i ]
+[; ;screen_lcd.c: 168: i++;
+"168
+[e ++ _i -> 1 `i ]
+"169
+}
+[e :U 1267 ]
+"165
+[e $ > _number -> 0 `i 1268  ]
+[e :U 1269 ]
+[; ;screen_lcd.c: 169: }
+[; ;screen_lcd.c: 170: for (i = i - 1; i >= 0; i--) {
+"170
+{
+[e = _i - _i -> 1 `i ]
+[e $ >= _i -> 0 `i 1270  ]
+[e $U 1271  ]
+[e :U 1270 ]
+{
+[; ;screen_lcd.c: 171: LCD_DATA = number_string[i];
+"171
+[e = _LCD_DATA *U + &U _number_string * -> -> _i `ui `ux -> -> # *U &U _number_string `ui `ux ]
+[; ;screen_lcd.c: 172: acq();
+"172
+[e ( _acq ..  ]
+"173
+}
+"170
+[e -- _i -> 1 `i ]
+[e $ >= _i -> 0 `i 1270  ]
+[e :U 1271 ]
+"173
+}
+[; ;screen_lcd.c: 173: }
+[; ;screen_lcd.c: 174: }
+"174
+[e :UE 1266 ]
 }

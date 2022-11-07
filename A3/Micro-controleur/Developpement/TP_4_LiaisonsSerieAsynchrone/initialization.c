@@ -73,7 +73,7 @@ void I2C_Init(void){
  * no @param
  * no @return
  */
-void Init_interruption(void){
+void Init_interuption(void){
     INTCON = 0x00;
     INTCONbits.PEIE_GIEL = 1;
     INTCONbits.GIE_GIEH = 1;
@@ -102,7 +102,6 @@ __delay_ms( val) ;
  */
 char char_to_ascii(char data){
     return (data + ASCII_CONVERSION_CONST);
-    
 }
 
 

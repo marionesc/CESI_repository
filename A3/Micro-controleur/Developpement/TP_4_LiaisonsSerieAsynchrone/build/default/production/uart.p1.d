@@ -1,7 +1,9 @@
  build/default/production/uart.d  \
  build/default/production/uart.p1:  \
  uart.c  \
-get_keyboard.h  \
-LCD.h  \
+keyboard.h  \
+CNA.h  \
+screen_lcd.h  \
 uart.h  \
-fonction.h 
+eeprom.h  \
+initialization.h 

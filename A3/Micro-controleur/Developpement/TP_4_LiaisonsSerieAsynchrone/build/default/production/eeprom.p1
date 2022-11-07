@@ -1,125 +1,142 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"1548 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _MEMCON `Vuc ~T0 @X0 0 e@3878 ]
-[s S105 :2 `uc 1 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S105 . WM . WAIT . EBDIS ]
-[s S106 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S106 . WM0 WM1 . WAIT0 WAIT1 ]
-[u S104 `S105 1 `S106 1 ]
-[n S104 . . . ]
-"1569
-[v _MEMCONbits `VS104 ~T0 @X0 0 e@3878 ]
-[s S1084 :1 `uc 1 ]
-[n S1084 . NOT_BOR ]
-[s S1085 :1 `uc 1 :1 `uc 1 ]
-[n S1085 . . NOT_POR ]
-[s S1086 :2 `uc 1 :1 `uc 1 ]
-[n S1086 . . NOT_PD ]
-[s S1087 :3 `uc 1 :1 `uc 1 ]
-[n S1087 . . NOT_TO ]
-[s S1088 :4 `uc 1 :1 `uc 1 ]
-[n S1088 . . NOT_RI ]
-[s S1089 :5 `uc 1 :1 `uc 1 ]
-[n S1089 . . NOT_CM ]
-[s S1090 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1090 . nBOR nPOR nPD nTO nRI nCM SBOREN IPEN ]
-[s S1091 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1091 . BOR POR PD TO RI CM ]
-[u S1083 `S1084 1 `S1085 1 `S1086 1 `S1087 1 `S1088 1 `S1089 1 `S1090 1 `S1091 1 ]
-[n S1083 . . . . . . . . . ]
-"17190
-[v _RCONbits `VS1083 ~T0 @X0 0 e@4048 ]
-[s S1165 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1165 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-[s S1166 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1166 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-[s S1167 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1167 . . GIEL GIEH ]
-[s S1168 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1168 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-[s S1169 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1169 . . GIEL GIEH ]
-[u S1164 `S1165 1 `S1166 1 `S1167 1 `S1168 1 `S1169 1 ]
-[n S1164 . . . . . . ]
-"18388
-[v _INTCONbits `VS1164 ~T0 @X0 0 e@4082 ]
-"1416
-[v _ANCON0 `Vuc ~T0 @X0 0 e@3877 ]
-"1284
-[v _ANCON1 `Vuc ~T0 @X0 0 e@3876 ]
-"1152
-[v _ANCON2 `Vuc ~T0 @X0 0 e@3875 ]
-"11314
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"11535
-[v _TRISH `Vuc ~T0 @X0 0 e@3993 ]
-"11492
-[v _TRISG `Vuc ~T0 @X0 0 e@3992 ]
-"887
-[v _TXSTA2 `Vuc ~T0 @X0 0 e@3873 ]
-"1015
-[v _RCSTA2 `Vuc ~T0 @X0 0 e@3874 ]
-"742
-[v _BAUDCON2 `Vuc ~T0 @X0 0 e@3872 ]
-"723
-[v _SPBRGH2 `Vuc ~T0 @X0 0 e@3871 ]
-"704
-[v _SPBRG2 `Vuc ~T0 @X0 0 e@3870 ]
-"5511
+"5511 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [v _EEADR `Vuc ~T0 @X0 0 e@3938 ]
-[s S543 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S543 . RD WR WREN WRERR FREE . CFGS EEPGD ]
-[s S544 :6 `uc 1 :1 `uc 1 ]
-[n S544 . . EEFS ]
-[u S542 `S543 1 `S544 1 ]
-[n S542 . . . ]
+[s S548 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S548 . RD WR WREN WRERR FREE . CFGS EEPGD ]
+[s S549 :6 `uc 1 :1 `uc 1 ]
+[n S549 . . EEFS ]
+[u S547 `S548 1 `S549 1 ]
+[n S547 . . . ]
 "8006
-[v _EECON1bits `VS542 ~T0 @X0 0 e@3967 ]
+[v _EECON1bits `VS547 ~T0 @X0 0 e@3967 ]
 "5492
 [v _EEDATA `Vuc ~T0 @X0 0 e@3937 ]
+[s S1170 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1170 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+[s S1171 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1171 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+[s S1172 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1172 . . GIEL GIEH ]
+[s S1173 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1173 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+[s S1174 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1174 . . GIEL GIEH ]
+[u S1169 `S1170 1 `S1171 1 `S1172 1 `S1173 1 `S1174 1 ]
+[n S1169 . . . . . . ]
+"18388
+[v _INTCONbits `VS1169 ~T0 @X0 0 e@4082 ]
 "7966
 [v _EECON2 `Vuc ~T0 @X0 0 e@3966 ]
-"15811
-[v _SSP1STAT `Vuc ~T0 @X0 0 e@4039 ]
-"15532
-[v _SSP1CON1 `Vuc ~T0 @X0 0 e@4038 ]
-[s S951 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S951 . SSPM CKP SSPEN SSPOV WCOL ]
-[s S952 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S952 . SSPM0 SSPM1 SSPM2 SSPM3 ]
-[s S953 :4 `uc 1 :1 `uc 1 ]
-[n S953 . . CKP1 ]
-[s S954 :5 `uc 1 :1 `uc 1 ]
-[n S954 . . SSPEN1 ]
-[s S955 :1 `uc 1 ]
-[n S955 . SSPM01 ]
-[s S956 :1 `uc 1 :1 `uc 1 ]
-[n S956 . . SSPM11 ]
-[s S957 :2 `uc 1 :1 `uc 1 ]
-[n S957 . . SSPM21 ]
-[s S958 :3 `uc 1 :1 `uc 1 ]
-[n S958 . . SSPM31 ]
-[s S959 :6 `uc 1 :1 `uc 1 ]
-[n S959 . . SSPOV1 ]
-[s S960 :7 `uc 1 :1 `uc 1 ]
-[n S960 . . WCOL1 ]
-[u S950 `S951 1 `S952 1 `S953 1 `S954 1 `S955 1 `S956 1 `S957 1 `S958 1 `S959 1 `S960 1 ]
-[n S950 . . . . . . . . . . . ]
-"15588
-[v _SSP1CON1bits `VS950 ~T0 @X0 0 e@4038 ]
-"15113
-[v _SSP1CON2 `Vuc ~T0 @X0 0 e@4037 ]
-"16468
-[v _SSP1ADD `Vuc ~T0 @X0 0 e@4040 ]
-"144 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18.h
-[v __delay `(v ~T0 @X0 0 ef1`ul ]
-[p i __delay ]
-[; ;fonction.h: 24: void Init (void);
-[; ;fonction.h: 25: void Init_UART2(void);
-[; ;fonction.h: 26: void Eeprom_write(unsigned char addr, unsigned char data);
-[; ;fonction.h: 27: int Eeprom_read(unsigned char addr);
-[; ;fonction.h: 28: void I2C_Init();
-[; ;fonction.h: 29: void delai_ms(unsigned char val);
+[; ;stdio.h: 8: typedef int ptrdiff_t;
+[; ;stdio.h: 9: typedef unsigned size_t;
+[; ;stdio.h: 10: typedef unsigned short wchar_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 23: extern int errno;
+[; ;stdio.h: 54: struct __prbuf
+[; ;stdio.h: 55: {
+[; ;stdio.h: 56: char * ptr;
+[; ;stdio.h: 57: void (* func)(char);
+[; ;stdio.h: 58: };
+[; ;conio.h: 17: extern int errno;
+[; ;conio.h: 20: extern void init_uart(void);
+[; ;conio.h: 22: extern char getch(void);
+[; ;conio.h: 23: extern char getche(void);
+[; ;conio.h: 24: extern void putch(char);
+[; ;conio.h: 25: extern void ungetch(char);
+[; ;conio.h: 27: extern __bit kbhit(void);
+[; ;conio.h: 31: extern char * cgets(char *);
+[; ;conio.h: 32: extern void cputs(const char *);
+[; ;stdio.h: 99: extern int cprintf(char *, ...);
+[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 194: extern char * gets(char *);
+[; ;stdio.h: 195: extern int puts(const char *);
+[; ;stdio.h: 196: extern int scanf(const char *, ...);
+[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...);
+[; ;stdio.h: 198: extern int vprintf(const char *, va_list);
+[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap);
+[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list);
+[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 206: extern int printf(const char *, ...);
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: int rem;
+[; ;stdlib.h: 29: int quot;
+[; ;stdlib.h: 30: } div_t;
+[; ;stdlib.h: 31: typedef struct {
+[; ;stdlib.h: 32: unsigned rem;
+[; ;stdlib.h: 33: unsigned quot;
+[; ;stdlib.h: 34: } udiv_t;
+[; ;stdlib.h: 35: typedef struct {
+[; ;stdlib.h: 36: long quot;
+[; ;stdlib.h: 37: long rem;
+[; ;stdlib.h: 38: } ldiv_t;
+[; ;stdlib.h: 39: typedef struct {
+[; ;stdlib.h: 40: unsigned long quot;
+[; ;stdlib.h: 41: unsigned long rem;
+[; ;stdlib.h: 42: } uldiv_t;
+[; ;stdlib.h: 65: extern double atof(const char *);
+[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 67: extern int atoi(const char *);
+[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 69: extern long atol(const char *);
+[; ;stdlib.h: 70: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 72: extern int rand(void);
+[; ;stdlib.h: 73: extern void srand(unsigned int);
+[; ;stdlib.h: 74: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 75: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 77: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 87: extern void * malloc(size_t);
+[; ;stdlib.h: 88: extern void free(void *);
+[; ;stdlib.h: 89: extern void * realloc(void *, size_t);
+[; ;stdlib.h: 91: extern void abort(void);
+[; ;stdlib.h: 92: extern void exit(int);
+[; ;stdlib.h: 93: extern int atexit(void (*)(void));
+[; ;stdlib.h: 94: extern char * getenv(const char *);
+[; ;stdlib.h: 95: extern char ** environ;
+[; ;stdlib.h: 96: extern int system(char *);
+[; ;stdlib.h: 97: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 98: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 99: extern int abs(int);
+[; ;stdlib.h: 100: extern long labs(long);
+[; ;stdlib.h: 103: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 104: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 109: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 110: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 112: extern char * ftoa(float f, int * status);
+[; ;string.h: 22: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 23: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 24: extern void * memset(void *, int, size_t);
+[; ;string.h: 35: extern char * strcat(char *, const char *);
+[; ;string.h: 36: extern char * strcpy(char *, const char *);
+[; ;string.h: 37: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 38: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strdup(const char *);
+[; ;string.h: 40: extern char * strtok(char *, const char *);
+[; ;string.h: 43: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 44: extern int strcmp(const char *, const char *);
+[; ;string.h: 45: extern int stricmp(const char *, const char *);
+[; ;string.h: 46: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 47: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 49: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 50: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 51: extern size_t strspn(const char *, const char *);
+[; ;string.h: 52: extern char * strstr(const char *, const char *);
+[; ;string.h: 53: extern char * stristr(const char *, const char *);
+[; ;string.h: 54: extern char * strerror(int);
+[; ;string.h: 55: extern size_t strlen(const char *);
+[; ;string.h: 56: extern char * strchr(const char *, int);
+[; ;string.h: 57: extern char * strichr(const char *, int);
+[; ;string.h: 58: extern char * strrchr(const char *, int);
+[; ;string.h: 59: extern char * strrichr(const char *, int);
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -8502,9 +8519,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;EEP.h: 36: void Busy_eep ( void );
 [; ;EEP.h: 37: unsigned char Read_b_eep( unsigned int badd );
 [; ;EEP.h: 38: void Write_b_eep( unsigned int badd, unsigned char bdata );
-[; ;stddef.h: 2: typedef int ptrdiff_t;
-[; ;stddef.h: 3: typedef unsigned size_t;
-[; ;stddef.h: 4: typedef unsigned short wchar_t;
 [; ;stddef.h: 13: extern int errno;
 [; ;GenericTypeDefs.h: 65: typedef enum _BOOL { FALSE = 0, TRUE } BOOL;
 [; ;GenericTypeDefs.h: 68: typedef enum _BIT { CLEAR = 0, SET } BIT;
@@ -9258,323 +9272,113 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 144: extern void _delay(unsigned long);
 [; ;pic18.h: 146: extern void _delaywdt(unsigned long);
 [; ;pic18.h: 148: extern void _delay3(unsigned char);
-"24 LCD.h
-[v _LCD_FUNC `Fuc ~T0 @X0 1 e@1703936 ]
-[; ;LCD.h: 24: far unsigned char LCD_FUNC@0x1A0000;
-"25
-[v _LCD_DATA `Fuc ~T0 @X0 1 e@1703938 ]
-[; ;LCD.h: 25: far unsigned char LCD_DATA@0x1A0002;
-"26
-[v _mmode `i ~T0 @X0 1 e ]
-[i _mmode
--> 0 `i
-]
-[; ;LCD.h: 26: int mmode = 0;
-[; ;LCD.h: 27: void acq(void);
-[; ;LCD.h: 28: void init_aff_lcd(void);
-[; ;LCD.h: 29: void aff_lcd_clav(unsigned char c);
-[; ;LCD.h: 30: void writeLCD(char phrase[]);
-[; ;LCD.h: 31: void aff_lcd(char c);
-[; ;LCD.h: 32: void writeLCD_number(int number);
-[; ;LCD.h: 33: int conversion_echelle(int min_echelle,int max_echelle,int min_aff,int max_aff,int value);
-[; ;stdarg.h: 7: typedef void * va_list[1];
-[; ;stdarg.h: 10: extern void * __va_start(void);
-[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
-[; ;stdio.h: 23: extern int errno;
-[; ;stdio.h: 54: struct __prbuf
-[; ;stdio.h: 55: {
-[; ;stdio.h: 56: char * ptr;
-[; ;stdio.h: 57: void (* func)(char);
-[; ;stdio.h: 58: };
-[; ;conio.h: 17: extern int errno;
-[; ;conio.h: 20: extern void init_uart(void);
-[; ;conio.h: 22: extern char getch(void);
-[; ;conio.h: 23: extern char getche(void);
-[; ;conio.h: 24: extern void putch(char);
-[; ;conio.h: 25: extern void ungetch(char);
-[; ;conio.h: 27: extern __bit kbhit(void);
-[; ;conio.h: 31: extern char * cgets(char *);
-[; ;conio.h: 32: extern void cputs(const char *);
-[; ;stdio.h: 99: extern int cprintf(char *, ...);
-[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-[; ;stdio.h: 194: extern char * gets(char *);
-[; ;stdio.h: 195: extern int puts(const char *);
-[; ;stdio.h: 196: extern int scanf(const char *, ...);
-[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...);
-[; ;stdio.h: 198: extern int vprintf(const char *, va_list);
-[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap);
-[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list);
-[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
-[; ;stdio.h: 206: extern int printf(const char *, ...);
-[; ;stdlib.h: 27: typedef struct {
-[; ;stdlib.h: 28: int rem;
-[; ;stdlib.h: 29: int quot;
-[; ;stdlib.h: 30: } div_t;
-[; ;stdlib.h: 31: typedef struct {
-[; ;stdlib.h: 32: unsigned rem;
-[; ;stdlib.h: 33: unsigned quot;
-[; ;stdlib.h: 34: } udiv_t;
-[; ;stdlib.h: 35: typedef struct {
-[; ;stdlib.h: 36: long quot;
-[; ;stdlib.h: 37: long rem;
-[; ;stdlib.h: 38: } ldiv_t;
-[; ;stdlib.h: 39: typedef struct {
-[; ;stdlib.h: 40: unsigned long quot;
-[; ;stdlib.h: 41: unsigned long rem;
-[; ;stdlib.h: 42: } uldiv_t;
-[; ;stdlib.h: 65: extern double atof(const char *);
-[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
-[; ;stdlib.h: 67: extern int atoi(const char *);
-[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
-[; ;stdlib.h: 69: extern long atol(const char *);
-[; ;stdlib.h: 70: extern long strtol(const char *, char **, int);
-[; ;stdlib.h: 72: extern int rand(void);
-[; ;stdlib.h: 73: extern void srand(unsigned int);
-[; ;stdlib.h: 74: extern void * calloc(size_t, size_t);
-[; ;stdlib.h: 75: extern div_t div(int numer, int denom);
-[; ;stdlib.h: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
-[; ;stdlib.h: 77: extern ldiv_t ldiv(long numer, long denom);
-[; ;stdlib.h: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-[; ;stdlib.h: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-[; ;stdlib.h: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-[; ;stdlib.h: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
-[; ;stdlib.h: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
-[; ;stdlib.h: 87: extern void * malloc(size_t);
-[; ;stdlib.h: 88: extern void free(void *);
-[; ;stdlib.h: 89: extern void * realloc(void *, size_t);
-[; ;stdlib.h: 91: extern void abort(void);
-[; ;stdlib.h: 92: extern void exit(int);
-[; ;stdlib.h: 93: extern int atexit(void (*)(void));
-[; ;stdlib.h: 94: extern char * getenv(const char *);
-[; ;stdlib.h: 95: extern char ** environ;
-[; ;stdlib.h: 96: extern int system(char *);
-[; ;stdlib.h: 97: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-[; ;stdlib.h: 98: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-[; ;stdlib.h: 99: extern int abs(int);
-[; ;stdlib.h: 100: extern long labs(long);
-[; ;stdlib.h: 103: extern char * itoa(char * buf, int val, int base);
-[; ;stdlib.h: 104: extern char * utoa(char * buf, unsigned val, int base);
-[; ;stdlib.h: 109: extern char * ltoa(char * buf, long val, int base);
-[; ;stdlib.h: 110: extern char * ultoa(char * buf, unsigned long val, int base);
-[; ;stdlib.h: 112: extern char * ftoa(float f, int * status);
-"12 fonction.c
-[v _Init `(v ~T0 @X0 1 ef ]
+[; ;initialization.h: 13: void Init(void);
+[; ;initialization.h: 14: void I2C_Init(void);
+[; ;initialization.h: 15: void Init_interuption(void);
+[; ;initialization.h: 18: void delai_ms(unsigned char val);
+[; ;initialization.h: 19: char char_to_ascii(char data);
+[; ;initialization.h: 20: int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value);
+[; ;eeprom.h: 12: int read_eeprom(unsigned char addr);
+[; ;eeprom.h: 13: void write_eeprom(unsigned char addr, unsigned char data);
+[; ;keyboard.h: 11: unsigned char get_keyboard();
+[; ;screen_lcd.h: 4: void init_screen_lcd(void);
+[; ;screen_lcd.h: 7: void acq(void);
+[; ;screen_lcd.h: 8: void set_ddram(unsigned char addr);
+[; ;screen_lcd.h: 9: void screen_action(unsigned char keyboard);
+[; ;screen_lcd.h: 10: void screen_word_write(char *word);
+[; ;screen_lcd.h: 11: void screen_number_write(int number);
+[; ;uart.h: 2: void Init_UART1(void);
+[; ;uart.h: 3: void set_UART1(unsigned char set_message);
+[; ;uart.h: 4: void set_UART1_hyper(unsigned char set_message);
+[; ;uart.h: 7: void Init_UART2(void);
+[; ;uart.h: 8: void set_UART2(unsigned char set_message);
+[; ;uart.h: 9: void set_UART2_pc(unsigned char set_message);
+[; ;uart.h: 12: void keyboard_treatment(void);
+[; ;CNA.h: 12: unsigned char ADC_read(int channel);
+[; ;CNA.h: 13: void DAC_write(unsigned char value);
+"32 eeprom.c
+[v _read_eeprom `(i ~T0 @X0 1 ef1`uc ]
 {
-[; ;fonction.c: 12: void Init(void){
-[e :U _Init ]
-[f ]
-[; ;fonction.c: 14: MEMCON = 0xA0;
-"14
-[e = _MEMCON -> -> 160 `i `uc ]
-[; ;fonction.c: 15: MEMCONbits.EBDIS = 0;
-"15
-[e = . . _MEMCONbits 0 4 -> -> 0 `i `uc ]
-[; ;fonction.c: 18: RCONbits.IPEN = 0;
-"18
-[e = . . _RCONbits 6 7 -> -> 0 `i `uc ]
-[; ;fonction.c: 19: INTCONbits.PEIE = 0;
-"19
-[e = . . _INTCONbits 1 6 -> -> 0 `i `uc ]
-[; ;fonction.c: 20: INTCONbits.GIE = 1;
-"20
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;fonction.c: 21: INTCONbits.INT0IE = 1;
-"21
-[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-[; ;fonction.c: 22: INTCONbits.INT0IF = 0;
-"22
-[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-[; ;fonction.c: 25: ANCON0 = 0x00;
-"25
-[e = _ANCON0 -> -> 0 `i `uc ]
-[; ;fonction.c: 26: ANCON1 = 0x00;
-"26
-[e = _ANCON1 -> -> 0 `i `uc ]
-[; ;fonction.c: 27: ANCON2 = 0x00;
-"27
-[e = _ANCON2 -> -> 0 `i `uc ]
-[; ;fonction.c: 28: TRISD = 0x00;
-"28
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;fonction.c: 29: TRISH = 0xFF;
-"29
-[e = _TRISH -> -> 255 `i `uc ]
-[; ;fonction.c: 32: TRISG = 0x04;
-"32
-[e = _TRISG -> -> 4 `i `uc ]
-[; ;fonction.c: 33: }
-"33
-[e :UE 1243 ]
-}
-"39
-[v _Init_UART2 `(v ~T0 @X0 1 ef ]
-{
-[; ;fonction.c: 39: void Init_UART2(void){
-[e :U _Init_UART2 ]
-[f ]
-[; ;fonction.c: 40: TXSTA2 = 0x20;
-"40
-[e = _TXSTA2 -> -> 32 `i `uc ]
-[; ;fonction.c: 41: RCSTA2 = 0x90;
-"41
-[e = _RCSTA2 -> -> 144 `i `uc ]
-[; ;fonction.c: 43: BAUDCON2 = 0x00;
-"43
-[e = _BAUDCON2 -> -> 0 `i `uc ]
-[; ;fonction.c: 45: SPBRGH2 = 0;
-"45
-[e = _SPBRGH2 -> -> 0 `i `uc ]
-[; ;fonction.c: 46: SPBRG2 = 17;
-"46
-[e = _SPBRG2 -> -> 17 `i `uc ]
-[; ;fonction.c: 47: }
-"47
-[e :UE 1244 ]
-}
-"53
-[v _Eeprom_read `(i ~T0 @X0 1 ef1`uc ]
-{
-[; ;fonction.c: 53: int Eeprom_read(unsigned char addr){
-[e :U _Eeprom_read ]
+[; ;eeprom.c: 32: int read_eeprom(unsigned char addr){
+[e :U _read_eeprom ]
 [v _addr `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;fonction.c: 55: EEADR = addr;
-"55
+[; ;eeprom.c: 34: EEADR = addr;
+"34
 [e = _EEADR _addr ]
-[; ;fonction.c: 56: EECON1bits.EEPGD = 0;
-"56
+[; ;eeprom.c: 35: EECON1bits.EEPGD = 0;
+"35
 [e = . . _EECON1bits 0 7 -> -> 0 `i `uc ]
-[; ;fonction.c: 57: EECON1bits.CFGS = 0;
-"57
+[; ;eeprom.c: 36: EECON1bits.CFGS = 0;
+"36
 [e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
-[; ;fonction.c: 58: EECON1bits.RD = 1;
-"58
+[; ;eeprom.c: 37: EECON1bits.RD = 1;
+"37
 [e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
-[; ;fonction.c: 61: while(EECON1bits.RD);
-"61
-[e $U 1246  ]
-[e :U 1247 ]
+[; ;eeprom.c: 40: while(EECON1bits.RD);
+"40
+[e $U 1244  ]
+[e :U 1245 ]
+[e :U 1244 ]
+[e $ != -> . . _EECON1bits 0 0 `i -> -> -> 0 `i `Vuc `i 1245  ]
 [e :U 1246 ]
-[e $ != -> . . _EECON1bits 0 0 `i -> -> -> 0 `i `Vuc `i 1247  ]
-[e :U 1248 ]
-[; ;fonction.c: 62: return EEDATA;
-"62
+[; ;eeprom.c: 41: return EEDATA;
+"41
 [e ) -> _EEDATA `i ]
-[e $UE 1245  ]
-[; ;fonction.c: 63: }
-"63
-[e :UE 1245 ]
+[e $UE 1243  ]
+[; ;eeprom.c: 42: }
+"42
+[e :UE 1243 ]
 }
-"71
-[v _Eeprom_write `(v ~T0 @X0 1 ef2`uc`uc ]
+"50
+[v _write_eeprom `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;fonction.c: 71: void Eeprom_write(unsigned char addr, unsigned char data){
-[e :U _Eeprom_write ]
+[; ;eeprom.c: 50: void write_eeprom(unsigned char addr, unsigned char data){
+[e :U _write_eeprom ]
 [v _addr `uc ~T0 @X0 1 r1 ]
 [v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;fonction.c: 73: EEADR = addr;
-"73
+[; ;eeprom.c: 52: EEADR = addr;
+"52
 [e = _EEADR _addr ]
-[; ;fonction.c: 74: EEDATA = data;
-"74
+[; ;eeprom.c: 53: EEDATA = data;
+"53
 [e = _EEDATA _data ]
-[; ;fonction.c: 75: EECON1bits.EEPGD = 0;
-"75
+[; ;eeprom.c: 54: EECON1bits.EEPGD = 0;
+"54
 [e = . . _EECON1bits 0 7 -> -> 0 `i `uc ]
-[; ;fonction.c: 76: EECON1bits.CFGS = 0;
-"76
+[; ;eeprom.c: 55: EECON1bits.CFGS = 0;
+"55
 [e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
-[; ;fonction.c: 77: EECON1bits.WREN = 1;
-"77
+[; ;eeprom.c: 56: EECON1bits.WREN = 1;
+"56
 [e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
-[; ;fonction.c: 78: INTCONbits.GIEH = 0;
-"78
+[; ;eeprom.c: 57: INTCONbits.GIEH = 0;
+"57
 [e = . . _INTCONbits 2 2 -> -> 0 `i `uc ]
-[; ;fonction.c: 79: EECON2 = 0x55;
-"79
+[; ;eeprom.c: 58: EECON2 = 0x55;
+"58
 [e = _EECON2 -> -> 85 `i `uc ]
-[; ;fonction.c: 80: EECON2 = 0xAA;
-"80
+[; ;eeprom.c: 59: EECON2 = 0xAA;
+"59
 [e = _EECON2 -> -> 170 `i `uc ]
-[; ;fonction.c: 81: EECON1bits.WR = 1;
-"81
+[; ;eeprom.c: 60: EECON1bits.WR = 1;
+"60
 [e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
-[; ;fonction.c: 84: while(EECON1bits.WR);
-"84
-[e $U 1250  ]
-[e :U 1251 ]
+[; ;eeprom.c: 63: while(EECON1bits.WR);
+"63
+[e $U 1248  ]
+[e :U 1249 ]
+[e :U 1248 ]
+[e $ != -> . . _EECON1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1249  ]
 [e :U 1250 ]
-[e $ != -> . . _EECON1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1251  ]
-[e :U 1252 ]
-[; ;fonction.c: 86: EECON1bits.WREN = 0;
-"86
+[; ;eeprom.c: 65: EECON1bits.WREN = 0;
+"65
 [e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
-[; ;fonction.c: 87: INTCONbits.GIEH = 1;
-"87
+[; ;eeprom.c: 66: INTCONbits.GIEH = 1;
+"66
 [e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;fonction.c: 88: }
-"88
-[e :UE 1249 ]
-}
-"94
-[v _I2C_Init `(v ~T0 @X0 1 ef ]
-{
-[; ;fonction.c: 94: void I2C_Init(void){
-[e :U _I2C_Init ]
-[f ]
-[; ;fonction.c: 95: SSP1STAT = 0x00;
-"95
-[e = _SSP1STAT -> -> 0 `i `uc ]
-[; ;fonction.c: 96: SSP1CON1 = 0x00;
-"96
-[e = _SSP1CON1 -> -> 0 `i `uc ]
-[; ;fonction.c: 97: SSP1CON1bits.SSPEN = 1;
-"97
-[e = . . _SSP1CON1bits 0 2 -> -> 1 `i `uc ]
-[; ;fonction.c: 98: SSP1CON1bits.SSPM = 0x08;
-"98
-[e = . . _SSP1CON1bits 0 0 -> -> 8 `i `uc ]
-[; ;fonction.c: 99: SSP1CON2 = 0x00;
-"99
-[e = _SSP1CON2 -> -> 0 `i `uc ]
-[; ;fonction.c: 100: SSP1ADD = 0x1A;
-"100
-[e = _SSP1ADD -> -> 26 `i `uc ]
-[; ;fonction.c: 101: }
-"101
-[e :UE 1253 ]
-}
-"107
-[v _delai_ms `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;fonction.c: 107: void delai_ms(unsigned char val){
-[e :U _delai_ms ]
-[v _val `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;fonction.c: 111: for (int j=0;j<val;j++) {
-"111
-{
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
-[e $U 1258  ]
-[e :U 1255 ]
-{
-[; ;fonction.c: 112: _delay((unsigned long)((1)*(11059200/4000.0)));
-"112
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-"113
-}
-"111
-[e ++ _j -> 1 `i ]
-[e :U 1258 ]
-[e $ < _j -> _val `i 1255  ]
-[e :U 1256 ]
-"113
-}
-[; ;fonction.c: 113: }
-[; ;fonction.c: 114: }
-"114
-[e :UE 1254 ]
+[; ;eeprom.c: 67: }
+"67
+[e :UE 1247 ]
 }

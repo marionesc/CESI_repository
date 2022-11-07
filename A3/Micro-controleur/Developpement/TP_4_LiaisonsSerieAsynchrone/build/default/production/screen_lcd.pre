@@ -1,5 +1,173 @@
 
-# 1 "get_keyboard.c"
+# 1 "screen_lcd.c"
+
+# 8 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdio.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 23 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdio.h"
+extern int errno;
+
+# 54
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 17 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\conio.h"
+extern int errno;
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 31
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 99 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 191
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...);
+extern int sscanf(const char *, const char *, ...);
+extern int vprintf(const char *, va_list);
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap);
+extern int vsscanf(const char *, const char *, va_list);
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 27 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdlib.h"
+typedef struct {
+int rem;
+int quot;
+} div_t;
+typedef struct {
+unsigned rem;
+unsigned quot;
+} udiv_t;
+typedef struct {
+long quot;
+long rem;
+} ldiv_t;
+typedef struct {
+unsigned long quot;
+unsigned long rem;
+} uldiv_t;
+
+# 65
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+
+extern void abort(void);
+extern void exit(int);
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+
+# 22 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 35
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
 
 # 44 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h"
 extern volatile unsigned char PMD3 @ 0xF16;
@@ -10894,12 +11062,7 @@ void Busy_eep ( void );
 unsigned char Read_b_eep( unsigned int badd );
 void Write_b_eep( unsigned int badd, unsigned char bdata );
 
-# 2 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stddef.h"
-typedef int ptrdiff_t;
-typedef unsigned size_t;
-typedef unsigned short wchar_t;
-
-# 13
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stddef.h"
 extern int errno;
 
 # 65 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\GenericTypeDefs.h"
@@ -11923,15 +12086,150 @@ extern void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern void _delay3(unsigned char);
 
-# 4 "get_keyboard.h"
-unsigned char get_keyboard_f(void);
+# 13 "initialization.h"
+void Init(void);
+void I2C_Init(void);
+void Init_interuption(void);
 
-# 4 "get_keyboard.c"
-far unsigned char CLAV @0x180000;
 
-unsigned char get_keyboard_f(void){
-unsigned char keyboard_value;
-keyboard_value = CLAV&0x0F + 0x30;
+void delai_ms(unsigned char val);
+char char_to_ascii(char data);
+int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value);
 
-return keyboard_value;
+# 12 "eeprom.h"
+int read_eeprom(unsigned char addr);
+void write_eeprom(unsigned char addr, unsigned char data);
+
+# 11 "keyboard.h"
+unsigned char get_keyboard();
+
+# 4 "screen_lcd.h"
+void init_screen_lcd(void);
+
+
+void acq(void);
+void set_ddram(unsigned char addr);
+void screen_action(unsigned char keyboard);
+void screen_word_write(char *word);
+void screen_number_write(int number);
+
+# 2 "uart.h"
+void Init_UART1(void);
+void set_UART1(unsigned char set_message);
+void set_UART1_hyper(unsigned char set_message);
+
+
+void Init_UART2(void);
+void set_UART2(unsigned char set_message);
+void set_UART2_pc(unsigned char set_message);
+
+
+void keyboard_treatment(void);
+
+# 12 "CNA.h"
+unsigned char ADC_read(int channel);
+void DAC_write(unsigned char value);
+
+# 44 "screen_lcd.c"
+far unsigned char LCD_FUNC @0x1A0000;
+far unsigned char LCD_DATA @0x1A0002;
+
+# 56
+void init_screen_lcd(void) {
+_delay((unsigned long)((10)*(11059200/4000.0))); LCD_FUNC = 0x38;
+_delay((unsigned long)((5)*(11059200/4000.0))); LCD_FUNC = 0x38;
+_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x38;
+_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x38;
+_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x14;
+_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x0E;
+_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x06;
+_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x02;
+_delay((unsigned long)((2)*(11059200/4000.0))); LCD_FUNC = 0x01;
+_delay((unsigned long)((2)*(11059200/4000.0)));
 }
+
+# 75
+void acq(void) {
+while ((LCD_FUNC & 0x80) == 0x80);
+}
+
+# 85
+void set_ddram(unsigned char addr) {
+LCD_FUNC = 0x40 & addr;
+}
+
+# 94
+void screen_action(unsigned char keyboard) {
+keyboard = keyboard & 0x0F;
+
+switch (keyboard) {
+
+case 10 : break;
+case 11 : break;
+
+case 12 :
+LCD_FUNC = 0x10;
+_delay((unsigned long)((2)*(11059200/4000.0))); acq();
+break;
+
+case 13 :
+LCD_FUNC = 0x14;
+_delay((unsigned long)((2)*(11059200/4000.0))); acq();
+break;
+
+case 14 :
+LCD_FUNC = 0x01;
+_delay((unsigned long)((2)*(11059200/4000.0))); acq();
+
+LCD_FUNC = 0x02;
+_delay((unsigned long)((2)*(11059200/4000.0))); acq();
+break;
+
+case 15 :
+LCD_FUNC = 0b0011000000;
+_delay((unsigned long)((2)*(11059200/4000.0)));
+acq();
+break;
+
+default :
+LCD_DATA = keyboard + 48;
+acq();
+break;
+}
+}
+
+# 138
+void screen_word_write(char *word) {
+int word_length = strlen(word);
+
+LCD_FUNC = 0x01;
+acq();
+if(word_length == 1){
+LCD_DATA = word;
+acq();
+}
+else{
+for(int j = 1; j < word_length; j++){
+LCD_DATA = word[j];
+acq();
+}
+}
+}
+
+# 160
+void screen_number_write(int number){
+int i = 0;
+char number_string[10];
+LCD_FUNC = 0x01;
+acq();
+while (number > 0) {
+number_string[i] = number % 10 + 48;
+number = number / 10;
+i++;
+}
+for (i = i - 1; i >= 0; i--) {
+LCD_DATA = number_string[i];
+acq();
+}
+}
+

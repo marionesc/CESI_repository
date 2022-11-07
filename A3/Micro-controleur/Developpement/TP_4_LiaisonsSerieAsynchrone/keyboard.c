@@ -26,15 +26,30 @@ far unsigned char CLAV @0x180000;
 
 
 // FUNCTION 
+/** Lecture de la valeur du clavier
+ * no @param
+ * @return la valeur du clavier 
+ */
+unsigned char get_keyboard(){
+    return ((CLAV && 0x0F) + 0x30); 
+}
 /**
  * Recuparation de la valeur entree sur le clavier numerique
  * no @param
- * @return keyboard_value la valeur ASCII convertie en valeur reelle
+ * no @return
  */
-unsigned char  high_priority interrupt get_keyboard(void){
-    unsigned char keyboard_value = (CLAV & 0x0F) + 0x30;
-    screen_word_write(keyboard_value);
-    return keyboard_value;
+unsigned char  high_priority interrupt keyboard_int(void){
+    unsigned char keyboard_value; 
+    if((INTCONbits.INT0IF && INTCONbits.INT0IE) == 1){
+        keyboard_value = get_keyboard();
+        screen_word_write(keyboard_value);
+        
+        set_UART1(keyboard_value); 
+        set_UART2(keyboard_value);
+        
+        INTCONbits.INT0IF = 0; 
+    }
+    return keyboard_value; 
 }
 /**
  * Configuration d une interruption des l appui sur une touche du clavier

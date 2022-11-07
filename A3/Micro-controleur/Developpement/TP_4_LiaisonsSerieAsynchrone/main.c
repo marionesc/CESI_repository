@@ -31,18 +31,10 @@ int keyboard_flag = 0;
 //MAIN PROGRAM
 void main(void) {
     Init();
-    init_aff_lcd();
-    Init_UART2();
-    Init_interruption();
+    Init_interuption(); 
+    Init_UART1();
+    Init_UART2(); 
     
-    acq();
-    I2C_Init();
     while (1) {
-        if (keyboard_flag == 1){
-            TXREG2 = get_keyboard_f();
-            aff_lcd(0x05);
-            keyboard_flag = 0;
         }
     }
-}
-

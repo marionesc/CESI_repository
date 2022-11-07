@@ -33,13 +33,18 @@ extern int keyboard_flag;
  * @return 
  */
 void Init_UART1(void){
-    TXSTA1 = 0x20;  // Configuration de TX2 en sortie
-    RCSTA1 = 0x90;  // Configuration de RX2 en entree
-    
-    BAUDCON1 = 0x00;
-    
-    SPBRGH1 = 0;
     SPBRG1 = 17;
+    
+    TXSTA1bits.SYNC = 0;  
+    TXSTA1bits.TXEN = 1; 
+    
+    RCSTA1bits.SPEN = 1;
+    RCSTA1bits.CREN = 1;
+    
+    BAUDCON2bits.BRG16 = 0;
+    
+    TRISCbits.TRISC6 = 0;
+    TRISCbits.TRISC7 = 1; 
 }
 
 /**Envoie d un message via le port serie UART1
@@ -47,7 +52,7 @@ void Init_UART1(void){
  * no @return
  */
 void set_UART1(unsigned char set_message){
-    while(TX1IF == 0);
+    while(TX1IF == 0); // On ne doit envoyer qu' flag = 0 -> delais d'attente
     TXREG1 = set_message;
 }
 
@@ -69,13 +74,18 @@ void set_UART1_hyper(unsigned char set_message){
  * @return 
  */
 void Init_UART2(void){
-    TXSTA2 = 0x20;  // Configuration de TX2 en sortie
-    RCSTA2 = 0x90;  // Configuration de RX2 en entree
-    
-    BAUDCON2 = 0x00;
-    
-    SPBRGH2 = 0;
     SPBRG2 = 17;
+    
+    TXSTA2bits.SYNC = 0;  
+    TXSTA2bits.TXEN = 1; 
+    
+    RCSTA2bits.SPEN = 1;
+    RCSTA2bits.CREN = 1;
+    
+    BAUDCON2bits.BRG16 = 0;
+    
+    TRISGbits.TRISG1 = 0;
+    TRISGbits.TRISG2 = 1; 
 }
 
 
@@ -98,10 +108,14 @@ void set_UART2_pc(unsigned char set_message){
     }
 }
 
+// OTHER FUNCTION 
+/**
+ * 
+ */
 void keyboard_treatment(void){
     unsigned char data;
     if (keyboard_flag == 1){
-        data = get_keyboard_f();
+        data = get_keyboard();
         
         if (data == 0x3F){
             set_UART2(0x0D);

@@ -1,13 +1,173 @@
 
 # 1 "main.c"
 
-# 24 "fonction.h"
-void Init (void);
-void Init_UART2(void);
-void Eeprom_write(unsigned char addr, unsigned char data);
-int Eeprom_read(unsigned char addr);
-void I2C_Init();
-void delai_ms(unsigned char val);
+# 8 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdio.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 23 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdio.h"
+extern int errno;
+
+# 54
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 17 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\conio.h"
+extern int errno;
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 31
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 99 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 191
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...);
+extern int sscanf(const char *, const char *, ...);
+extern int vprintf(const char *, va_list);
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap);
+extern int vsscanf(const char *, const char *, va_list);
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 27 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdlib.h"
+typedef struct {
+int rem;
+int quot;
+} div_t;
+typedef struct {
+unsigned rem;
+unsigned quot;
+} udiv_t;
+typedef struct {
+long quot;
+long rem;
+} ldiv_t;
+typedef struct {
+unsigned long quot;
+unsigned long rem;
+} uldiv_t;
+
+# 65
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+
+extern void abort(void);
+extern void exit(int);
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+
+# 22 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 35
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
 
 # 44 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h"
 extern volatile unsigned char PMD3 @ 0xF16;
@@ -10902,12 +11062,7 @@ void Busy_eep ( void );
 unsigned char Read_b_eep( unsigned int badd );
 void Write_b_eep( unsigned int badd, unsigned char bdata );
 
-# 2 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stddef.h"
-typedef int ptrdiff_t;
-typedef unsigned size_t;
-typedef unsigned short wchar_t;
-
-# 13
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stddef.h"
 extern int errno;
 
 # 65 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\GenericTypeDefs.h"
@@ -11931,58 +12086,61 @@ extern void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern void _delay3(unsigned char);
 
-# 24 "LCD.h"
-far unsigned char LCD_FUNC@0x1A0000;
-far unsigned char LCD_DATA@0x1A0002;
-int mmode = 0;
+# 13 "initialization.h"
+void Init(void);
+void I2C_Init(void);
+void Init_interuption(void);
+
+
+void delai_ms(unsigned char val);
+char char_to_ascii(char data);
+int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value);
+
+# 12 "eeprom.h"
+int read_eeprom(unsigned char addr);
+void write_eeprom(unsigned char addr, unsigned char data);
+
+# 11 "keyboard.h"
+unsigned char get_keyboard();
+
+# 4 "screen_lcd.h"
+void init_screen_lcd(void);
+
+
 void acq(void);
-void init_aff_lcd(void);
-void aff_lcd_clav(unsigned char c);
-void writeLCD(char phrase[]);
-void aff_lcd(char c);
-void writeLCD_number(int number);
-int conversion_echelle(int min_echelle,int max_echelle,int min_aff,int max_aff,int value);
+void set_ddram(unsigned char addr);
+void screen_action(unsigned char keyboard);
+void screen_word_write(char *word);
+void screen_number_write(int number);
 
-# 3 "clav.h"
-far unsigned char Clavier @0x180000;
-unsigned char mem_touche;
-unsigned char high_priority interrupt get_val_clav ();
-
-# 3 "CNA.h"
-unsigned char ADC_read(int channel);
-void DAC_write(unsigned char value);
-
-# 4 "get_keyboard.h"
-unsigned char get_keyboard_f(void);
-
-# 23 "uart.h"
+# 2 "uart.h"
+void Init_UART1(void);
 void set_UART1(unsigned char set_message);
 void set_UART1_hyper(unsigned char set_message);
 
+
+void Init_UART2(void);
 void set_UART2(unsigned char set_message);
 void set_UART2_pc(unsigned char set_message);
 
-# 24 "interruption.h"
-void Init_interruption(void);
 
-# 22 "main.c"
+void keyboard_treatment(void);
+
+# 12 "CNA.h"
+unsigned char ADC_read(int channel);
+void DAC_write(unsigned char value);
+
+# 28 "main.c"
 unsigned char keyboard_value;
 int keyboard_flag = 0;
 
+
 void main(void) {
 Init();
-init_aff_lcd();
+Init_interuption();
+Init_UART1();
 Init_UART2();
-Init_interruption();
 
-acq();
-I2C_Init();
 while (1) {
-if (keyboard_flag == 1){
-TXREG2 = get_keyboard_f();
-aff_lcd(0x05);
-keyboard_flag = 0;
 }
 }
-}
-

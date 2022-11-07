@@ -8,8 +8,6 @@
  *      Last update : 2022-11-07
  */
 
-#ifndef EEPROM_H
-#define	EEPROM_H
 
 int read_eeprom(unsigned char addr);
 void write_eeprom(unsigned char addr, unsigned char data); 

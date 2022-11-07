@@ -8,8 +8,8 @@
  *      Last update : 2022-11-07
  */
 
-#ifndef KEYBOARD_H
-#define	KEYBOARD_H
+unsigned char get_keyboard();
 
-unsigned char high_priority interrupt get_keyboard(void);
+
+//unsigned char high_priority interrupt keyboard_int(void);
 //void high_priority interrupt get_val_clav (); 
