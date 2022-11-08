@@ -80,6 +80,26 @@ void Init_interuption(void){
     INTCONbits.INT0E = 1;
 }
 
+/**
+ * 
+ * 
+ * Débordement timer toutes les sec (prescaler =7200): 
+ * autoreload = (Ttimer / (Tclock x precaler)) - 1
+ * 
+ * --> autoreload 7200 --> timer 16bits 
+ */
+void Init_timer0(void){
+    T0CONbits.T08BIT = 0;   // timer configure en 16 bits
+    T0CONbits.T0CS = 0;     // Clock interne
+    T0CONbits.T0SE = 0;     // Incrementation low to high
+    T0CONbits.PSA = 0;      // Assignation du prescaler
+    T0CONbits.T0PS = 0b111; // Prescaler 1:256
+  
+    INTCONbits.TMR0IE = 1;  // enable timer0 interrupt
+    INTCONbits.TMR0IF = 0;  // clear timer0 interrupt flag
+    INTCONbits.GIE = 1;     // enable global interrupts
+    
+}
 
 // ADDITIONAL FUNCTION
 /**Creation d une fonction delais en ms
@@ -118,3 +138,43 @@ char char_to_ascii(char data){
 int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value){
     return (((max_aff - min_aff)  / (max_ech - min_ech))*value);
 }
+
+/*** TIMER 0 ***/
+/**
+ * Lancement du timer 0
+ * no @param
+ * no @return
+ */
+void start_timer0(void){
+    T0CONbits.TMR0ON = 1;
+}
+
+/**
+ * Arret du timer 0
+ * no @param
+ * no @return
+ */
+void stop_timer0(void){
+    T0CONbits.TMR0ON = 0;
+}
+
+/**
+ * Lecture de la valeur du timer en ??
+ * @return TMR0L la durée du timer 
+ */
+int lecture_timer(void){
+    return TMR0L; 
+}
+
+/**
+ * Reset de la valeur du timer en memoire
+ */
+void reset_timer0(void){
+    TMR0L = 0;
+}
+
+
+/**** FAN ****/
+// void set_fan(int rpm) --> vitesse de rotation du fan
+// int  get_fan() --> lit la vitesse reelle du fan 
+

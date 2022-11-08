@@ -89,9 +89,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SSP1ADD `Vuc ~T0 @X0 0 e@4040 ]
 "18341
 [v _INTCON `Vuc ~T0 @X0 0 e@4082 ]
+[s S1112 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1112 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
+[s S1113 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1113 . T0PS0 T0PS1 T0PS2 ]
+[u S1111 `S1112 1 `S1113 1 ]
+[n S1111 . . . ]
+"17564
+[v _T0CONbits `VS1111 ~T0 @X0 0 e@4053 ]
 "144 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18.h
 [v __delay `(v ~T0 @X0 0 ef1`ul ]
 [p i __delay ]
+"17619 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
+[v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
 [; ;stdio.h: 8: typedef int ptrdiff_t;
 [; ;stdio.h: 9: typedef unsigned size_t;
 [; ;stdio.h: 10: typedef unsigned short wchar_t;
@@ -9340,9 +9350,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;initialization.h: 13: void Init(void);
 [; ;initialization.h: 14: void I2C_Init(void);
 [; ;initialization.h: 15: void Init_interuption(void);
-[; ;initialization.h: 18: void delai_ms(unsigned char val);
-[; ;initialization.h: 19: char char_to_ascii(char data);
-[; ;initialization.h: 20: int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value);
+[; ;initialization.h: 16: void Init_timer0(void);
+[; ;initialization.h: 19: void delai_ms(unsigned char val);
+[; ;initialization.h: 20: char char_to_ascii(char data);
+[; ;initialization.h: 21: int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value);
+[; ;initialization.h: 24: void start_timer0(void);
+[; ;initialization.h: 25: void stop_timer0(void);
+[; ;initialization.h: 26: int lecture_timer0(void);
+[; ;initialization.h: 27: void reset_timer0(void);
 [; ;eeprom.h: 12: int read_eeprom(unsigned char addr);
 [; ;eeprom.h: 13: void write_eeprom(unsigned char addr, unsigned char data);
 [; ;keyboard.h: 11: unsigned char get_keyboard();
@@ -9460,57 +9475,91 @@ Version 3.2 HI-TECH Software Intermediate Code
 "81
 [e :UE 1245 ]
 }
-"89
+"91
+[v _Init_timer0 `(v ~T0 @X0 1 ef ]
+{
+[; ;initialization.c: 91: void Init_timer0(void){
+[e :U _Init_timer0 ]
+[f ]
+[; ;initialization.c: 92: T0CONbits.T08BIT = 0;
+"92
+[e = . . _T0CONbits 0 4 -> -> 0 `i `uc ]
+[; ;initialization.c: 93: T0CONbits.T0CS = 0;
+"93
+[e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
+[; ;initialization.c: 94: T0CONbits.T0SE = 0;
+"94
+[e = . . _T0CONbits 0 2 -> -> 0 `i `uc ]
+[; ;initialization.c: 95: T0CONbits.PSA = 0;
+"95
+[e = . . _T0CONbits 0 1 -> -> 0 `i `uc ]
+[; ;initialization.c: 96: T0CONbits.T0PS = 0b111;
+"96
+[e = . . _T0CONbits 0 0 -> -> 7 `i `uc ]
+[; ;initialization.c: 98: INTCONbits.TMR0IE = 1;
+"98
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+[; ;initialization.c: 99: INTCONbits.TMR0IF = 0;
+"99
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;initialization.c: 100: INTCONbits.GIE = 1;
+"100
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;initialization.c: 102: }
+"102
+[e :UE 1246 ]
+}
+"109
 [v _delai_ms `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;initialization.c: 89: void delai_ms(unsigned char val){
+[; ;initialization.c: 109: void delai_ms(unsigned char val){
 [e :U _delai_ms ]
 [v _val `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;initialization.c: 93: for (int j=0;j<val;j++) {
-"93
+[; ;initialization.c: 113: for (int j=0;j<val;j++) {
+"113
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 0 `i ]
-[e $U 1250  ]
-[e :U 1247 ]
-{
-[; ;initialization.c: 94: _delay((unsigned long)((1)*(11059200/4000.0)));
-"94
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
-"95
-}
-"93
-[e ++ _j -> 1 `i ]
-[e :U 1250 ]
-[e $ < _j -> _val `i 1247  ]
+[e $U 1251  ]
 [e :U 1248 ]
-"95
+{
+[; ;initialization.c: 114: _delay((unsigned long)((1)*(11059200/4000.0)));
+"114
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 11059200 `l `d .4000.0 `ul ]
+"115
 }
-[; ;initialization.c: 95: }
-[; ;initialization.c: 96: }
-"96
-[e :UE 1246 ]
+"113
+[e ++ _j -> 1 `i ]
+[e :U 1251 ]
+[e $ < _j -> _val `i 1248  ]
+[e :U 1249 ]
+"115
 }
-"103
+[; ;initialization.c: 115: }
+[; ;initialization.c: 116: }
+"116
+[e :UE 1247 ]
+}
+"123
 [v _char_to_ascii `(uc ~T0 @X0 1 ef1`uc ]
 {
-[; ;initialization.c: 103: char char_to_ascii(char data){
+[; ;initialization.c: 123: char char_to_ascii(char data){
 [e :U _char_to_ascii ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;initialization.c: 104: return (data + 48);
-"104
+[; ;initialization.c: 124: return (data + 48);
+"124
 [e ) -> + -> _data `i -> 48 `i `uc ]
-[e $UE 1251  ]
-[; ;initialization.c: 105: }
-"105
-[e :UE 1251 ]
+[e $UE 1252  ]
+[; ;initialization.c: 125: }
+"125
+[e :UE 1252 ]
 }
-"118
+"138
 [v _conversion_echelle `(i ~T0 @X0 1 ef5`i`i`i`i`i ]
 {
-[; ;initialization.c: 118: int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value){
+[; ;initialization.c: 138: int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value){
 [e :U _conversion_echelle ]
 [v _min_ech `i ~T0 @X0 1 r1 ]
 [v _max_ech `i ~T0 @X0 1 r2 ]
@@ -9518,11 +9567,64 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _max_aff `i ~T0 @X0 1 r4 ]
 [v _value `i ~T0 @X0 1 r5 ]
 [f ]
-[; ;initialization.c: 119: return (((max_aff - min_aff) / (max_ech - min_ech))*value);
-"119
+[; ;initialization.c: 139: return (((max_aff - min_aff) / (max_ech - min_ech))*value);
+"139
 [e ) * / - _max_aff _min_aff - _max_ech _min_ech _value ]
-[e $UE 1252  ]
-[; ;initialization.c: 120: }
-"120
-[e :UE 1252 ]
+[e $UE 1253  ]
+[; ;initialization.c: 140: }
+"140
+[e :UE 1253 ]
+}
+"148
+[v _start_timer0 `(v ~T0 @X0 1 ef ]
+{
+[; ;initialization.c: 148: void start_timer0(void){
+[e :U _start_timer0 ]
+[f ]
+[; ;initialization.c: 149: T0CONbits.TMR0ON = 1;
+"149
+[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
+[; ;initialization.c: 150: }
+"150
+[e :UE 1254 ]
+}
+"157
+[v _stop_timer0 `(v ~T0 @X0 1 ef ]
+{
+[; ;initialization.c: 157: void stop_timer0(void){
+[e :U _stop_timer0 ]
+[f ]
+[; ;initialization.c: 158: T0CONbits.TMR0ON = 0;
+"158
+[e = . . _T0CONbits 0 5 -> -> 0 `i `uc ]
+[; ;initialization.c: 159: }
+"159
+[e :UE 1255 ]
+}
+"165
+[v _lecture_timer `(i ~T0 @X0 1 ef ]
+{
+[; ;initialization.c: 165: int lecture_timer(void){
+[e :U _lecture_timer ]
+[f ]
+[; ;initialization.c: 166: return TMR0L;
+"166
+[e ) -> _TMR0L `i ]
+[e $UE 1256  ]
+[; ;initialization.c: 167: }
+"167
+[e :UE 1256 ]
+}
+"172
+[v _reset_timer0 `(v ~T0 @X0 1 ef ]
+{
+[; ;initialization.c: 172: void reset_timer0(void){
+[e :U _reset_timer0 ]
+[f ]
+[; ;initialization.c: 173: TMR0L = 0;
+"173
+[e = _TMR0L -> -> 0 `i `uc ]
+[; ;initialization.c: 174: }
+"174
+[e :UE 1257 ]
 }

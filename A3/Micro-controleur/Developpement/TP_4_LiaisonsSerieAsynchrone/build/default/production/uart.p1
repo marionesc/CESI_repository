@@ -9359,9 +9359,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;initialization.h: 13: void Init(void);
 [; ;initialization.h: 14: void I2C_Init(void);
 [; ;initialization.h: 15: void Init_interuption(void);
-[; ;initialization.h: 18: void delai_ms(unsigned char val);
-[; ;initialization.h: 19: char char_to_ascii(char data);
-[; ;initialization.h: 20: int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value);
+[; ;initialization.h: 16: void Init_timer0(void);
+[; ;initialization.h: 19: void delai_ms(unsigned char val);
+[; ;initialization.h: 20: char char_to_ascii(char data);
+[; ;initialization.h: 21: int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value);
+[; ;initialization.h: 24: void start_timer0(void);
+[; ;initialization.h: 25: void stop_timer0(void);
+[; ;initialization.h: 26: int lecture_timer0(void);
+[; ;initialization.h: 27: void reset_timer0(void);
 [; ;eeprom.h: 12: int read_eeprom(unsigned char addr);
 [; ;eeprom.h: 13: void write_eeprom(unsigned char addr, unsigned char data);
 [; ;keyboard.h: 11: unsigned char get_keyboard();

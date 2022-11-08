@@ -12090,11 +12090,18 @@ extern void _delay3(unsigned char);
 void Init(void);
 void I2C_Init(void);
 void Init_interuption(void);
+void Init_timer0(void);
 
 
 void delai_ms(unsigned char val);
 char char_to_ascii(char data);
 int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value);
+
+
+void start_timer0(void);
+void stop_timer0(void);
+int lecture_timer0(void);
+void reset_timer0(void);
 
 # 12 "eeprom.h"
 int read_eeprom(unsigned char addr);
@@ -12172,21 +12179,56 @@ INTCONbits.GIE_GIEH = 1;
 INTCONbits.INT0E = 1;
 }
 
-# 89
+# 91
+void Init_timer0(void){
+T0CONbits.T08BIT = 0;
+T0CONbits.T0CS = 0;
+T0CONbits.T0SE = 0;
+T0CONbits.PSA = 0;
+T0CONbits.T0PS = 0b111;
+
+INTCONbits.TMR0IE = 1;
+INTCONbits.TMR0IF = 0;
+INTCONbits.GIE = 1;
+
+}
+
+# 109
 void delai_ms(unsigned char val){
 
-# 93
+# 113
 for (int j=0;j<val;j++) {
 _delay((unsigned long)((1)*(11059200/4000.0)));
 }
 }
 
-# 103
+# 123
 char char_to_ascii(char data){
 return (data + 48);
 }
 
-# 118
+# 138
 int conversion_echelle(int min_ech,int max_ech,int min_aff,int max_aff,int value){
 return (((max_aff - min_aff) / (max_ech - min_ech))*value);
 }
+
+# 148
+void start_timer0(void){
+T0CONbits.TMR0ON = 1;
+}
+
+# 157
+void stop_timer0(void){
+T0CONbits.TMR0ON = 0;
+}
+
+# 165
+int lecture_timer(void){
+return TMR0L;
+}
+
+# 172
+void reset_timer0(void){
+TMR0L = 0;
+}
+
