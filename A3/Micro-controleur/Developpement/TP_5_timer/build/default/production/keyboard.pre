@@ -12142,7 +12142,7 @@ far unsigned char CLAV @0x180000;
 
 # 33
 unsigned char get_keyboard(){
-return ((CLAV && 0x0F) + 0x30);
+return ((CLAV & 0x0F) + 0x30);
 }
 
 # 41

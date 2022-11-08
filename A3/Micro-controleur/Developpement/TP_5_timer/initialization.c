@@ -16,7 +16,7 @@
 
 #include "initialization.h"
 #include "eeprom.h"
-#include "keyboard.h"
+//#include "keyboard.h"
 #include "screen_lcd.h"
 #include "uart.h"
 #include "CNA.h"
@@ -51,7 +51,7 @@ void Init(void){
     TRISH  = 0xFF;         // 1 => PORTH en entrée
     
     // OBLIGATOIRE : configuration de la liaison serie
-    TRISG = 0x04;         // TX-G1 en sortie 0 et RX-G2 en entree 1
+    TRISGbits.TRISG2 = 1;
 }
 
 
@@ -110,7 +110,7 @@ void delai_ms(unsigned char val){
 /* Utilisation de la fonction temporisation delay_ms définie dans « xc.h »
 __delay_ms( val) ;
 */
-    for (int j=0;j<val;j++) {
+    for (int j = 0; j < val ; j++) {
         __delay_ms(1);
     }
 }
@@ -162,7 +162,7 @@ void stop_timer0(void){
  * Lecture de la valeur du timer en ??
  * @return TMR0L la durée du timer 
  */
-int lecture_timer(void){
+int lecture_timer0(void){
     return TMR0L; 
 }
 

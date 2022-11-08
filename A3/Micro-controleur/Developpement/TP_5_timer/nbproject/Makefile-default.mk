@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=CNA.c configuration.c main.c uart.c initialization.c eeprom.c keyboard.c screen_lcd.c
+SOURCEFILES_QUOTED_IF_SPACED=CNA.c configuration.c main.c uart.c initialization.c eeprom.c screen_lcd.c fan.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/CNA.p1 ${OBJECTDIR}/configuration.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/initialization.p1 ${OBJECTDIR}/eeprom.p1 ${OBJECTDIR}/keyboard.p1 ${OBJECTDIR}/screen_lcd.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/CNA.p1.d ${OBJECTDIR}/configuration.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/uart.p1.d ${OBJECTDIR}/initialization.p1.d ${OBJECTDIR}/eeprom.p1.d ${OBJECTDIR}/keyboard.p1.d ${OBJECTDIR}/screen_lcd.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/CNA.p1 ${OBJECTDIR}/configuration.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/initialization.p1 ${OBJECTDIR}/eeprom.p1 ${OBJECTDIR}/screen_lcd.p1 ${OBJECTDIR}/fan.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/CNA.p1.d ${OBJECTDIR}/configuration.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/uart.p1.d ${OBJECTDIR}/initialization.p1.d ${OBJECTDIR}/eeprom.p1.d ${OBJECTDIR}/screen_lcd.p1.d ${OBJECTDIR}/fan.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/CNA.p1 ${OBJECTDIR}/configuration.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/initialization.p1 ${OBJECTDIR}/eeprom.p1 ${OBJECTDIR}/keyboard.p1 ${OBJECTDIR}/screen_lcd.p1
+OBJECTFILES=${OBJECTDIR}/CNA.p1 ${OBJECTDIR}/configuration.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/initialization.p1 ${OBJECTDIR}/eeprom.p1 ${OBJECTDIR}/screen_lcd.p1 ${OBJECTDIR}/fan.p1
 
 # Source Files
-SOURCEFILES=CNA.c configuration.c main.c uart.c initialization.c eeprom.c keyboard.c screen_lcd.c
+SOURCEFILES=CNA.c configuration.c main.c uart.c initialization.c eeprom.c screen_lcd.c fan.c
 
 
 
@@ -142,14 +142,6 @@ ${OBJECTDIR}/eeprom.p1: eeprom.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/eeprom.d ${OBJECTDIR}/eeprom.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/eeprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/keyboard.p1: keyboard.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/keyboard.p1.d 
-	@${RM} ${OBJECTDIR}/keyboard.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=pickit3    --double=24 --float=24 --emi=wordwrite --ram=default,2000-1FFFFF --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/keyboard.p1 keyboard.c 
-	@-${MV} ${OBJECTDIR}/keyboard.d ${OBJECTDIR}/keyboard.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/keyboard.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 ${OBJECTDIR}/screen_lcd.p1: screen_lcd.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/screen_lcd.p1.d 
@@ -157,6 +149,14 @@ ${OBJECTDIR}/screen_lcd.p1: screen_lcd.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=pickit3    --double=24 --float=24 --emi=wordwrite --ram=default,2000-1FFFFF --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/screen_lcd.p1 screen_lcd.c 
 	@-${MV} ${OBJECTDIR}/screen_lcd.d ${OBJECTDIR}/screen_lcd.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/screen_lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/fan.p1: fan.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/fan.p1.d 
+	@${RM} ${OBJECTDIR}/fan.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=pickit3    --double=24 --float=24 --emi=wordwrite --ram=default,2000-1FFFFF --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/fan.p1 fan.c 
+	@-${MV} ${OBJECTDIR}/fan.d ${OBJECTDIR}/fan.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/fan.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/CNA.p1: CNA.c  nbproject/Makefile-${CND_CONF}.mk 
@@ -207,14 +207,6 @@ ${OBJECTDIR}/eeprom.p1: eeprom.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/eeprom.d ${OBJECTDIR}/eeprom.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/eeprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/keyboard.p1: keyboard.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/keyboard.p1.d 
-	@${RM} ${OBJECTDIR}/keyboard.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G    --double=24 --float=24 --emi=wordwrite --ram=default,2000-1FFFFF --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/keyboard.p1 keyboard.c 
-	@-${MV} ${OBJECTDIR}/keyboard.d ${OBJECTDIR}/keyboard.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/keyboard.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 ${OBJECTDIR}/screen_lcd.p1: screen_lcd.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/screen_lcd.p1.d 
@@ -222,6 +214,14 @@ ${OBJECTDIR}/screen_lcd.p1: screen_lcd.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G    --double=24 --float=24 --emi=wordwrite --ram=default,2000-1FFFFF --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/screen_lcd.p1 screen_lcd.c 
 	@-${MV} ${OBJECTDIR}/screen_lcd.d ${OBJECTDIR}/screen_lcd.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/screen_lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/fan.p1: fan.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/fan.p1.d 
+	@${RM} ${OBJECTDIR}/fan.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G    --double=24 --float=24 --emi=wordwrite --ram=default,2000-1FFFFF --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/fan.p1 fan.c 
+	@-${MV} ${OBJECTDIR}/fan.d ${OBJECTDIR}/fan.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/fan.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

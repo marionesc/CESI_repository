@@ -1,5 +1,5 @@
 
-# 1 "screen_lcd.c"
+# 1 "fan.c"
 
 # 8 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdio.h"
 typedef int ptrdiff_t;
@@ -12134,106 +12134,44 @@ void keyboard_treatment(void);
 unsigned char ADC_read(int channel);
 void DAC_write(unsigned char value);
 
-# 44 "screen_lcd.c"
-far unsigned char LCD_FUNC @0x1A0000;
-far unsigned char LCD_DATA @0x1A0002;
+# 11 "fan.h"
+void Init_fan(void);
+void set_fan(int value);
+int get_fan(void);
 
-# 56
-void init_screen_lcd(void) {
-_delay((unsigned long)((10)*(11059200/4000.0))); LCD_FUNC = 0x38;
-_delay((unsigned long)((5)*(11059200/4000.0))); LCD_FUNC = 0x38;
-_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x38;
-_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x38;
-_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x14;
-_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x0E;
-_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x06;
-_delay((unsigned long)((1)*(11059200/4000.0))); LCD_FUNC = 0x02;
-_delay((unsigned long)((2)*(11059200/4000.0))); LCD_FUNC = 0x01;
-_delay((unsigned long)((2)*(11059200/4000.0)));
+# 33 "fan.c"
+void Init_fan(void){
+TRISCbits.TRISC2 = 0;
+
+TRISBbits.TRISB1 = 1;
 }
 
-# 75
-void acq(void) {
-while ((LCD_FUNC & 0x80) == 0x80);
+
+
+
+void set_fan(int value){
+LATCbits.LATC2 = value;
 }
 
-# 85
-void set_ddram(unsigned char addr) {
-LCD_FUNC = 0x40 & addr;
-}
+# 50
+int get_fan(void){
+reset_timer0();
+int fan_signal = PORTBbits.RB1;
+
+
+while(fan_signal == 0){
+fan_signal = PORTBbits.RB1;
+};
+start_timer0();
+
+
+while(fan_signal == 1){
+fan_signal = PORTBbits.RB1;
+};
+
+# 71
+stop_timer0();
+return lecture_timer0();
 
 # 94
-void screen_action(unsigned char keyboard) {
-keyboard = keyboard & 0x0F;
-
-switch (keyboard) {
-
-case 10 : break;
-case 11 : break;
-
-case 12 :
-LCD_FUNC = 0x10;
-_delay((unsigned long)((2)*(11059200/4000.0))); acq();
-break;
-
-case 13 :
-LCD_FUNC = 0x14;
-_delay((unsigned long)((2)*(11059200/4000.0))); acq();
-break;
-
-case 14 :
-LCD_FUNC = 0x01;
-_delay((unsigned long)((2)*(11059200/4000.0))); acq();
-
-LCD_FUNC = 0x02;
-_delay((unsigned long)((2)*(11059200/4000.0))); acq();
-break;
-
-case 15 :
-LCD_FUNC = 0b0011000000;
-_delay((unsigned long)((2)*(11059200/4000.0)));
-acq();
-break;
-
-default :
-LCD_DATA = keyboard + 48;
-acq();
-break;
 }
-}
-
-# 138
-void screen_word_write(char *word) {
-int word_length = strlen(word);
-
-LCD_FUNC = 0x01;
-acq();
-if(word_length == 1){
-LCD_DATA = word;
-acq();
-}
-else{
-for(int j = 1; j < word_length; j++){
-LCD_DATA = word[j];
-acq();
-}
-}
-}
-
-# 160
-void screen_number_write(int number){
-int i = 0;
-char number_string[10];
-LCD_FUNC = 0x01;
-acq();
-while (number > 0) {
-number_string[i] = number % 10 + 48;
-number = number / 10;
-i++;
-}
-for (i = i - 1; i >= 0; i--) {
-LCD_DATA = number_string[i];
-acq();
-}
-}
-

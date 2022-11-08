@@ -17,7 +17,7 @@
 
 #include "initialization.h"
 #include "eeprom.h"
-#include "keyboard.h"
+//#include "keyboard.h"
 #include "screen_lcd.h"
 #include "uart.h"
 #include "CNA.h"
@@ -41,7 +41,7 @@
 // GLOBAL VALUE
 #define ASCII_CONVERSION_CONST      48
 
-far unsigned char LCD_FUNC      @0x1A0000;
+far unsigned char LCD_FUNC   @0x1A0000;
 far unsigned char LCD_DATA   @0x1A0002;
 
 //int calcul_value = 0;     // Pour pouvoir activer +/- sur le clavier

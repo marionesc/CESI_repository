@@ -2,12 +2,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "13 initialization.h
 [v _Init `(v ~T0 @X0 0 ef ]
-"15
-[v _Init_interuption `(v ~T0 @X0 0 ef ]
-"2 uart.h
-[v _Init_UART1 `(v ~T0 @X0 0 ef ]
+"11 fan.h
+[v _Init_fan `(v ~T0 @X0 0 ef ]
+"16 initialization.h
+[v _Init_timer0 `(v ~T0 @X0 0 ef ]
+"4 screen_lcd.h
+[v _init_screen_lcd `(v ~T0 @X0 0 ef ]
 "7
-[v _Init_UART2 `(v ~T0 @X0 0 ef ]
+[v _acq `(v ~T0 @X0 0 ef ]
+"12 fan.h
+[v _set_fan `(v ~T0 @X0 0 ef1`i ]
+"11 screen_lcd.h
+[v _screen_number_write `(v ~T0 @X0 0 ef1`i ]
 [; ;stdio.h: 8: typedef int ptrdiff_t;
 [; ;stdio.h: 9: typedef unsigned size_t;
 [; ;stdio.h: 10: typedef unsigned short wchar_t;
@@ -9266,7 +9272,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;initialization.h: 27: void reset_timer0(void);
 [; ;eeprom.h: 12: int read_eeprom(unsigned char addr);
 [; ;eeprom.h: 13: void write_eeprom(unsigned char addr, unsigned char data);
-[; ;keyboard.h: 11: unsigned char get_keyboard();
 [; ;screen_lcd.h: 4: void init_screen_lcd(void);
 [; ;screen_lcd.h: 7: void acq(void);
 [; ;screen_lcd.h: 8: void set_ddram(unsigned char addr);
@@ -9282,45 +9287,54 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;uart.h: 12: void keyboard_treatment(void);
 [; ;CNA.h: 12: unsigned char ADC_read(int channel);
 [; ;CNA.h: 13: void DAC_write(unsigned char value);
-"28 main.c
-[v _keyboard_value `uc ~T0 @X0 1 e ]
-[; ;main.c: 28: unsigned char keyboard_value;
-"29
-[v _keyboard_flag `i ~T0 @X0 1 e ]
-[i _keyboard_flag
--> 0 `i
+[; ;fan.h: 11: void Init_fan(void);
+[; ;fan.h: 12: void set_fan(int value);
+[; ;fan.h: 13: int get_fan(void);
+"31 main.c
+[v _number `i ~T0 @X0 1 e ]
+[i _number
+-> 258 `i
 ]
-[; ;main.c: 29: int keyboard_flag = 0;
-"32
+[; ;main.c: 31: int number = 258;
+"34
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 32: void main(void) {
+[; ;main.c: 34: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 33: Init();
-"33
-[e ( _Init ..  ]
-[; ;main.c: 34: Init_interuption();
-"34
-[e ( _Init_interuption ..  ]
-[; ;main.c: 35: Init_UART1();
+[; ;main.c: 35: Init();
 "35
-[e ( _Init_UART1 ..  ]
-[; ;main.c: 36: Init_UART2();
+[e ( _Init ..  ]
+[; ;main.c: 36: Init_fan();
 "36
-[e ( _Init_UART2 ..  ]
-[; ;main.c: 38: while (1) {
-"38
+[e ( _Init_fan ..  ]
+[; ;main.c: 37: Init_timer0();
+"37
+[e ( _Init_timer0 ..  ]
+[; ;main.c: 39: init_screen_lcd();
+"39
+[e ( _init_screen_lcd ..  ]
+[; ;main.c: 40: acq();
+"40
+[e ( _acq ..  ]
+[; ;main.c: 42: while (1) {
+"42
 [e :U 1245 ]
 {
-"39
+[; ;main.c: 43: set_fan(1);
+"43
+[e ( _set_fan (1 -> 1 `i ]
+[; ;main.c: 45: screen_number_write(number);
+"45
+[e ( _screen_number_write (1 _number ]
+"46
 }
 [e :U 1244 ]
-"38
+"42
 [e $U 1245  ]
 [e :U 1246 ]
-[; ;main.c: 39: }
-[; ;main.c: 40: }
-"40
+[; ;main.c: 46: }
+[; ;main.c: 47: }
+"47
 [e :UE 1243 ]
 }

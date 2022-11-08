@@ -31,7 +31,7 @@ far unsigned char CLAV @0x180000;
  * @return la valeur du clavier 
  */
 unsigned char get_keyboard(){
-    return ((CLAV && 0x0F) + 0x30); 
+    return ((CLAV & 0x0F) + 0x30); 
 }
 /**
  * Recuparation de la valeur entree sur le clavier numerique

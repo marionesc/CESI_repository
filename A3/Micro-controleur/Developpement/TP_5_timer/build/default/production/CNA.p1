@@ -9279,7 +9279,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;initialization.h: 27: void reset_timer0(void);
 [; ;eeprom.h: 12: int read_eeprom(unsigned char addr);
 [; ;eeprom.h: 13: void write_eeprom(unsigned char addr, unsigned char data);
-[; ;keyboard.h: 11: unsigned char get_keyboard();
 [; ;screen_lcd.h: 4: void init_screen_lcd(void);
 [; ;screen_lcd.h: 7: void acq(void);
 [; ;screen_lcd.h: 8: void set_ddram(unsigned char addr);

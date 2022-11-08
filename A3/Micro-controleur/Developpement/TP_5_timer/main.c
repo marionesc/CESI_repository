@@ -16,25 +16,32 @@
 
 #include "initialization.h"
 #include "eeprom.h"
-#include "keyboard.h"
+//#include "keyboard.h"
 #include "screen_lcd.h"
 #include "uart.h"
 #include "CNA.h"
+#include "fan.h"
 
 //DEFFINITION 
 #define _XTAL_FREQ 11059200
 
 //GLOBAL VALUE
-unsigned char keyboard_value;
-int keyboard_flag = 0;
+//unsigned char keyboard_value;
+//int keyboard_flag = 0;
+int number = 258;
 
 //MAIN PROGRAM
 void main(void) {
     Init();
-    Init_interuption(); 
-    Init_UART1();
-    Init_UART2(); 
+    Init_fan();
+    Init_timer0(); 
+    
+    init_screen_lcd();
+    acq(); 
     
     while (1) {
+        set_fan(1);
+        //int time = get_fan();
+        screen_number_write(number);
         }
-    }
+}

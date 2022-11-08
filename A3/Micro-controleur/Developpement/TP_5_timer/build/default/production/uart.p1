@@ -107,8 +107,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TXREG2 `Vuc ~T0 @X0 0 e@3868 ]
 "28 uart.c
 [v _keyboard_flag `i ~T0 @X0 0 e ]
-"11 keyboard.h
-[v _get_keyboard `(uc ~T0 @X0 0 ef ]
+"118
+[v _get_keyboard `(i ~T0 @X0 0 ef ]
 "7 screen_lcd.h
 [v _acq `(v ~T0 @X0 0 ef ]
 [; ;stdio.h: 8: typedef int ptrdiff_t;
@@ -9369,7 +9369,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;initialization.h: 27: void reset_timer0(void);
 [; ;eeprom.h: 12: int read_eeprom(unsigned char addr);
 [; ;eeprom.h: 13: void write_eeprom(unsigned char addr, unsigned char data);
-[; ;keyboard.h: 11: unsigned char get_keyboard();
 [; ;screen_lcd.h: 4: void init_screen_lcd(void);
 [; ;screen_lcd.h: 7: void acq(void);
 [; ;screen_lcd.h: 8: void set_ddram(unsigned char addr);
@@ -9556,7 +9555,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;uart.c: 118: data = get_keyboard();
 "118
-[e = _data ( _get_keyboard ..  ]
+[e = _data -> ( _get_keyboard ..  `uc ]
 [; ;uart.c: 120: if (data == 0x3F){
 "120
 [e $ ! == -> _data `i -> 63 `i 1259  ]

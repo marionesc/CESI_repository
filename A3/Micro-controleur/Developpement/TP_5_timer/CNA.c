@@ -16,7 +16,7 @@
 
 #include "initialization.h"
 #include "eeprom.h"
-#include "keyboard.h"
+//#include "keyboard.h"
 #include "screen_lcd.h"
 #include "uart.h"
 #include "CNA.h"

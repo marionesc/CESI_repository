@@ -9302,9 +9302,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;keyboard.c: 33: unsigned char get_keyboard(){
 [e :U _get_keyboard ]
 [f ]
-[; ;keyboard.c: 34: return ((CLAV && 0x0F) + 0x30);
+[; ;keyboard.c: 34: return ((CLAV & 0x0F) + 0x30);
 "34
-[e ) -> + -> && != -> _CLAV `i -> -> -> 0 `i `Fuc `i != -> 15 `i -> 0 `i `i -> 48 `i `uc ]
+[e ) -> + & -> _CLAV `i -> 15 `i -> 48 `i `uc ]
 [e $UE 1243  ]
 [; ;keyboard.c: 35: }
 "35

@@ -12107,9 +12107,6 @@ void reset_timer0(void);
 int read_eeprom(unsigned char addr);
 void write_eeprom(unsigned char addr, unsigned char data);
 
-# 11 "keyboard.h"
-unsigned char get_keyboard();
-
 # 4 "screen_lcd.h"
 void init_screen_lcd(void);
 
@@ -12158,7 +12155,7 @@ TRISD = 0x00;
 TRISH = 0xFF;
 
 
-TRISG = 0x04;
+TRISGbits.TRISG2 = 1;
 }
 
 # 62
@@ -12197,7 +12194,7 @@ INTCONbits.GIE = 1;
 void delai_ms(unsigned char val){
 
 # 113
-for (int j=0;j<val;j++) {
+for (int j = 0; j < val ; j++) {
 _delay((unsigned long)((1)*(11059200/4000.0)));
 }
 }
@@ -12223,7 +12220,7 @@ T0CONbits.TMR0ON = 0;
 }
 
 # 165
-int lecture_timer(void){
+int lecture_timer0(void){
 return TMR0L;
 }
 
