@@ -1,0 +1,14 @@
+_Init_UART1: CODE, 596 0 24
+_Init_UART2: CODE, 518 0 44
+_Init_interuption: CODE, 686 0 12
+_set_UART1: CODE, 658 0 16
+_set_UART2: CODE, 642 0 16
+_acq: CODE, 562 0 34
+_strlen: CODE, 338 0 68
+_main: CODE, 620 0 22
+__initialization: CODE, 674 0 6
+_Init: CODE, 406 0 60
+_screen_word_write: CODE, 180 0 158
+_get_keyboard: CODE, 466 0 52
+_keyboard_int: CODE, 8 0 168
+Total: 680
