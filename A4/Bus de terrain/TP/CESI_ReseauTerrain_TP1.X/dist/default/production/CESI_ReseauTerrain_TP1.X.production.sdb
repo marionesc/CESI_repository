@@ -1,0 +1,585 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F87K22 ]
+[d frameptr 4065 ]
+"7 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"5 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/afficheur.c
+[v _write_d_aff write_d_aff `(v  1 e 1 0 ]
+"18
+[v _write_c_aff write_c_aff `(v  1 e 1 0 ]
+"31
+[v _check_status_ok check_status_ok `(uc  1 e 1 0 ]
+"54
+[v _wait_status_ok wait_status_ok `(uc  1 e 1 0 ]
+"91
+[v _command command `(uc  1 e 1 0 ]
+"107
+[v _d1command d1command `(uc  1 e 1 0 ]
+"129
+[v _d2command d2command `(uc  1 e 1 0 ]
+"155
+[v _delai_us_char delai_us_char `(v  1 e 1 0 ]
+"165
+[v _initialisation_afficheur initialisation_afficheur `(v  1 e 1 0 ]
+"244
+[v _draw_string draw_string `(v  1 e 1 0 ]
+"276
+[v _goto_lico goto_lico `(v  1 e 1 0 ]
+"288
+[v _clear_text clear_text `(v  1 e 1 0 ]
+"299
+[v _clear_graphics clear_graphics `(v  1 e 1 0 ]
+"321
+[v _plot1 plot1 `(v  1 e 1 0 ]
+"363
+[v _drawVericalLine drawVericalLine `(v  1 e 1 0 ]
+"3 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/eep_spi.c
+[v _EEP_SPI_Initialize EEP_SPI_Initialize `(v  1 e 1 0 ]
+"7
+[v _EEP_SPI_EnableWrite EEP_SPI_EnableWrite `(v  1 e 1 0 ]
+"14
+[v _EEP_SPI_IsWriteInProgress EEP_SPI_IsWriteInProgress `(a  1 e 1 0 ]
+"33
+[v _EEP_SPI_ReadByte EEP_SPI_ReadByte `(uc  1 e 1 0 ]
+"50
+[v _EEP_SPI_WriteByte EEP_SPI_WriteByte `(v  1 e 1 0 ]
+"66
+[v _EEP_SPI_WriteBytes EEP_SPI_WriteBytes `(v  1 e 1 0 ]
+"15 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/main.c
+[v _initialisation_des_ports initialisation_des_ports `(v  1 e 1 0 ]
+"46
+[v _main main `(v  1 e 1 0 ]
+"3 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/spi.c
+[v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
+"22
+[v _SPI_ExchangeByte SPI_ExchangeByte `(uc  1 e 1 0 ]
+"30
+[v _SPI_ExchangeBlock SPI_ExchangeBlock `(v  1 e 1 0 ]
+"1081 /Applications/microchip/xc8/v2.10/pic/include/pic18f87k22.h
+[v _ANCON2 ANCON2 `VEuc  1 e 1 @3875 ]
+"1193
+[v _ANCON1 ANCON1 `VEuc  1 e 1 @3876 ]
+"1305
+[v _ANCON0 ANCON0 `VEuc  1 e 1 @3877 ]
+"1417
+[v _MEMCON MEMCON `VEuc  1 e 1 @3878 ]
+[s S194 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RTSECSEL 1 0 :2:1 
+`uc 1 . 1 0 :2:3 
+`uc 1 RJPU 1 0 :1:5 
+`uc 1 REPU 1 0 :1:6 
+`uc 1 RDPU 1 0 :1:7 
+]
+"4262
+[s S201 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RTSECSEL0 1 0 :1:1 
+`uc 1 RTSECSEL1 1 0 :1:2 
+]
+[u S205 . 1 `S194 1 . 1 0 `S201 1 . 1 0 ]
+[v _PADCFG1bits PADCFG1bits `VES205  1 e 1 @3923 ]
+"6037
+[v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @3943 ]
+[s S606 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"6067
+[s S612 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[s S617 . 1 `uc 1 SSPM02 1 0 :1:0 
+`uc 1 SSPM12 1 0 :1:1 
+`uc 1 SSPM22 1 0 :1:2 
+`uc 1 SSPM32 1 0 :1:3 
+`uc 1 CKP2 1 0 :1:4 
+`uc 1 SSPEN2 1 0 :1:5 
+`uc 1 SSPOV2 1 0 :1:6 
+`uc 1 WCOL2 1 0 :1:7 
+]
+[u S626 . 1 `S606 1 . 1 0 `S612 1 . 1 0 `S617 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES626  1 e 1 @3943 ]
+"6157
+[v _SSP2STAT SSP2STAT `VEuc  1 e 1 @3944 ]
+"6724
+[v _SSP2BUF SSP2BUF `VEuc  1 e 1 @3946 ]
+"9248
+[v _PORTH PORTH `VEuc  1 e 1 @3975 ]
+[s S28 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"9821
+[s S37 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 LC3 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S46 . 1 `S28 1 . 1 0 `S37 1 . 1 0 ]
+[v _LATCbits LATCbits `VES46  1 e 1 @3979 ]
+[s S536 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LATF1 1 0 :1:1 
+`uc 1 LATF2 1 0 :1:2 
+`uc 1 LATF3 1 0 :1:3 
+`uc 1 LATF4 1 0 :1:4 
+`uc 1 LATF5 1 0 :1:5 
+`uc 1 LATF6 1 0 :1:6 
+`uc 1 LATF7 1 0 :1:7 
+]
+"10157
+[s S545 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LF1 1 0 :1:1 
+`uc 1 LF2 1 0 :1:2 
+`uc 1 LF3 1 0 :1:3 
+`uc 1 LF4 1 0 :1:4 
+`uc 1 LF5 1 0 :1:5 
+`uc 1 LF6 1 0 :1:6 
+`uc 1 LF7 1 0 :1:7 
+]
+[u S554 . 1 `S536 1 . 1 0 `S545 1 . 1 0 ]
+[v _LATFbits LATFbits `VES554  1 e 1 @3982 ]
+[s S68 . 1 `uc 1 LATG0 1 0 :1:0 
+`uc 1 LATG1 1 0 :1:1 
+`uc 1 LATG2 1 0 :1:2 
+`uc 1 LATG3 1 0 :1:3 
+`uc 1 LATG4 1 0 :1:4 
+]
+"10253
+[s S74 . 1 `uc 1 LG0 1 0 :1:0 
+`uc 1 LG1 1 0 :1:1 
+`uc 1 LG2 1 0 :1:2 
+`uc 1 LG3 1 0 :1:3 
+`uc 1 LG4 1 0 :1:4 
+]
+[u S80 . 1 `S68 1 . 1 0 `S74 1 . 1 0 ]
+[v _LATGbits LATGbits `VES80  1 e 1 @3983 ]
+"10308
+[v _LATH LATH `VEuc  1 e 1 @3984 ]
+"10420
+[v _LATJ LATJ `VEuc  1 e 1 @3985 ]
+[s S330 . 1 `uc 1 LATJ0 1 0 :1:0 
+`uc 1 LATJ1 1 0 :1:1 
+`uc 1 LATJ2 1 0 :1:2 
+`uc 1 LATJ3 1 0 :1:3 
+`uc 1 LATJ4 1 0 :1:4 
+`uc 1 LATJ5 1 0 :1:5 
+`uc 1 LATJ6 1 0 :1:6 
+`uc 1 LATJ7 1 0 :1:7 
+]
+"10447
+[s S339 . 1 `uc 1 LJ0 1 0 :1:0 
+`uc 1 LJ1 1 0 :1:1 
+`uc 1 LJ2 1 0 :1:2 
+`uc 1 LJ3 1 0 :1:3 
+`uc 1 LJ4 1 0 :1:4 
+`uc 1 LJ5 1 0 :1:5 
+`uc 1 LJ6 1 0 :1:6 
+`uc 1 LJ7 1 0 :1:7 
+]
+[u S348 . 1 `S330 1 . 1 0 `S339 1 . 1 0 ]
+[v _LATJbits LATJbits `VES348  1 e 1 @3985 ]
+[s S96 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"10549
+[u S105 . 1 `S96 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES105  1 e 1 @3986 ]
+[s S117 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"10673
+[u S126 . 1 `S117 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES126  1 e 1 @3988 ]
+[s S494 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"10735
+[u S503 . 1 `S494 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES503  1 e 1 @3989 ]
+[s S515 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TRISF1 1 0 :1:1 
+`uc 1 TRISF2 1 0 :1:2 
+`uc 1 TRISF3 1 0 :1:3 
+`uc 1 TRISF4 1 0 :1:4 
+`uc 1 TRISF5 1 0 :1:5 
+`uc 1 TRISF6 1 0 :1:6 
+`uc 1 TRISF7 1 0 :1:7 
+]
+"10859
+[u S524 . 1 `S515 1 . 1 0 ]
+[v _TRISFbits TRISFbits `VES524  1 e 1 @3991 ]
+[s S138 . 1 `uc 1 TRISG0 1 0 :1:0 
+`uc 1 TRISG1 1 0 :1:1 
+`uc 1 TRISG2 1 0 :1:2 
+`uc 1 TRISG3 1 0 :1:3 
+`uc 1 TRISG4 1 0 :1:4 
+]
+"10913
+[u S144 . 1 `S138 1 . 1 0 ]
+[v _TRISGbits TRISGbits `VES144  1 e 1 @3992 ]
+"10943
+[v _TRISH TRISH `VEuc  1 e 1 @3993 ]
+"11005
+[v _TRISJ TRISJ `VEuc  1 e 1 @3994 ]
+[s S576 . 1 `uc 1 TMR3GIF 1 0 :1:0 
+`uc 1 TMR3IF 1 0 :1:1 
+`uc 1 HLVDIF 1 0 :1:2 
+`uc 1 BCL1IF 1 0 :1:3 
+`uc 1 BCL2IF 1 0 :1:4 
+`uc 1 SSP2IF 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 OSCFIF 1 0 :1:7 
+]
+"11546
+[s S585 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIF 1 0 :1:2 
+`uc 1 BCLIF 1 0 :1:3 
+]
+[u S589 . 1 `S576 1 . 1 0 `S585 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES589  1 e 1 @4001 ]
+[s S153 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"17479
+[s S156 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 INT3IP 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 INTEDG3 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S165 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT3P 1 0 :1:1 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S171 . 1 `S153 1 . 1 0 `S156 1 . 1 0 `S165 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES171  1 e 1 @4081 ]
+"46 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"49
+[v main@tu8DataFromEEPROM tu8DataFromEEPROM `[20]uc  1 a 20 35 ]
+"48
+[v main@tu8Data tu8Data `[16]uc  1 a 16 19 ]
+"51
+[v main@u8Cpt u8Cpt `uc  1 a 1 58 ]
+"50
+[v main@u8Index u8Index `uc  1 a 1 57 ]
+"47
+[v main@F6860 F6860 `[16]uc  1 s 16 F6860 ]
+"111
+} 0
+"15
+[v _initialisation_des_ports initialisation_des_ports `(v  1 e 1 0 ]
+{
+"44
+} 0
+"165 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/afficheur.c
+[v _initialisation_afficheur initialisation_afficheur `(v  1 e 1 0 ]
+{
+"168
+[v initialisation_afficheur@error_count error_count `uc  1 a 1 8 ]
+"227
+} 0
+"31
+[v _check_status_ok check_status_ok `(uc  1 e 1 0 ]
+{
+"33
+[v check_status_ok@res res `uc  1 a 1 0 ]
+"52
+} 0
+"276
+[v _goto_lico goto_lico `(v  1 e 1 0 ]
+{
+[v goto_lico@ligne ligne `uc  1 a 1 wreg ]
+"278
+[v goto_lico@adr adr `ui  1 a 2 12 ]
+"276
+[v goto_lico@ligne ligne `uc  1 a 1 wreg ]
+[v goto_lico@colonne colonne `uc  1 p 1 8 ]
+"280
+[v goto_lico@ligne ligne `uc  1 a 1 11 ]
+"286
+} 0
+"244
+[v _draw_string draw_string `(v  1 e 1 0 ]
+{
+[v draw_string@tableau tableau `*.34uc  1 p 2 7 ]
+"252
+} 0
+"363
+[v _drawVericalLine drawVericalLine `(v  1 e 1 0 ]
+{
+[v drawVericalLine@ligne ligne `uc  1 a 1 wreg ]
+"365
+[v drawVericalLine@index index `uc  1 a 1 17 ]
+"363
+[v drawVericalLine@ligne ligne `uc  1 a 1 wreg ]
+[v drawVericalLine@colonne colonne `uc  1 p 1 14 ]
+[v drawVericalLine@lenght lenght `uc  1 p 1 15 ]
+"365
+[v drawVericalLine@ligne ligne `uc  1 a 1 16 ]
+"371
+} 0
+"321
+[v _plot1 plot1 `(v  1 e 1 0 ]
+{
+[v plot1@x x `uc  1 a 1 wreg ]
+"323
+[v plot1@add add `ui  1 a 2 11 ]
+"321
+[v plot1@x x `uc  1 a 1 wreg ]
+[v plot1@y y `uc  1 p 1 8 ]
+"325
+[v plot1@x x `uc  1 a 1 13 ]
+"340
+} 0
+"91
+[v _command command `(uc  1 e 1 0 ]
+{
+[v command@cmd cmd `uc  1 a 1 wreg ]
+[v command@cmd cmd `uc  1 a 1 wreg ]
+[v command@cmd cmd `uc  1 a 1 5 ]
+"105
+} 0
+"7 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"34
+} 0
+"7 /Applications/microchip/xc8/v2.10/pic/sources/c99/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"41
+} 0
+"288 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/afficheur.c
+[v _clear_text clear_text `(v  1 e 1 0 ]
+{
+"290
+[v clear_text@add add `ui  1 a 2 8 ]
+"297
+} 0
+"299
+[v _clear_graphics clear_graphics `(v  1 e 1 0 ]
+{
+"301
+[v clear_graphics@add add `ui  1 a 2 8 ]
+"308
+} 0
+"129
+[v _d2command d2command `(uc  1 e 1 0 ]
+{
+[v d2command@d1 d1 `uc  1 a 1 wreg ]
+"131
+[v d2command@res res `uc  1 a 1 7 ]
+"129
+[v d2command@d1 d1 `uc  1 a 1 wreg ]
+[v d2command@d2 d2 `uc  1 p 1 4 ]
+[v d2command@cmd cmd `uc  1 p 1 5 ]
+"133
+[v d2command@d1 d1 `uc  1 a 1 6 ]
+"153
+} 0
+"107
+[v _d1command d1command `(uc  1 e 1 0 ]
+{
+[v d1command@d1 d1 `uc  1 a 1 wreg ]
+"109
+[v d1command@res res `uc  1 a 1 6 ]
+"107
+[v d1command@d1 d1 `uc  1 a 1 wreg ]
+[v d1command@cmd cmd `uc  1 p 1 4 ]
+"111
+[v d1command@d1 d1 `uc  1 a 1 5 ]
+"127
+} 0
+"5
+[v _write_d_aff write_d_aff `(v  1 e 1 0 ]
+{
+[v write_d_aff@data data `uc  1 a 1 wreg ]
+[v write_d_aff@data data `uc  1 a 1 wreg ]
+"7
+[v write_d_aff@data data `uc  1 a 1 0 ]
+"16
+} 0
+"18
+[v _write_c_aff write_c_aff `(v  1 e 1 0 ]
+{
+[v write_c_aff@command command `uc  1 a 1 wreg ]
+[v write_c_aff@command command `uc  1 a 1 wreg ]
+"20
+[v write_c_aff@command command `uc  1 a 1 0 ]
+"29
+} 0
+"54
+[v _wait_status_ok wait_status_ok `(uc  1 e 1 0 ]
+{
+"56
+[v wait_status_ok@res res `uc  1 a 1 3 ]
+[v wait_status_ok@status status `uc  1 a 1 2 ]
+[v wait_status_ok@err err `uc  1 a 1 1 ]
+"89
+} 0
+"155
+[v _delai_us_char delai_us_char `(v  1 e 1 0 ]
+{
+[v delai_us_char@ucdelai ucdelai `uc  1 a 1 wreg ]
+[v delai_us_char@ucdelai ucdelai `uc  1 a 1 wreg ]
+[v delai_us_char@ucdelai ucdelai `uc  1 a 1 0 ]
+"163
+} 0
+"3 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/spi.c
+[v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
+{
+"20
+} 0
+"66 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/eep_spi.c
+[v _EEP_SPI_WriteBytes EEP_SPI_WriteBytes `(v  1 e 1 0 ]
+{
+[v EEP_SPI_WriteBytes@Fu8Address Fu8Address `uc  1 a 1 wreg ]
+"68
+[v EEP_SPI_WriteBytes@u8Index u8Index `uc  1 a 1 15 ]
+"66
+[v EEP_SPI_WriteBytes@Fu8Address Fu8Address `uc  1 a 1 wreg ]
+[v EEP_SPI_WriteBytes@Fpu8Data Fpu8Data `*.39uc  1 p 2 11 ]
+[v EEP_SPI_WriteBytes@Fu8Size Fu8Size `uc  1 p 1 13 ]
+"68
+[v EEP_SPI_WriteBytes@Fu8Address Fu8Address `uc  1 a 1 14 ]
+"74
+} 0
+"50
+[v _EEP_SPI_WriteByte EEP_SPI_WriteByte `(v  1 e 1 0 ]
+{
+[v EEP_SPI_WriteByte@Fu8Address Fu8Address `uc  1 a 1 wreg ]
+"52
+[v EEP_SPI_WriteByte@tu8Data tu8Data `[3]uc  1 a 3 8 ]
+"50
+[v EEP_SPI_WriteByte@Fu8Address Fu8Address `uc  1 a 1 wreg ]
+[v EEP_SPI_WriteByte@Fu8Data Fu8Data `uc  1 p 1 6 ]
+"52
+[v EEP_SPI_WriteByte@Fu8Address Fu8Address `uc  1 a 1 7 ]
+"64
+} 0
+"30 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/spi.c
+[v _SPI_ExchangeBlock SPI_ExchangeBlock `(v  1 e 1 0 ]
+{
+"32
+[v SPI_ExchangeBlock@data data `*.39uc  1 a 2 4 ]
+"30
+[v SPI_ExchangeBlock@block block `*.39v  1 p 2 0 ]
+[v SPI_ExchangeBlock@blockSize blockSize `ui  1 p 2 2 ]
+"40
+} 0
+"7 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/eep_spi.c
+[v _EEP_SPI_EnableWrite EEP_SPI_EnableWrite `(v  1 e 1 0 ]
+{
+"12
+} 0
+"33
+[v _EEP_SPI_ReadByte EEP_SPI_ReadByte `(uc  1 e 1 0 ]
+{
+[v EEP_SPI_ReadByte@Fu8Address Fu8Address `uc  1 a 1 wreg ]
+"35
+[v EEP_SPI_ReadByte@u8ReadData u8ReadData `uc  1 a 1 3 ]
+"33
+[v EEP_SPI_ReadByte@Fu8Address Fu8Address `uc  1 a 1 wreg ]
+[v EEP_SPI_ReadByte@Fu8Address Fu8Address `uc  1 a 1 2 ]
+"48
+} 0
+"14
+[v _EEP_SPI_IsWriteInProgress EEP_SPI_IsWriteInProgress `(a  1 e 1 0 ]
+{
+"16
+[v EEP_SPI_IsWriteInProgress@u8WIP u8WIP `uc  1 a 1 1 ]
+"31
+} 0
+"22 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/spi.c
+[v _SPI_ExchangeByte SPI_ExchangeByte `(uc  1 e 1 0 ]
+{
+[v SPI_ExchangeByte@data data `uc  1 a 1 wreg ]
+[v SPI_ExchangeByte@data data `uc  1 a 1 wreg ]
+"24
+[v SPI_ExchangeByte@data data `uc  1 a 1 0 ]
+"28
+} 0
+"3 /Users/Stephane/Documents/CESI/Reseaux de terrains/2022/CESI_ReseauTerrain_TP1.X/eep_spi.c
+[v _EEP_SPI_Initialize EEP_SPI_Initialize `(v  1 e 1 0 ]
+{
+"5
+} 0
