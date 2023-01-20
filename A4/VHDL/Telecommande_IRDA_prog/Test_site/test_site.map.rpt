@@ -1,0 +1,575 @@
+Analysis & Synthesis report for test_site
+Thu Oct 21 08:37:03 2021
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Oct 21 08:37:03 2021         ;
+; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
+; Revision Name                      ; test_site                                     ;
+; Top-level Entity Name              ; Maquette_ER_test_IRDA                         ;
+; Family                             ; Cyclone IV E                                  ;
+; Total logic elements               ; 0                                             ;
+;     Total combinational functions  ; 0                                             ;
+;     Dedicated logic registers      ; 0                                             ;
+; Total registers                    ; 0                                             ;
+; Total pins                         ; 325                                           ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                           ;
++----------------------------------------------------------------------------+-----------------------+--------------------+
+; Option                                                                     ; Setting               ; Default Value      ;
++----------------------------------------------------------------------------+-----------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7         ;                    ;
+; Top-level entity name                                                      ; Maquette_ER_test_IRDA ; test_site          ;
+; Family name                                                                ; Cyclone IV E          ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                   ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                    ; On                 ;
+; Enable compact report table                                                ; Off                   ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                  ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                   ; Off                ;
+; Preserve fewer node names                                                  ; On                    ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                   ; Off                ;
+; Verilog Version                                                            ; Verilog_2001          ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993             ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                  ; Auto               ;
+; Safe State Machine                                                         ; Off                   ; Off                ;
+; Extract Verilog State Machines                                             ; On                    ; On                 ;
+; Extract VHDL State Machines                                                ; On                    ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                   ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                  ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                   ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                    ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                    ; On                 ;
+; Parallel Synthesis                                                         ; On                    ; On                 ;
+; DSP Block Balancing                                                        ; Auto                  ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                    ; On                 ;
+; Power-Up Don't Care                                                        ; On                    ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                   ; Off                ;
+; Remove Duplicate Registers                                                 ; On                    ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                   ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                   ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                   ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                   ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                   ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                    ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                   ; Off                ;
+; Optimization Technique                                                     ; Balanced              ; Balanced           ;
+; Carry Chain Length                                                         ; 70                    ; 70                 ;
+; Auto Carry Chains                                                          ; On                    ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                    ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                   ; Off                ;
+; Auto ROM Replacement                                                       ; On                    ; On                 ;
+; Auto RAM Replacement                                                       ; On                    ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                    ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                  ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                  ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                    ; On                 ;
+; Strict RAM Replacement                                                     ; Off                   ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                    ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                   ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                    ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                   ; Off                ;
+; Auto Resource Sharing                                                      ; Off                   ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                   ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                   ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                   ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                    ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                   ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                    ; On                 ;
+; Report Parameter Settings                                                  ; On                    ; On                 ;
+; Report Source Assignments                                                  ; On                    ; On                 ;
+; Report Connectivity Checks                                                 ; On                    ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                   ; Off                ;
+; Synchronization Register Chain Length                                      ; 3                     ; 3                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation    ; Normal compilation ;
+; HDL message level                                                          ; Level2                ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                   ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                  ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                   ; 100                ;
+; Clock MUX Protection                                                       ; On                    ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                   ; Off                ;
+; Block Design Naming                                                        ; Auto                  ; Auto               ;
+; SDC constraint protection                                                  ; Off                   ; Off                ;
+; Synthesis Effort                                                           ; Auto                  ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                    ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium                ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                  ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                    ; On                 ;
+; Synthesis Seed                                                             ; 1                     ; 1                  ;
++----------------------------------------------------------------------------+-----------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                       ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+
+; Maquette_ER_test_IRDA.vhd        ; yes             ; User VHDL File  ; I:/IUT/35_CESI/2_CESI_2A_S1/TP_2A_S1_CESI/Projet teleco/Telecommande_IRDA_prog/Test_site/Maquette_ER_test_IRDA.vhd ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+;                                             ;                ;
+; Total combinational functions               ; 0              ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 0              ;
+;     -- 3 input functions                    ; 0              ;
+;     -- <=2 input functions                  ; 0              ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 0              ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 0              ;
+;     -- Dedicated logic registers            ; 0              ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 325            ;
+; Maximum fan-out node                        ; IRDA_RXD~input ;
+; Maximum fan-out                             ; 2              ;
+; Total fan-out                               ; 491            ;
+; Average fan-out                             ; 0.62           ;
++---------------------------------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                            ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
+; |Maquette_ER_test_IRDA     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 325  ; 0            ; |Maquette_ER_test_IRDA ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Oct 21 08:36:57 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test_site_quartus11 -c test_site
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file maquette_er.vhd
+    Info (12022): Found design unit 1: Maquette_ER-synth
+    Info (12023): Found entity 1: Maquette_ER
+Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
+    Info (12022): Found design unit 1: pll-SYN
+    Info (12023): Found entity 1: pll
+Info (12021): Found 2 design units, including 1 entities, in source file maquette_er_test_irda.vhd
+    Info (12022): Found design unit 1: Maquette_ER_test_IRDA-synth
+    Info (12023): Found entity 1: Maquette_ER_test_IRDA
+Info (12127): Elaborating entity "Maquette_ER_test_IRDA" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(29): used implicit default value for signal "LCD_BLON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(29): used implicit default value for signal "LCD_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(29): used implicit default value for signal "LCD_ON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(29): used implicit default value for signal "LCD_RS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(29): used implicit default value for signal "LCD_RW" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(33): used implicit default value for signal "SD_CLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(39): used implicit default value for signal "VGA_B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(39): used implicit default value for signal "VGA_G" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(39): used implicit default value for signal "VGA_R" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(40): used implicit default value for signal "VGA_BLANK_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(40): used implicit default value for signal "VGA_CLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(41): used implicit default value for signal "VGA_HS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(41): used implicit default value for signal "VGA_SYNC_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(41): used implicit default value for signal "VGA_VS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(46): used implicit default value for signal "AUD_DACDAT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(46): used implicit default value for signal "AUD_XCK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(49): used implicit default value for signal "I2C_SCLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(56): used implicit default value for signal "SRAM_ADDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(58): used implicit default value for signal "SRAM_CE_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(58): used implicit default value for signal "SRAM_LB_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(58): used implicit default value for signal "SRAM_OE_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(59): used implicit default value for signal "SRAM_UB_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Maquette_ER_test_IRDA.vhd(59): used implicit default value for signal "SRAM_WE_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10873): Using initial value X (don't care) for net "LEDG[0]" at Maquette_ER_test_IRDA.vhd(16)
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[0]" and its non-tri-state driver.
+Warning (13039): The following bidir pins have no drivers
+    Warning (13040): Bidir "LCD_DATA[0]" has no driver
+    Warning (13040): Bidir "LCD_DATA[1]" has no driver
+    Warning (13040): Bidir "LCD_DATA[2]" has no driver
+    Warning (13040): Bidir "LCD_DATA[3]" has no driver
+    Warning (13040): Bidir "LCD_DATA[4]" has no driver
+    Warning (13040): Bidir "LCD_DATA[5]" has no driver
+    Warning (13040): Bidir "LCD_DATA[6]" has no driver
+    Warning (13040): Bidir "LCD_DATA[7]" has no driver
+    Warning (13040): Bidir "SD_CMD" has no driver
+    Warning (13040): Bidir "SD_DAT[0]" has no driver
+    Warning (13040): Bidir "SD_DAT[1]" has no driver
+    Warning (13040): Bidir "SD_DAT[2]" has no driver
+    Warning (13040): Bidir "SD_DAT[3]" has no driver
+    Warning (13040): Bidir "AUD_ADCLRCK" has no driver
+    Warning (13040): Bidir "AUD_BCLK" has no driver
+    Warning (13040): Bidir "AUD_DACLRCK" has no driver
+    Warning (13040): Bidir "I2C_SDAT" has no driver
+    Warning (13040): Bidir "SRAM_DQ[0]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[1]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[2]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[3]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[4]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[5]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[6]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[7]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[8]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[9]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[10]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[11]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[12]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[13]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[14]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[15]" has no driver
+    Warning (13040): Bidir "GPIO[1]" has no driver
+    Warning (13040): Bidir "GPIO[2]" has no driver
+    Warning (13040): Bidir "GPIO[3]" has no driver
+    Warning (13040): Bidir "GPIO[4]" has no driver
+    Warning (13040): Bidir "GPIO[5]" has no driver
+    Warning (13040): Bidir "GPIO[6]" has no driver
+    Warning (13040): Bidir "GPIO[7]" has no driver
+    Warning (13040): Bidir "GPIO[8]" has no driver
+    Warning (13040): Bidir "GPIO[9]" has no driver
+    Warning (13040): Bidir "GPIO[10]" has no driver
+    Warning (13040): Bidir "GPIO[11]" has no driver
+    Warning (13040): Bidir "GPIO[12]" has no driver
+    Warning (13040): Bidir "GPIO[13]" has no driver
+    Warning (13040): Bidir "GPIO[14]" has no driver
+    Warning (13040): Bidir "GPIO[15]" has no driver
+    Warning (13040): Bidir "GPIO[16]" has no driver
+    Warning (13040): Bidir "GPIO[17]" has no driver
+    Warning (13040): Bidir "GPIO[18]" has no driver
+    Warning (13040): Bidir "GPIO[19]" has no driver
+    Warning (13040): Bidir "GPIO[20]" has no driver
+    Warning (13040): Bidir "GPIO[21]" has no driver
+    Warning (13040): Bidir "GPIO[22]" has no driver
+    Warning (13040): Bidir "GPIO[23]" has no driver
+    Warning (13040): Bidir "GPIO[24]" has no driver
+    Warning (13040): Bidir "GPIO[25]" has no driver
+    Warning (13040): Bidir "GPIO[26]" has no driver
+    Warning (13040): Bidir "GPIO[27]" has no driver
+    Warning (13040): Bidir "GPIO[28]" has no driver
+    Warning (13040): Bidir "GPIO[29]" has no driver
+    Warning (13040): Bidir "GPIO[30]" has no driver
+    Warning (13040): Bidir "GPIO[31]" has no driver
+    Warning (13040): Bidir "GPIO[32]" has no driver
+    Warning (13040): Bidir "GPIO[33]" has no driver
+    Warning (13040): Bidir "GPIO[34]" has no driver
+    Warning (13040): Bidir "GPIO[35]" has no driver
+    Warning (13040): Bidir "HSMC_CLKOUT_N1" has no driver
+    Warning (13040): Bidir "HSMC_CLKOUT_P1" has no driver
+    Warning (13040): Bidir "HSMC_CLKOUT0" has no driver
+    Warning (13040): Bidir "HSMC_CLKOUT_N2" has no driver
+    Warning (13040): Bidir "HSMC_CLKOUT_P2" has no driver
+    Warning (13040): Bidir "HSMC_D[0]" has no driver
+    Warning (13040): Bidir "HSMC_D[1]" has no driver
+    Warning (13040): Bidir "HSMC_D[2]" has no driver
+    Warning (13040): Bidir "HSMC_D[3]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[0]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[1]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[2]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[3]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[4]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[5]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[6]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[7]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[8]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[9]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[10]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[11]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[12]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[13]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[14]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[15]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_N[16]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[0]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[1]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[2]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[3]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[4]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[5]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[6]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[7]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[8]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[9]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[10]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[11]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[12]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[13]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[14]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[15]" has no driver
+    Warning (13040): Bidir "HSMC_RX_D_P[16]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[0]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[1]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[2]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[3]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[4]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[5]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[6]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[7]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[8]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[9]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[10]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[11]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[12]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[13]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[14]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[15]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_N[16]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[0]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[1]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[2]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[3]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[4]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[5]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[6]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[7]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[8]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[9]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[10]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[11]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[12]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[13]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[14]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[15]" has no driver
+    Warning (13040): Bidir "HSMC_TX_D_P[16]" has no driver
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "GPIO[0]~synth"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[0]" is stuck at GND
+    Warning (13410): Pin "LEDG[1]" is stuck at GND
+    Warning (13410): Pin "LEDG[2]" is stuck at GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC
+    Warning (13410): Pin "HEX0[2]" is stuck at VCC
+    Warning (13410): Pin "HEX0[3]" is stuck at VCC
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX6[0]" is stuck at VCC
+    Warning (13410): Pin "HEX6[1]" is stuck at VCC
+    Warning (13410): Pin "HEX6[2]" is stuck at VCC
+    Warning (13410): Pin "HEX6[3]" is stuck at VCC
+    Warning (13410): Pin "HEX6[4]" is stuck at VCC
+    Warning (13410): Pin "HEX6[5]" is stuck at VCC
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC
+    Warning (13410): Pin "HEX7[1]" is stuck at VCC
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC
+    Warning (13410): Pin "HEX7[4]" is stuck at VCC
+    Warning (13410): Pin "HEX7[5]" is stuck at VCC
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC
+    Warning (13410): Pin "LCD_BLON" is stuck at GND
+    Warning (13410): Pin "LCD_EN" is stuck at GND
+    Warning (13410): Pin "LCD_ON" is stuck at GND
+    Warning (13410): Pin "LCD_RS" is stuck at GND
+    Warning (13410): Pin "LCD_RW" is stuck at GND
+    Warning (13410): Pin "SD_CLK" is stuck at GND
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND
+    Warning (13410): Pin "VGA_CLK" is stuck at GND
+    Warning (13410): Pin "VGA_HS" is stuck at GND
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
+    Warning (13410): Pin "VGA_VS" is stuck at GND
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND
+    Warning (13410): Pin "AUD_XCK" is stuck at GND
+    Warning (13410): Pin "I2C_SCLK" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[0]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[1]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[2]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[3]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[4]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[5]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[6]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[7]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[8]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[9]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[10]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[11]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[12]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[13]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[14]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[15]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[16]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[17]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[18]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[19]" is stuck at GND
+    Warning (13410): Pin "SRAM_CE_N" is stuck at GND
+    Warning (13410): Pin "SRAM_LB_N" is stuck at GND
+    Warning (13410): Pin "SRAM_OE_N" is stuck at GND
+    Warning (13410): Pin "SRAM_UB_N" is stuck at GND
+    Warning (13410): Pin "SRAM_WE_N" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+    Warning (15610): No output dependent on input pin "CLOCK2_50"
+    Warning (15610): No output dependent on input pin "CLOCK3_50"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "SD_WP_N"
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN0"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN_N1"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN_P1"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN_N2"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN_P2"
+Info (21057): Implemented 325 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 146 output pins
+    Info (21060): Implemented 146 bidirectional pins
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 318 warnings
+    Info: Peak virtual memory: 330 megabytes
+    Info: Processing ended: Thu Oct 21 08:37:03 2021
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:02
+
+
