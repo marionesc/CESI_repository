@@ -1,6 +1,6 @@
 Flow report for MaP
-Thu Jan 23 19:15:24 2014
-Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+Fri Jan 27 17:27:35 2023
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
 ---------------------
@@ -35,27 +35,27 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Thu Jan 23 19:15:24 2014   ;
-; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
-; Revision Name                      ; MaP                                     ;
-; Top-level Entity Name              ; gest_can_gene                           ;
-; Family                             ; Cyclone II                              ;
-; Device                             ; EP2C5AT144A7                            ;
-; Timing Models                      ; Final                                   ;
-; Met timing requirements            ; N/A                                     ;
-; Total logic elements               ; 79                                      ;
-;     Total combinational functions  ; 79                                      ;
-;     Dedicated logic registers      ; 37                                      ;
-; Total registers                    ; 37                                      ;
-; Total pins                         ; 33                                      ;
-; Total virtual pins                 ; 0                                       ;
-; Total memory bits                  ; 0                                       ;
-; Embedded Multiplier 9-bit elements ; 0                                       ;
-; Total PLLs                         ; 0                                       ;
-+------------------------------------+-----------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++------------------------------------+------------------------------------------+
+; Flow Status                        ; Successful - Fri Jan 27 17:27:27 2023    ;
+; Quartus II 64-Bit Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                      ; MaP                                      ;
+; Top-level Entity Name              ; decodeur_IRDA_2MHz                       ;
+; Family                             ; Cyclone III                              ;
+; Met timing requirements            ; N/A                                      ;
+; Total logic elements               ; 80 / 5,136 ( 2 % )                       ;
+;     Total combinational functions  ; 66 / 5,136 ( 1 % )                       ;
+;     Dedicated logic registers      ; 59 / 5,136 ( 1 % )                       ;
+; Total registers                    ; 59                                       ;
+; Total pins                         ; 26 / 183 ( 14 % )                        ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0 / 423,936 ( 0 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                           ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                            ;
+; Device                             ; EP3C5F256C6                              ;
+; Timing Models                      ; Final                                    ;
++------------------------------------+------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,50 +63,57 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/23/2014 19:15:23 ;
+; Start date & time ; 01/27/2023 17:27:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MaP                 ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                   ;
-+------------------------------------+------------------------------+---------------+---------------+----------------+
-; Assignment Name                    ; Value                        ; Default Value ; Entity Name   ; Section Id     ;
-+------------------------------------+------------------------------+---------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 126176852979.139050092305328 ; --            ; --            ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 125                          ; --            ; --            ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; -40                          ; --            ; --            ; --             ;
-; PARTITION_COLOR                    ; 16764057                     ; --            ; gest_can_gene ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                       ; --            ; gest_can_gene ; Top            ;
-; TOP_LEVEL_ENTITY                   ; gest_can_gene                ; MaP           ; --            ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                          ; --            ; --            ; eda_blast_fpga ;
-+------------------------------------+------------------------------+---------------+---------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++------------------------------------+---------------------------------+---------------+--------------------+----------------+
+; Assignment Name                    ; Value                           ; Default Value ; Entity Name        ; Section Id     ;
++------------------------------------+---------------------------------+---------------+--------------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 251053325809109.167483682800604 ; --            ; --                 ; --             ;
+; PARTITION_COLOR                    ; 16764057                        ; --            ; decodeur_IRDA_2Mhz ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; decodeur_IRDA_2Mhz ; Top            ;
+; TOP_LEVEL_ENTITY                   ; decodeur_IRDA_2Mhz              ; MaP           ; --                 ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --                 ; eda_blast_fpga ;
++------------------------------------+---------------------------------+---------------+--------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 269 MB              ; 00:00:01                           ;
-; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4463 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 4601 MB             ; 00:00:04                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4390 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 4446 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:07                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Hobbes2          ; Windows XP ; 5.1        ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+------------------+---------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++---------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis      ; P-GE2I-ERAU-E01  ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                    ; P-GE2I-ERAU-E01  ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler                 ; P-GE2I-ERAU-E01  ; Windows Vista ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; P-GE2I-ERAU-E01  ; Windows Vista ; 6.2        ; x86_64         ;
++---------------------------+------------------+---------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Mise_au_point -c MaP
+quartus_fit --read_settings_files=off --write_settings_files=off Mise_au_point -c MaP
+quartus_asm --read_settings_files=off --write_settings_files=off Mise_au_point -c MaP
+quartus_sta Mise_au_point -c MaP
 
 
 

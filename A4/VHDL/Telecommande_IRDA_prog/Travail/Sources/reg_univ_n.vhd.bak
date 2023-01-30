@@ -24,11 +24,9 @@ BEGIN
 			if sraz = '1' then reg <= (others => '0') ;
 			elsif sload = '1' then reg <= E ;
 			elsif en ='1' then 
-			
-				if sens = '1' then 					-- decalage a droite
+				if sens = '1' then -- decalage a droite
 					reg <= ser_in & reg(n-1 downto 1);
-					
-				else 								-- decalage a gauche
+				else 			-- decalage a gauche
 					reg <= reg(n-2 downto 0) & ser_in ;
 					
 				END IF;

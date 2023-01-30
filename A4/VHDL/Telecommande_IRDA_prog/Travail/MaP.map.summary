@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Jan 23 19:15:24 2014
-Quartus II Version : 9.0 Build 132 02/25/2009 SJ Web Edition
+Analysis & Synthesis Status : Successful - Fri Jan 27 17:27:11 2023
+Quartus II 64-Bit Version : 9.0 Build 132 02/25/2009 SJ Full Version
 Revision Name : MaP
-Top-level Entity Name : gest_can_gene
-Family : Cyclone II
-Total logic elements : 79
-    Total combinational functions : 79
-    Dedicated logic registers : 37
-Total registers : 37
-Total pins : 33
+Top-level Entity Name : decodeur_IRDA_2MHz
+Family : Cyclone III
+Total logic elements : 83
+    Total combinational functions : 66
+    Dedicated logic registers : 59
+Total registers : 59
+Total pins : 26
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

@@ -23,7 +23,7 @@ BEGIN
 		elsif clk = '1' and clk'event then
 			if sraz = '1' then cpt <= (others => '0') ;
 			elsif sload = '1' then cpt <= unsigned (E) ;
-			elsif en = '1' then 
+			elsif en ='1' then 
 				if upb_dn = '1' then 		-- decomptage
 					cpt <= cpt - 1 ;
 				else 						-- comptage

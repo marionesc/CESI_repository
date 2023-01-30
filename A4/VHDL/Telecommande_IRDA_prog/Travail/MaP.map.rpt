@@ -1,6 +1,6 @@
 Analysis & Synthesis report for MaP
-Thu Jan 23 19:15:24 2014
-Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+Fri Jan 27 17:27:11 2023
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
 ---------------------
@@ -12,12 +12,10 @@ Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. State Machine - |gest_can_gene|etat
+  7. Registers Removed During Synthesis
   8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |gest_can_gene
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |decodeur_IRDA_2Mhz
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -40,24 +38,24 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 23 19:15:24 2014   ;
-; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
-; Revision Name                      ; MaP                                     ;
-; Top-level Entity Name              ; gest_can_gene                           ;
-; Family                             ; Cyclone II                              ;
-; Total logic elements               ; 79                                      ;
-;     Total combinational functions  ; 79                                      ;
-;     Dedicated logic registers      ; 37                                      ;
-; Total registers                    ; 37                                      ;
-; Total pins                         ; 33                                      ;
-; Total virtual pins                 ; 0                                       ;
-; Total memory bits                  ; 0                                       ;
-; Embedded Multiplier 9-bit elements ; 0                                       ;
-; Total PLLs                         ; 0                                       ;
-+------------------------------------+-----------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jan 27 17:27:11 2023    ;
+; Quartus II 64-Bit Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                      ; MaP                                      ;
+; Top-level Entity Name              ; decodeur_IRDA_2MHz                       ;
+; Family                             ; Cyclone III                              ;
+; Total logic elements               ; 83                                       ;
+;     Total combinational functions  ; 66                                       ;
+;     Dedicated logic registers      ; 59                                       ;
+; Total registers                    ; 59                                       ;
+; Total pins                         ; 26                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -65,9 +63,8 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                         ; Setting            ; Default Value      ;
 +----------------------------------------------------------------+--------------------+--------------------+
-; Device                                                         ; EP2C5AT144A7       ;                    ;
-; Top-level entity name                                          ; gest_can_gene      ; MaP                ;
-; Family name                                                    ; Cyclone II         ; Stratix II         ;
+; Top-level entity name                                          ; decodeur_IRDA_2Mhz ; MaP                ;
+; Family name                                                    ; Cyclone III        ; Cyclone IV GX      ;
 ; Use Generated Physical Constraints File                        ; Off                ;                    ;
 ; Use smart compilation                                          ; Off                ; Off                ;
 ; Restructure Multiplexers                                       ; Auto               ; Auto               ;
@@ -104,11 +101,13 @@ applicable agreement for further details.
 ; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
 ; Auto ROM Replacement                                           ; On                 ; On                 ;
 ; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto DSP Block Replacement                                     ; On                 ; On                 ;
 ; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
 ; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
 ; Strict RAM Replacement                                         ; Off                ; Off                ;
 ; Allow Synchronous Control Signals                              ; On                 ; On                 ;
 ; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
 ; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
 ; Auto Resource Sharing                                          ; Off                ; Off                ;
 ; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
@@ -116,14 +115,14 @@ applicable agreement for further details.
 ; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
 ; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
 ; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
-; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; On                 ; On                 ;
 ; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
-; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; Synchronization Register Chain Length                          ; 3                  ; 3                  ;
 ; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
 ; HDL message level                                              ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 5000               ; 5000               ;
 ; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
 ; Clock MUX Protection                                           ; On                 ; On                 ;
 ; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
@@ -135,42 +134,42 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+
-; gest_can_gene.vhd                ; yes             ; User VHDL File  ; F:/Mes Docs/Boulot/ER 2EN/Dictaphone/Travail/gest_can_gene.vhd ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                    ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
+; Sources/decodeur_IRDA_2Mhz.vhd   ; yes             ; User VHDL File  ; R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A4/Telecommande DMX/Telecommande_IRDA_prog/Travail/Sources/decodeur_IRDA_2Mhz.vhd ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 79    ;
-;                                             ;       ;
-; Total combinational functions               ; 79    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 34    ;
-;     -- 3 input functions                    ; 21    ;
-;     -- <=2 input functions                  ; 24    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 75    ;
-;     -- arithmetic mode                      ; 4     ;
-;                                             ;       ;
-; Total registers                             ; 37    ;
-;     -- Dedicated logic registers            ; 37    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 33    ;
-; Maximum fan-out node                        ; arazb ;
-; Maximum fan-out                             ; 38    ;
-; Total fan-out                               ; 406   ;
-; Average fan-out                             ; 2.72  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 83             ;
+;                                             ;                ;
+; Total combinational functions               ; 66             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 13             ;
+;     -- 3 input functions                    ; 17             ;
+;     -- <=2 input functions                  ; 36             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 21             ;
+;     -- arithmetic mode                      ; 45             ;
+;                                             ;                ;
+; Total registers                             ; 59             ;
+;     -- Dedicated logic registers            ; 59             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 26             ;
+; Maximum fan-out node                        ; clk_2MHz~input ;
+; Maximum fan-out                             ; 59             ;
+; Total fan-out                               ; 433            ;
+; Average fan-out                             ; 2.45           ;
++---------------------------------------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -178,22 +177,25 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |gest_can_gene             ; 79 (79)           ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |gest_can_gene      ; work         ;
+; |decodeur_IRDA_2MHz        ; 66 (66)           ; 59 (59)      ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |decodeur_IRDA_2MHz ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+-------------------------------------------------+
-; State Machine - |gest_can_gene|etat             ;
-+---------+---------+---------+---------+---------+
-; Name    ; etat.e3 ; etat.e2 ; etat.e1 ; etat.e0 ;
-+---------+---------+---------+---------+---------+
-; etat.e0 ; 0       ; 0       ; 0       ; 0       ;
-; etat.e1 ; 0       ; 0       ; 1       ; 1       ;
-; etat.e2 ; 0       ; 1       ; 0       ; 1       ;
-; etat.e3 ; 1       ; 0       ; 0       ; 1       ;
-+---------+---------+---------+---------+---------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; s_load_T~reg0                          ; Stuck at VCC due to stuck port data_in ;
+; chiffre_conv[8..31]                    ; Stuck at GND due to stuck port data_in ;
+; touche_s[10..31]                       ; Lost fanout                            ;
+; chiffre_conv[0]                        ; Lost fanout                            ;
+; up~reg0                                ; Stuck at VCC due to stuck port data_in ;
+; down~reg0                              ; Stuck at VCC due to stuck port data_in ;
+; valide~reg0                            ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 51 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -201,48 +203,23 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 37    ;
-; Number of registers using Synchronous Clear  ; 5     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 35    ;
+; Total registers                              ; 59    ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 27    ;
+; Number of registers using Clock Enable       ; 58    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; ssb~reg0                               ; 2       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |gest_can_gene|cpt_dur[1]       ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |gest_can_gene|reg_decal_txi[7] ;
-; 9:1                ; 20 bits   ; 120 LEs       ; 20 LEs               ; 100 LEs                ; Yes        ; |gest_can_gene|reg_decal_rxi[6] ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |gest_can_gene|Selector33       ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |gest_can_gene|Selector35       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |gest_can_gene ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; duree_max      ; 2     ; Signed Integer                                       ;
-; taille_tx      ; 8     ; Signed Integer                                       ;
-; taille_rx      ; 16    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |decodeur_IRDA_2Mhz ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -250,35 +227,63 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II Analysis & Synthesis
-    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
-    Info: Processing started: Thu Jan 23 19:15:23 2014
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Fri Jan 27 17:27:08 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Mise_au_point -c MaP
-Info: Found 2 design units, including 1 entities, in source file gest_can.vhd
-    Info: Found design unit 1: gest_can-synth
-    Info: Found entity 1: gest_can
-Info: Found 2 design units, including 1 entities, in source file gest_cna.vhd
-    Info: Found design unit 1: gest_cna-synth
-    Info: Found entity 1: gest_cna
-Info: Found 2 design units, including 1 entities, in source file test_conv.vhd
-    Info: Found design unit 1: test_conv-synth
-    Info: Found entity 1: test_conv
-Info: Found 2 design units, including 1 entities, in source file gest_can_gene.vhd
-    Info: Found design unit 1: gest_can_gene-synth
-    Info: Found entity 1: gest_can_gene
-Info: Elaborating entity "gest_can_gene" for the top level hierarchy
-Info: Registers with preset signals will power-up high
-Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "sclk~reg0" is converted into an equivalent circuit using register "sclk~reg0_emulated" and latch "sclk~reg0latch"
-Info: Implemented 112 device resources after synthesis - the final resource count might be different
-    Info: Implemented 14 input pins
-    Info: Implemented 19 output pins
-    Info: Implemented 79 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 269 megabytes
-    Info: Processing ended: Thu Jan 23 19:15:24 2014
-    Info: Elapsed time: 00:00:01
+Info: Found 2 design units, including 1 entities, in source file Sources/cpt_dcpt_n.vhd
+    Info: Found design unit 1: cpt_dcpt_n-synth
+    Info: Found entity 1: cpt_dcpt_n
+Info: Found 2 design units, including 1 entities, in source file Sources/pll.vhd
+    Info: Found design unit 1: pll-SYN
+    Info: Found entity 1: pll
+Info: Found 2 design units, including 1 entities, in source file Sources/reg_univ_n.vhd
+    Info: Found design unit 1: reg_univ_n-synth
+    Info: Found entity 1: reg_univ_n
+Info: Found 2 design units, including 1 entities, in source file Sources/decodeur_IRDA_2Mhz.vhd
+    Info: Found design unit 1: decodeur_IRDA_2MHz-archi
+    Info: Found entity 1: decodeur_IRDA_2MHz
+Info: Elaborating entity "decodeur_IRDA_2Mhz" for the top level hierarchy
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "up" is stuck at VCC
+    Warning (13410): Pin "down" is stuck at VCC
+    Warning (13410): Pin "valide" is stuck at VCC
+    Warning (13410): Pin "s_load_T" is stuck at VCC
+Info: Timing-Driven Synthesis is running
+Info: 23 registers lost all their fanouts during netlist optimizations. The first 23 are displayed below.
+    Info: Register "touche_s[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "touche_s[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "chiffre_conv[0]" lost all its fanouts during netlist optimizations.
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "recept"
+Info: Implemented 109 device resources after synthesis - the final resource count might be different
+    Info: Implemented 12 input pins
+    Info: Implemented 14 output pins
+    Info: Implemented 83 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4463 megabytes
+    Info: Processing ended: Fri Jan 27 17:27:11 2023
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 

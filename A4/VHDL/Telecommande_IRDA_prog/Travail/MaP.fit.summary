@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Jan 27 17:27:21 2023
+Quartus II 64-Bit Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : MaP
+Top-level Entity Name : decodeur_IRDA_2MHz
+Family : Cyclone III
+Device : EP3C5F256C6
+Timing Models : Final
+Total logic elements : 80 / 5,136 ( 2 % )
+    Total combinational functions : 66 / 5,136 ( 1 % )
+    Dedicated logic registers : 59 / 5,136 ( 1 % )
+Total registers : 59
+Total pins : 26 / 183 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
