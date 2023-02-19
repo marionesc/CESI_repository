@@ -1,0 +1,6 @@
+
+State Machine - |decodeur_IRDA_2MHz|state
+Name state.e2 state.e1 state.e0 
+state.e0 0 0 0 
+state.e1 0 1 1 
+state.e2 1 0 1 

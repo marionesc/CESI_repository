@@ -30,7 +30,7 @@ Chip Device Options:
 ****************************
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[1] -- NON-UNIQUE
+	ATOM_NAME: cpt_touche[31] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 0
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
@@ -40,268 +40,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[1]~107	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [SYNCH_DATA]	  touche[1]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [SLOAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[1]	LIT INDEX 0 FANOUTS 3 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[2] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 1
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[2]~109	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [SYNCH_DATA]	  touche[2]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [SLOAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[2]	LIT INDEX 0 FANOUTS 3 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[3] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 2
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[3]~111	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [SYNCH_DATA]	  touche[3]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [SLOAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[3]	LIT INDEX 0 FANOUTS 3 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[4] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 3
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[4]~113	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [SYNCH_DATA]	  touche[4]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [SLOAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[4]	LIT INDEX 0 FANOUTS 3 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[5] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 4
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[5]~115	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [SYNCH_DATA]	  touche[5]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [SLOAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[5]	LIT INDEX 0 FANOUTS 3 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[6] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 5
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[6]~117	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [SYNCH_DATA]	  touche[6]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [SLOAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[6]	LIT INDEX 0 FANOUTS 3 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[7] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 6
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[7]~119	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [SYNCH_DATA]	  touche[7]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [SLOAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[7]	LIT INDEX 0 FANOUTS 2 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[8] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 7
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[8]~121	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [SYNCH_DATA]	  ~GND	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [SLOAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[8]	LIT INDEX 0 FANOUTS 2 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[9] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 8
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[9]~123	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [SYNCH_DATA]	  ~GND	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [SLOAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[9]	LIT INDEX 0 FANOUTS 1 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[1]~107 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 9
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  touche[1]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [DATAB]	  touche_s[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[1]~107	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	touche_s[1]~108	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 6688
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[31] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 10
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[31]~190	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[31]~158	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[31]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -311,9 +56,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: cpt_touche[2] -- NON-UNIQUE
+	ATOM_NAME: cpt_touche[0] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 11
+	Atom Id: 1
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -321,13 +66,65 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[2]~132	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[0]~96	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	cpt_touche[0]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[1] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 2
+	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  cpt_touche[1]~98	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		6: NO ITERM
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	cpt_touche[1]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[2] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 3
+	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  cpt_touche[2]~100	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		6: NO ITERM
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[2]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -339,7 +136,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[3] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 12
+	Atom Id: 4
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -347,13 +144,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[3]~134	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[3]~102	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[3]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -365,7 +162,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[4] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 13
+	Atom Id: 5
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -373,13 +170,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[4]~136	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[4]~104	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[4]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -391,7 +188,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[5] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 14
+	Atom Id: 6
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -399,13 +196,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[5]~138	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[5]~106	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[5]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -417,7 +214,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[6] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 15
+	Atom Id: 7
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -425,13 +222,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[6]~140	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[6]~108	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[6]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -443,7 +240,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[7] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 16
+	Atom Id: 8
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -451,13 +248,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[7]~142	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[7]~110	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[7]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -469,7 +266,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[8] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 17
+	Atom Id: 9
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -477,13 +274,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[8]~144	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[8]~112	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[8]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -495,7 +292,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[9] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 18
+	Atom Id: 10
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -503,13 +300,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[9]~146	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[9]~114	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[9]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -521,7 +318,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[10] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 19
+	Atom Id: 11
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -529,13 +326,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[10]~148	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[10]~116	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[10]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -547,7 +344,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[11] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 20
+	Atom Id: 12
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -555,13 +352,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[11]~150	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[11]~118	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[11]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -573,7 +370,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[12] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 21
+	Atom Id: 13
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -581,13 +378,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[12]~152	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[12]~120	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[12]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -599,7 +396,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[13] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 22
+	Atom Id: 14
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -607,13 +404,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[13]~154	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[13]~122	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[13]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -625,7 +422,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[14] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 23
+	Atom Id: 15
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -633,13 +430,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[14]~156	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[14]~124	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[14]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -651,7 +448,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[15] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 24
+	Atom Id: 16
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -659,13 +456,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[15]~158	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[15]~126	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[15]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -677,7 +474,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[16] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 25
+	Atom Id: 17
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -685,13 +482,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[16]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[16]~128	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[16]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -703,7 +500,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[17] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 26
+	Atom Id: 18
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -711,13 +508,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[17]~162	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[17]~130	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[17]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -727,61 +524,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: cpt_touche[18] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 27
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[18]~164	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	cpt_touche[18]	LIT INDEX 0 FANOUTS 2 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[19] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 28
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[19]~166	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	cpt_touche[19]	LIT INDEX 0 FANOUTS 2 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
 	ATOM_NAME: cpt_touche[20] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 29
+	Atom Id: 19
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -789,13 +534,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[20]~168	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[20]~136	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[20]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -807,7 +552,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[21] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 30
+	Atom Id: 20
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -815,13 +560,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[21]~170	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[21]~138	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[21]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -833,7 +578,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[22] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 31
+	Atom Id: 21
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -841,13 +586,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[22]~172	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[22]~140	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[22]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -859,7 +604,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[23] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 32
+	Atom Id: 22
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -867,13 +612,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[23]~174	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[23]~142	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[23]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -883,9 +628,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: cpt_touche[24] -- NON-UNIQUE
+	ATOM_NAME: cpt_touche[18] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 33
+	Atom Id: 23
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -893,13 +638,65 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[24]~176	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[18]~132	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	cpt_touche[18]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[19] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 24
+	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  cpt_touche[19]~134	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		6: NO ITERM
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	cpt_touche[19]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[24] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 25
+	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  cpt_touche[24]~144	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		6: NO ITERM
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[24]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -911,7 +708,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[25] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 34
+	Atom Id: 26
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -919,13 +716,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[25]~178	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[25]~146	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[25]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -937,7 +734,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[26] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 35
+	Atom Id: 27
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -945,13 +742,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[26]~180	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[26]~148	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[26]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -963,7 +760,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[27] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 36
+	Atom Id: 28
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -971,13 +768,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[27]~182	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[27]~150	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[27]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -989,7 +786,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[28] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 37
+	Atom Id: 29
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -997,13 +794,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[28]~184	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[28]~152	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[28]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -1015,7 +812,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[29] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 38
+	Atom Id: 30
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -1023,13 +820,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[29]~186	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[29]~154	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[29]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -1041,7 +838,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: cpt_touche[30] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 39
+	Atom Id: 31
 	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
 
 	power up = low
@@ -1049,13 +846,13 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[30]~188	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  cpt_touche[30]~156	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		5: [SCLR]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  cpt_touche[31]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	cpt_touche[30]	LIT INDEX 0 FANOUTS 2 REGED POS
 
@@ -1065,9 +862,702 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[2]~109 -- NON-UNIQUE
+	ATOM_NAME: cpt_touche[0]~96 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 32
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[0]~96	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[0]~97	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 55aa
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[1]~98 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 33
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[0]~97	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[1]~98	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[1]~99	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[2]~100 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 34
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[1]~99	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[2]~100	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[2]~101	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[3]~102 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 35
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[2]~101	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[3]~102	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[3]~103	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[4]~104 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 36
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[3]~103	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[4]~104	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[4]~105	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[5]~106 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 37
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[4]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[5]~106	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[5]~107	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[6]~108 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 38
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[5]~107	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[6]~108	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[6]~109	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[7]~110 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 39
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[6]~109	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[7]~110	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[7]~111	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[8]~112 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 40
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[7]~111	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[8]~112	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[8]~113	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[9]~114 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 41
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[8]~113	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[9]~114	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[9]~115	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[10]~116 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 42
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[10]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[9]~115	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[10]~116	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[10]~117	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[11]~118 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 43
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[11]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[10]~117	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[11]~118	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[11]~119	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[12]~120 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 44
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[12]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[11]~119	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[12]~120	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[12]~121	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[13]~122 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 45
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[13]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[12]~121	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[13]~122	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[13]~123	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[14]~124 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 46
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[14]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[13]~123	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[14]~124	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[14]~125	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[15]~126 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 47
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[15]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[14]~125	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[15]~126	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[15]~127	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[16]~128 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 48
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[16]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[15]~127	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[16]~128	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[16]~129	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[17]~130 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 49
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[17]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[16]~129	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[17]~130	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[17]~131	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[18]~132 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 50
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[18]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[17]~131	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[18]~132	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[18]~133	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[19]~134 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 51
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[19]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[18]~133	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[19]~134	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[19]~135	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[20]~136 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 52
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[20]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[19]~135	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[20]~136	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[20]~137	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[21]~138 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 53
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[21]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[20]~137	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[21]~138	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[21]~139	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[22]~140 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 54
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[22]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[21]~139	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[22]~140	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[22]~141	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[23]~142 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 55
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[23]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[22]~141	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[23]~142	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[23]~143	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[24]~144 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 56
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[24]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[23]~143	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[24]~144	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[24]~145	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[25]~146 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 57
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[25]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[24]~145	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[25]~146	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[25]~147	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[26]~148 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 58
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[26]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[25]~147	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[26]~148	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[26]~149	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[27]~150 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 59
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[27]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[26]~149	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[27]~150	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[27]~151	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[28]~152 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 60
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[28]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[27]~151	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[28]~152	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[28]~153	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[29]~154 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 61
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[29]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[28]~153	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[29]~154	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[29]~155	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5f
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[30]~156 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 62
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[30]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  cpt_touche[29]~155	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[30]~156	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[30]~157	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = a50a
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[31]~158 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 63
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[31]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: NO ITERM
+		4: [CIN]	  cpt_touche[30]~157	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	cpt_touche[31]~158	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	cpt_touche[31]~159	LIT INDEX 0 FANOUTS 0
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 5a5a
+
+
+- ATOM ------------------------
+	ATOM_NAME: Add2~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 64
+	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  touche[1]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [DATAB]	  touche_s[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Add2~0	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	Add2~1	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 6688
+
+
+- ATOM ------------------------
+	ATOM_NAME: Add2~2 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 65
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1075,10 +1565,10 @@ Chip Device Options:
 		1: [DATAB]	  touche_s[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  touche_s[1]~108	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  Add2~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[2]~109	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	touche_s[2]~110	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	Add2~2	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	Add2~3	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -1088,7 +1578,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: Add1~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 41
+	Atom Id: 66
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1107,9 +1597,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[3]~111 -- NON-UNIQUE
+	ATOM_NAME: Add2~4 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 42
+	Atom Id: 67
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1117,10 +1607,10 @@ Chip Device Options:
 		1: [DATAB]	  touche[3]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  touche_s[2]~110	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  Add2~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[3]~111	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	touche_s[3]~112	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	Add2~4	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	Add2~5	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -1130,7 +1620,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: Add1~2 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 43
+	Atom Id: 68
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1149,9 +1639,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[4]~113 -- NON-UNIQUE
+	ATOM_NAME: Add2~6 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 44
+	Atom Id: 69
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1159,10 +1649,10 @@ Chip Device Options:
 		1: [DATAB]	  touche[4]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  touche_s[3]~112	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  Add2~5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[4]~113	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	touche_s[4]~114	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	Add2~6	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	Add2~7	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -1172,7 +1662,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: Add1~4 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 45
+	Atom Id: 70
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1191,9 +1681,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[5]~115 -- NON-UNIQUE
+	ATOM_NAME: Add2~8 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 46
+	Atom Id: 71
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1201,10 +1691,10 @@ Chip Device Options:
 		1: [DATAB]	  touche[5]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  touche_s[4]~114	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  Add2~7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[5]~115	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	touche_s[5]~116	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	Add2~8	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	Add2~9	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -1214,7 +1704,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: Add1~6 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 47
+	Atom Id: 72
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1233,9 +1723,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[6]~117 -- NON-UNIQUE
+	ATOM_NAME: Add2~10 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 48
+	Atom Id: 73
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1243,10 +1733,10 @@ Chip Device Options:
 		1: [DATAB]	  touche[6]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  touche_s[5]~116	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  Add2~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[6]~117	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	touche_s[6]~118	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	Add2~10	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	Add2~11	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -1256,7 +1746,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: Add1~8 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 49
+	Atom Id: 74
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1275,9 +1765,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[7]~119 -- NON-UNIQUE
+	ATOM_NAME: Add2~12 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 50
+	Atom Id: 75
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1285,10 +1775,10 @@ Chip Device Options:
 		1: [DATAB]	  touche[7]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  touche_s[6]~118	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  Add2~11	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[7]~119	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	touche_s[7]~120	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	Add2~12	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	Add2~13	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -1298,7 +1788,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: Add1~10 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 51
+	Atom Id: 76
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1317,9 +1807,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[8]~121 -- NON-UNIQUE
+	ATOM_NAME: Add2~14 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 52
+	Atom Id: 77
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1327,10 +1817,10 @@ Chip Device Options:
 		1: NO ITERM
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  touche_s[7]~120	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  Add2~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[8]~121	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	touche_s[8]~122	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	Add2~14	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	Add2~15	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -1340,7 +1830,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: Add1~12 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 53
+	Atom Id: 78
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1359,9 +1849,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[9]~123 -- NON-UNIQUE
+	ATOM_NAME: Add2~16 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 54
+	Atom Id: 79
 	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
@@ -1369,10 +1859,10 @@ Chip Device Options:
 		1: NO ITERM
 		2: NO ITERM
 		3: NO ITERM
-		4: [CIN]	  touche_s[8]~122	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  Add2~15	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[9]~123	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	touche_s[9]~124	LIT INDEX 0 FANOUTS 0
+		0: [COMBOUT]	Add2~16	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	Add2~17	LIT INDEX 0 FANOUTS 0
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -1380,733 +1870,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: cpt_touche[1] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 55
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[1]~130	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	cpt_touche[1]	LIT INDEX 0 FANOUTS 1 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[0] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 56
-	Atom Type: cycloneiii_ff (WYSIWYG) (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  cpt_touche[0]~128	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: [SCLR]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		6: NO ITERM
-		7: [ENA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [Q]	cpt_touche[0]	LIT INDEX 0 FANOUTS 1 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[0]~128 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 57
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[0]~128	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[0]~129	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 55aa
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[1]~130 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 58
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[0]~129	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[1]~130	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[1]~131	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[2]~132 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 59
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[1]~131	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[2]~132	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[2]~133	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[3]~134 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 60
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[2]~133	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[3]~134	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[3]~135	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[4]~136 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 61
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[3]~135	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[4]~136	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[4]~137	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[5]~138 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 62
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[4]~137	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[5]~138	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[5]~139	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[6]~140 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 63
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[5]~139	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[6]~140	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[6]~141	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[7]~142 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 64
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[6]~141	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[7]~142	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[7]~143	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[8]~144 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 65
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[7]~143	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[8]~144	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[8]~145	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[9]~146 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 66
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[8]~145	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[9]~146	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[9]~147	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[10]~148 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 67
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[10]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[9]~147	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[10]~148	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[10]~149	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[11]~150 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 68
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[11]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[10]~149	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[11]~150	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[11]~151	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[12]~152 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 69
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[12]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[11]~151	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[12]~152	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[12]~153	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[13]~154 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 70
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[13]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[12]~153	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[13]~154	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[13]~155	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[14]~156 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 71
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[14]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[13]~155	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[14]~156	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[14]~157	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[15]~158 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 72
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[15]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[14]~157	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[15]~158	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[15]~159	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[16]~160 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 73
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[16]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[15]~159	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[16]~160	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[16]~161	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[17]~162 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 74
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[17]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[16]~161	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[17]~162	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[17]~163	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[18]~164 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 75
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[18]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[17]~163	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[18]~164	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[18]~165	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[19]~166 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 76
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[19]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[18]~165	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[19]~166	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[19]~167	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[20]~168 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 77
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[20]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[19]~167	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[20]~168	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[20]~169	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[21]~170 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 78
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[21]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[20]~169	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[21]~170	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[21]~171	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[22]~172 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 79
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[22]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[21]~171	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[22]~172	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[22]~173	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[23]~174 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 80
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[23]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[22]~173	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[23]~174	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[23]~175	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[24]~176 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 81
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[24]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[23]~175	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[24]~176	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[24]~177	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[25]~178 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 82
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[25]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[24]~177	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[25]~178	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[25]~179	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[26]~180 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 83
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[26]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[25]~179	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[26]~180	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[26]~181	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[27]~182 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 84
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[27]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[26]~181	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[27]~182	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[27]~183	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[28]~184 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 85
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[28]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[27]~183	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[28]~184	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[28]~185	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[29]~186 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 86
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[29]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[28]~185	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[29]~186	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[29]~187	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5f
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[30]~188 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 87
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[30]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  cpt_touche[29]~187	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[30]~188	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[30]~189	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = a50a
-
-
-- ATOM ------------------------
-	ATOM_NAME: cpt_touche[31]~190 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 88
-	Atom Type: cycloneiii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[31]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: NO ITERM
-		4: [CIN]	  cpt_touche[30]~189	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	cpt_touche[31]~190	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	cpt_touche[31]~191	LIT INDEX 0 FANOUTS 0
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 5a5a
-
-
-- ATOM ------------------------
 	ATOM_NAME: canal_T[0]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 104
+	Atom Id: 96
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2120,7 +1886,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[0]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2132,7 +1898,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[1]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 105
+	Atom Id: 97
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2146,7 +1912,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[1]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2158,7 +1924,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[2]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 106
+	Atom Id: 98
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2172,7 +1938,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[2]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2184,7 +1950,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[3]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 107
+	Atom Id: 99
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2198,7 +1964,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[3]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2210,7 +1976,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[4]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 108
+	Atom Id: 100
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2224,7 +1990,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[4]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2236,7 +2002,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[5]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 109
+	Atom Id: 101
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2250,7 +2016,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[5]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2262,7 +2028,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[6]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 110
+	Atom Id: 102
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2276,7 +2042,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[6]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2288,7 +2054,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[7]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 111
+	Atom Id: 103
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2302,7 +2068,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[7]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2314,7 +2080,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[8]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 112
+	Atom Id: 104
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2328,7 +2094,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[8]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2340,7 +2106,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[9]~reg0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 113
+	Atom Id: 105
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2354,7 +2120,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  canal_T[0]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		7: [ENA]	  canal_T[0]~23	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [Q]	canal_T[9]~reg0	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2366,7 +2132,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: touche_s[0] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 114
+	Atom Id: 106
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2374,124 +2140,25 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche_s[0]~106	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [D]	  Mux44~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [Q]	touche_s[0]	LIT INDEX 0 FANOUTS 4 REGED POS
+		0: [Q]	touche_s[0]	LIT INDEX 0 FANOUTS 3 REGED POS
 
 	PARAMETER LIST:
 		power_up                       = low
 		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: chiffre_conv[6] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 117
-	Atom Type: cycloneiii_ff (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche[6]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: NO ITERM
-		7: [ENA]	  arazb~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-	OUTPUTS (Int. Connections):
-		0: [Q]	chiffre_conv[6]	LIT INDEX 0 FANOUTS 1 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: chiffre_conv[5] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 118
-	Atom Type: cycloneiii_ff (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche[5]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: NO ITERM
-		7: [ENA]	  arazb~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-	OUTPUTS (Int. Connections):
-		0: [Q]	chiffre_conv[5]	LIT INDEX 0 FANOUTS 1 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: chiffre_conv[4] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 119
-	Atom Type: cycloneiii_ff (LAB_FF)
-
-	power up = low
-	power up dont_care = false
-
-	INPUTS (Driven By):
-		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [D]	  touche[4]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: NO ITERM
-		7: [ENA]	  arazb~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-	OUTPUTS (Int. Connections):
-		0: [Q]	chiffre_conv[4]	LIT INDEX 0 FANOUTS 1 REGED POS
-
-	PARAMETER LIST:
-		power_up                       = low
-		is_wysiwyg                     = true
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[0]~104 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 120
-	Atom Type: cycloneiii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  arazb~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [DATAB]	  chiffre_conv[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  chiffre_conv[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  chiffre_conv[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[0]~104	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 0002
 
 
 - ATOM ------------------------
 	ATOM_NAME: chiffre_conv[7] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 121
+	Atom Id: 108
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2505,7 +2172,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  arazb~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		7: [ENA]	  !(arazb~input)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 	OUTPUTS (Int. Connections):
 		0: [Q]	chiffre_conv[7]	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2517,7 +2184,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: chiffre_conv[3] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 122
+	Atom Id: 109
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2531,7 +2198,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  arazb~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		7: [ENA]	  !(arazb~input)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 	OUTPUTS (Int. Connections):
 		0: [Q]	chiffre_conv[3]	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2543,7 +2210,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: chiffre_conv[2] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 123
+	Atom Id: 110
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2557,7 +2224,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  arazb~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		7: [ENA]	  !(arazb~input)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 	OUTPUTS (Int. Connections):
 		0: [Q]	chiffre_conv[2]	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2569,7 +2236,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: chiffre_conv[1] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 124
+	Atom Id: 111
 	Atom Type: cycloneiii_ff (LAB_FF)
 
 	power up = low
@@ -2583,7 +2250,7 @@ Chip Device Options:
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
-		7: [ENA]	  arazb~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		7: [ENA]	  !(arazb~input)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 	OUTPUTS (Int. Connections):
 		0: [Q]	chiffre_conv[1]	LIT INDEX 0 FANOUTS 1 REGED POS
 
@@ -2593,145 +2260,139 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: LessThan3~0 -- NON-UNIQUE
+	ATOM_NAME: canal_T[0]~20 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 125
+	Atom Id: 112
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  chiffre_conv[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  chiffre_conv[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  chiffre_conv[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  chiffre_conv[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  chiffre_conv[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  chiffre_conv[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  chiffre_conv[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	canal_T[0]~20	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = eeea
+
+
+- ATOM ------------------------
+	ATOM_NAME: chiffre_conv[6] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 113
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  touche[6]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  !(arazb~input)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+	OUTPUTS (Int. Connections):
+		0: [Q]	chiffre_conv[6]	LIT INDEX 0 FANOUTS 1 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: chiffre_conv[5] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 114
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  touche[5]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  !(arazb~input)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+	OUTPUTS (Int. Connections):
+		0: [Q]	chiffre_conv[5]	LIT INDEX 0 FANOUTS 1 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: canal_T[0]~21 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 115
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  chiffre_conv[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  chiffre_conv[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	LessThan3~0	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	canal_T[0]~21	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = a8a8
+		lut_mask                       = eeee
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche_s[0]~105 -- NON-UNIQUE
+	ATOM_NAME: chiffre_conv[4] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 127
-	Atom Type: cycloneiii_lcell_comb
+	Atom Id: 116
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
 
 	INPUTS (Driven By):
-		0: [DATAA]	  touche_s[0]~104	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  chiffre_conv[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  LessThan3~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  new_touche~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[0]~105	LIT INDEX 0 FANOUTS 43
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 0002
-
-
-- ATOM ------------------------
-	ATOM_NAME: canal_T[0]~30 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 131
-	Atom Type: cycloneiii_lcell_comb
-
-	INPUTS (Driven By):
-		0: NO ITERM
-		1: [DATAB]	  touche[7]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		2: [DATAC]	  touche[6]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: [DATAD]	  touche[5]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	canal_T[0]~30	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 0003
-
-
-- ATOM ------------------------
-	ATOM_NAME: canal_T[0]~31 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 136
-	Atom Type: cycloneiii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  touche[0]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [DATAB]	  touche[1]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		2: [DATAC]	  touche[2]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: [DATAD]	  touche[3]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	canal_T[0]~31	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 0007
-
-
-- ATOM ------------------------
-	ATOM_NAME: canal_T[0]~32 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 138
-	Atom Type: cycloneiii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  canal_T[0]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  canal_T[0]~31	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  touche[4]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	canal_T[0]~32	LIT INDEX 0 FANOUTS 10
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 8088
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche_s[0]~106 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 139
-	Atom Type: cycloneiii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  touche[0]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [DATAB]	  touche_s[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  touche[4]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		2: NO ITERM
-		3: [DATAD]	  touche_s[0]~105	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: NO ITERM
 		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  !(arazb~input)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	touche_s[0]~106	LIT INDEX 0 FANOUTS 1
-		1: NONE
+		0: [Q]	chiffre_conv[4]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = aacc
+		power_up                       = low
+		is_wysiwyg                     = true
 
 
 - ATOM ------------------------
-	ATOM_NAME: LessThan0~0 -- NON-UNIQUE
+	ATOM_NAME: canal_T[0]~22 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 140
+	Atom Id: 118
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  cpt_touche[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  cpt_touche[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  cpt_touche[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  canal_T[0]~20	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  canal_T[0]~21	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  chiffre_conv[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  arazb~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	LessThan0~0	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	canal_T[0]~22	LIT INDEX 0 FANOUTS 12
 		1: NONE
 
 	PARAMETER LIST:
@@ -2740,16 +2401,37 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: LessThan0~1 -- NON-UNIQUE
+	ATOM_NAME: LessThan0~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 141
+	Atom Id: 119
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  cpt_touche[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  cpt_touche[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  cpt_touche[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  cpt_touche[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  cpt_touche[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  cpt_touche[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  cpt_touche[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	LessThan0~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 0007
+
+
+- ATOM ------------------------
+	ATOM_NAME: LessThan0~1 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 120
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  cpt_touche[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  cpt_touche[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  cpt_touche[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	LessThan0~1	LIT INDEX 0 FANOUTS 1
@@ -2763,14 +2445,14 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: LessThan0~2 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 142
+	Atom Id: 121
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[10]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  cpt_touche[11]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  cpt_touche[12]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  cpt_touche[13]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  cpt_touche[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  cpt_touche[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  cpt_touche[10]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  cpt_touche[11]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	LessThan0~2	LIT INDEX 0 FANOUTS 1
@@ -2784,14 +2466,14 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: LessThan0~3 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 143
+	Atom Id: 122
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[14]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  cpt_touche[15]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  cpt_touche[16]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  cpt_touche[17]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  cpt_touche[12]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  cpt_touche[13]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  cpt_touche[14]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  cpt_touche[15]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	LessThan0~3	LIT INDEX 0 FANOUTS 1
@@ -2805,7 +2487,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: LessThan0~4 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 144
+	Atom Id: 123
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
@@ -2826,14 +2508,14 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: LessThan0~5 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 145
+	Atom Id: 124
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[18]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  cpt_touche[19]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  cpt_touche[20]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  cpt_touche[21]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: NO ITERM
+		1: NO ITERM
+		2: [DATAC]	  cpt_touche[16]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  cpt_touche[17]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	LessThan0~5	LIT INDEX 0 FANOUTS 1
@@ -2841,20 +2523,20 @@ Chip Device Options:
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 0001
+		lut_mask                       = 000f
 
 
 - ATOM ------------------------
 	ATOM_NAME: LessThan0~6 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 146
+	Atom Id: 125
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[22]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  cpt_touche[23]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  cpt_touche[24]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  cpt_touche[25]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  cpt_touche[20]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  cpt_touche[21]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  cpt_touche[22]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  cpt_touche[23]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	LessThan0~6	LIT INDEX 0 FANOUTS 1
@@ -2868,17 +2550,38 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: LessThan0~7 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 147
+	Atom Id: 126
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[26]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  cpt_touche[27]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  cpt_touche[28]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  cpt_touche[29]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  LessThan0~5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  LessThan0~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  cpt_touche[18]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  cpt_touche[19]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	LessThan0~7	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 0008
+
+
+- ATOM ------------------------
+	ATOM_NAME: LessThan0~8 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 127
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[24]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  cpt_touche[25]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  cpt_touche[26]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  cpt_touche[27]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	LessThan0~8	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
@@ -2887,19 +2590,103 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: LessThan0~8 -- NON-UNIQUE
+	ATOM_NAME: LessThan0~9 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 148
+	Atom Id: 128
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  LessThan0~5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  LessThan0~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  LessThan0~7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  LessThan0~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  cpt_touche[28]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  cpt_touche[29]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		3: [DATAD]	  cpt_touche[30]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	LessThan0~8	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	LessThan0~9	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 0002
+
+
+- ATOM ------------------------
+	ATOM_NAME: LessThan0~10 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 129
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  cpt_touche[31]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  LessThan0~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  LessThan0~7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  LessThan0~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	LessThan0~10	LIT INDEX 0 FANOUTS 42
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 1555
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux12~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 132
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  touche[1]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  touche[7]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux12~0	LIT INDEX 0 FANOUTS 2
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 00aa
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux12~1 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 138
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  touche[4]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [DATAB]	  touche[2]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		2: [DATAC]	  touche[3]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		3: [DATAD]	  touche[6]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux12~1	LIT INDEX 0 FANOUTS 2
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 0008
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux12~2 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 140
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  Mux12~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  touche[0]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		2: [DATAC]	  Mux12~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  touche[5]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux12~2	LIT INDEX 0 FANOUTS 11
 		1: NONE
 
 	PARAMETER LIST:
@@ -2908,51 +2695,538 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: LessThan0~9 -- NON-UNIQUE
+	ATOM_NAME: canal_T[0]~23 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 149
+	Atom Id: 141
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  cpt_touche[31]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  LessThan0~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  LessThan0~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: NO ITERM
+		0: [DATAA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	LessThan0~9	LIT INDEX 0 FANOUTS 41
+		0: [COMBOUT]	canal_T[0]~23	LIT INDEX 0 FANOUTS 10
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 1515
+		lut_mask                       = aa88
 
 
 - ATOM ------------------------
-	ATOM_NAME: ~GND -- NON-UNIQUE
+	ATOM_NAME: touche_s[1] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 142
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  Mux43~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	touche_s[1]	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche_s[2] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 143
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  Mux42~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	touche_s[2]	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche_s[3] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 144
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  Mux41~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	touche_s[3]	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche_s[4] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 145
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  Mux40~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	touche_s[4]	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche_s[5] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 146
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  Mux39~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	touche_s[5]	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche_s[6] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 147
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  Mux38~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	touche_s[6]	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche_s[7] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 148
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  Mux37~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	touche_s[7]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche_s[8] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 149
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  Mux36~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	touche_s[8]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche_s[9] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 150
+	Atom Type: cycloneiii_ff (LAB_FF)
+
+	power up = low
+	power up dont_care = false
+
+	INPUTS (Driven By):
+		0: [CLK]	  clk_2MHz~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [D]	  Mux35~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+		7: [ENA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [Q]	touche_s[9]	LIT INDEX 0 FANOUTS 1 REGED POS
+
+	PARAMETER LIST:
+		power_up                       = low
+		is_wysiwyg                     = true
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux44~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 151
 	Atom Type: cycloneiii_lcell_comb
 
 	INPUTS (Driven By):
-		0: NO ITERM
-		1: NO ITERM
+		0: [DATAA]	  touche[0]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [DATAB]	  touche[5]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		2: [DATAC]	  Mux12~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  Mux12~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux44~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 8aaa
+
+
+- ATOM ------------------------
+	ATOM_NAME: cpt_touche[31]~160 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 152
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  canal_T[0]~22	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	~GND	LIT INDEX 0 FANOUTS 2
+		0: [COMBOUT]	cpt_touche[31]~160	LIT INDEX 0 FANOUTS 32
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 0000
+		lut_mask                       = 2222
 
+
+- ATOM ------------------------
+	ATOM_NAME: Mux43~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 153
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  Add2~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  touche[1]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		2: [DATAC]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux43~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 00ca
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux42~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 154
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  Add2~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  touche[2]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		2: [DATAC]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux42~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 00ca
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux41~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 155
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  Add2~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  touche[3]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		2: [DATAC]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux41~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 00ca
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux40~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 156
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  Add2~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  touche[4]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		2: [DATAC]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux40~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 00ca
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux39~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 157
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  touche[5]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [DATAB]	  Add2~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux39~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = a0ac
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux38~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 158
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  touche[6]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [DATAB]	  Add2~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux38~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = a0ac
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux37~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 159
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  touche[7]~input	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
+		1: [DATAB]	  Add2~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux37~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = a0ac
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux36~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 160
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  Add2~14	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux36~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 0044
+
+
+- ATOM ------------------------
+	ATOM_NAME: Mux35~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 161
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  LessThan0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  Add2~16	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  Mux12~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	Mux35~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 0044
+
+
+- ATOM ------------------------
+	ATOM_NAME: new_touche~input -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 165
+	Atom Type: cycloneiii_io_ibuf
+
+	INPUTS (Driven By):
+		0: [I]	  new_touche	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [O]	new_touche~input	LIT INDEX 0 FANOUTS 0
+
+	PARAMETER LIST:
+		bus_hold                       = false
+		simulate_z_as                  = z
+
+
+- ATOM ------------------------
+	ATOM_NAME: new_touche -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 166
+	Atom Type: cycloneiii_io_pad
+
+	INPUTS (Driven By):
+		0: [PADIN]	DISCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [PADOUT]	new_touche	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		EMPTY!!
+
+	DELAY CHAINS:
+		Input Pin to Logic Array Delay 0:	0
+		Input Pin to Logic Array Delay 1:	0
+		Output Pin Delay:	0
+		Output Enable Register Tco Delay:	0
+		Input Pin to Input Register Delay:	0
+		PCI Clock Delay Chain:	0
+
+	IO STANDARD:			2.5 V
+	CURRENT STRENGTH:		DEFAULT
+	PCI DIODE:       		ON
 
 - ATOM ------------------------
 	ATOM_NAME: recept~input -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 154
+	Atom Id: 167
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
@@ -2969,7 +3243,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: recept -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 155
+	Atom Id: 168
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -2995,7 +3269,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: up~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 156
+	Atom Id: 169
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3013,7 +3287,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: up -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 157
+	Atom Id: 170
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3039,7 +3313,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: down~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 158
+	Atom Id: 171
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3057,7 +3331,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: down -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 159
+	Atom Id: 172
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3083,7 +3357,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: valide~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 160
+	Atom Id: 173
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3101,7 +3375,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: valide -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 161
+	Atom Id: 174
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3127,7 +3401,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: s_load_T~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 162
+	Atom Id: 175
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3145,7 +3419,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: s_load_T -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 163
+	Atom Id: 176
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3171,7 +3445,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[0]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 164
+	Atom Id: 177
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3189,7 +3463,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[0] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 165
+	Atom Id: 178
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3215,7 +3489,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[1]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 166
+	Atom Id: 179
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3233,7 +3507,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[1] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 167
+	Atom Id: 180
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3259,7 +3533,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[2]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 168
+	Atom Id: 181
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3277,7 +3551,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[2] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 169
+	Atom Id: 182
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3303,7 +3577,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[3]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 170
+	Atom Id: 183
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3321,7 +3595,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[3] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 171
+	Atom Id: 184
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3347,7 +3621,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[4]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 172
+	Atom Id: 185
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3365,7 +3639,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[4] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 173
+	Atom Id: 186
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3391,7 +3665,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[5]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 174
+	Atom Id: 187
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3409,7 +3683,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[5] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 175
+	Atom Id: 188
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3435,7 +3709,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[6]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 176
+	Atom Id: 189
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3453,7 +3727,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[6] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 177
+	Atom Id: 190
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3479,7 +3753,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[7]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 178
+	Atom Id: 191
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3497,7 +3771,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[7] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 179
+	Atom Id: 192
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3523,7 +3797,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[8]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 180
+	Atom Id: 193
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3541,7 +3815,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[8] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 181
+	Atom Id: 194
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3567,7 +3841,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[9]~output -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 182
+	Atom Id: 195
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -3585,7 +3859,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: canal_T[9] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 183
+	Atom Id: 196
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3611,7 +3885,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: clk_2MHz~input -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 184
+	Atom Id: 197
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
@@ -3628,7 +3902,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: clk_2MHz -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 185
+	Atom Id: 198
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3654,7 +3928,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: arazb~input -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 186
+	Atom Id: 199
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
@@ -3671,7 +3945,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: arazb -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 187
+	Atom Id: 200
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3695,224 +3969,9 @@ Chip Device Options:
 	PCI DIODE:       		ON
 
 - ATOM ------------------------
-	ATOM_NAME: new_touche~input -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 188
-	Atom Type: cycloneiii_io_ibuf
-
-	INPUTS (Driven By):
-		0: [I]	  new_touche	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [O]	new_touche~input	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		bus_hold                       = false
-		simulate_z_as                  = z
-
-
-- ATOM ------------------------
-	ATOM_NAME: new_touche -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 189
-	Atom Type: cycloneiii_io_pad
-
-	INPUTS (Driven By):
-		0: [PADIN]	DISCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [PADOUT]	new_touche	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		EMPTY!!
-
-	DELAY CHAINS:
-		Input Pin to Logic Array Delay 0:	0
-		Input Pin to Logic Array Delay 1:	0
-		Output Pin Delay:	0
-		Output Enable Register Tco Delay:	0
-		Input Pin to Input Register Delay:	0
-		PCI Clock Delay Chain:	0
-
-	IO STANDARD:			2.5 V
-	CURRENT STRENGTH:		DEFAULT
-	PCI DIODE:       		ON
-
-- ATOM ------------------------
-	ATOM_NAME: touche[7]~input -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 190
-	Atom Type: cycloneiii_io_ibuf
-
-	INPUTS (Driven By):
-		0: [I]	  touche[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [O]	touche[7]~input	LIT INDEX 0 FANOUTS 4
-
-	PARAMETER LIST:
-		bus_hold                       = false
-		simulate_z_as                  = z
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche[7] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 191
-	Atom Type: cycloneiii_io_pad
-
-	INPUTS (Driven By):
-		0: [PADIN]	DISCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [PADOUT]	touche[7]	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		EMPTY!!
-
-	DELAY CHAINS:
-		Input Pin to Logic Array Delay 0:	0
-		Input Pin to Logic Array Delay 1:	0
-		Output Pin Delay:	0
-		Output Enable Register Tco Delay:	0
-		Input Pin to Input Register Delay:	0
-		PCI Clock Delay Chain:	0
-
-	IO STANDARD:			2.5 V
-	CURRENT STRENGTH:		DEFAULT
-	PCI DIODE:       		ON
-
-- ATOM ------------------------
-	ATOM_NAME: touche[6]~input -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 192
-	Atom Type: cycloneiii_io_ibuf
-
-	INPUTS (Driven By):
-		0: [I]	  touche[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [O]	touche[6]~input	LIT INDEX 0 FANOUTS 4
-
-	PARAMETER LIST:
-		bus_hold                       = false
-		simulate_z_as                  = z
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche[6] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 193
-	Atom Type: cycloneiii_io_pad
-
-	INPUTS (Driven By):
-		0: [PADIN]	DISCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [PADOUT]	touche[6]	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		EMPTY!!
-
-	DELAY CHAINS:
-		Input Pin to Logic Array Delay 0:	0
-		Input Pin to Logic Array Delay 1:	0
-		Output Pin Delay:	0
-		Output Enable Register Tco Delay:	0
-		Input Pin to Input Register Delay:	0
-		PCI Clock Delay Chain:	0
-
-	IO STANDARD:			2.5 V
-	CURRENT STRENGTH:		DEFAULT
-	PCI DIODE:       		ON
-
-- ATOM ------------------------
-	ATOM_NAME: touche[5]~input -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 194
-	Atom Type: cycloneiii_io_ibuf
-
-	INPUTS (Driven By):
-		0: [I]	  touche[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [O]	touche[5]~input	LIT INDEX 0 FANOUTS 4
-
-	PARAMETER LIST:
-		bus_hold                       = false
-		simulate_z_as                  = z
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche[5] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 195
-	Atom Type: cycloneiii_io_pad
-
-	INPUTS (Driven By):
-		0: [PADIN]	DISCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [PADOUT]	touche[5]	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		EMPTY!!
-
-	DELAY CHAINS:
-		Input Pin to Logic Array Delay 0:	0
-		Input Pin to Logic Array Delay 1:	0
-		Output Pin Delay:	0
-		Output Enable Register Tco Delay:	0
-		Input Pin to Input Register Delay:	0
-		PCI Clock Delay Chain:	0
-
-	IO STANDARD:			2.5 V
-	CURRENT STRENGTH:		DEFAULT
-	PCI DIODE:       		ON
-
-- ATOM ------------------------
-	ATOM_NAME: touche[0]~input -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 196
-	Atom Type: cycloneiii_io_ibuf
-
-	INPUTS (Driven By):
-		0: [I]	  touche[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [O]	touche[0]~input	LIT INDEX 0 FANOUTS 2
-
-	PARAMETER LIST:
-		bus_hold                       = false
-		simulate_z_as                  = z
-
-
-- ATOM ------------------------
-	ATOM_NAME: touche[0] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 197
-	Atom Type: cycloneiii_io_pad
-
-	INPUTS (Driven By):
-		0: [PADIN]	DISCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [PADOUT]	touche[0]	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		EMPTY!!
-
-	DELAY CHAINS:
-		Input Pin to Logic Array Delay 0:	0
-		Input Pin to Logic Array Delay 1:	0
-		Output Pin Delay:	0
-		Output Enable Register Tco Delay:	0
-		Input Pin to Input Register Delay:	0
-		PCI Clock Delay Chain:	0
-
-	IO STANDARD:			2.5 V
-	CURRENT STRENGTH:		DEFAULT
-	PCI DIODE:       		ON
-
-- ATOM ------------------------
 	ATOM_NAME: touche[1]~input -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 198
+	Atom Id: 201
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
@@ -3929,7 +3988,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: touche[1] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 199
+	Atom Id: 202
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3953,9 +4012,138 @@ Chip Device Options:
 	PCI DIODE:       		ON
 
 - ATOM ------------------------
+	ATOM_NAME: touche[7]~input -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 203
+	Atom Type: cycloneiii_io_ibuf
+
+	INPUTS (Driven By):
+		0: [I]	  touche[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [O]	touche[7]~input	LIT INDEX 0 FANOUTS 4
+
+	PARAMETER LIST:
+		bus_hold                       = false
+		simulate_z_as                  = z
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche[7] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 204
+	Atom Type: cycloneiii_io_pad
+
+	INPUTS (Driven By):
+		0: [PADIN]	DISCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [PADOUT]	touche[7]	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		EMPTY!!
+
+	DELAY CHAINS:
+		Input Pin to Logic Array Delay 0:	0
+		Input Pin to Logic Array Delay 1:	0
+		Output Pin Delay:	0
+		Output Enable Register Tco Delay:	0
+		Input Pin to Input Register Delay:	0
+		PCI Clock Delay Chain:	0
+
+	IO STANDARD:			2.5 V
+	CURRENT STRENGTH:		DEFAULT
+	PCI DIODE:       		ON
+
+- ATOM ------------------------
+	ATOM_NAME: touche[0]~input -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 205
+	Atom Type: cycloneiii_io_ibuf
+
+	INPUTS (Driven By):
+		0: [I]	  touche[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [O]	touche[0]~input	LIT INDEX 0 FANOUTS 2
+
+	PARAMETER LIST:
+		bus_hold                       = false
+		simulate_z_as                  = z
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche[0] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 206
+	Atom Type: cycloneiii_io_pad
+
+	INPUTS (Driven By):
+		0: [PADIN]	DISCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [PADOUT]	touche[0]	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		EMPTY!!
+
+	DELAY CHAINS:
+		Input Pin to Logic Array Delay 0:	0
+		Input Pin to Logic Array Delay 1:	0
+		Output Pin Delay:	0
+		Output Enable Register Tco Delay:	0
+		Input Pin to Input Register Delay:	0
+		PCI Clock Delay Chain:	0
+
+	IO STANDARD:			2.5 V
+	CURRENT STRENGTH:		DEFAULT
+	PCI DIODE:       		ON
+
+- ATOM ------------------------
+	ATOM_NAME: touche[4]~input -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 207
+	Atom Type: cycloneiii_io_ibuf
+
+	INPUTS (Driven By):
+		0: [I]	  touche[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [O]	touche[4]~input	LIT INDEX 0 FANOUTS 4
+
+	PARAMETER LIST:
+		bus_hold                       = false
+		simulate_z_as                  = z
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche[4] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 208
+	Atom Type: cycloneiii_io_pad
+
+	INPUTS (Driven By):
+		0: [PADIN]	DISCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [PADOUT]	touche[4]	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		EMPTY!!
+
+	DELAY CHAINS:
+		Input Pin to Logic Array Delay 0:	0
+		Input Pin to Logic Array Delay 1:	0
+		Output Pin Delay:	0
+		Output Enable Register Tco Delay:	0
+		Input Pin to Input Register Delay:	0
+		PCI Clock Delay Chain:	0
+
+	IO STANDARD:			2.5 V
+	CURRENT STRENGTH:		DEFAULT
+	PCI DIODE:       		ON
+
+- ATOM ------------------------
 	ATOM_NAME: touche[2]~input -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 200
+	Atom Id: 209
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
@@ -3972,7 +4160,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: touche[2] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 201
+	Atom Id: 210
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -3998,7 +4186,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: touche[3]~input -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 202
+	Atom Id: 211
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
@@ -4015,7 +4203,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: touche[3] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 203
+	Atom Id: 212
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -4039,16 +4227,16 @@ Chip Device Options:
 	PCI DIODE:       		ON
 
 - ATOM ------------------------
-	ATOM_NAME: touche[4]~input -- NON-UNIQUE
+	ATOM_NAME: touche[6]~input -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 204
+	Atom Id: 213
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
-		0: [I]	  touche[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [I]	  touche[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [O]	touche[4]~input	LIT INDEX 0 FANOUTS 4
+		0: [O]	touche[6]~input	LIT INDEX 0 FANOUTS 4
 
 	PARAMETER LIST:
 		bus_hold                       = false
@@ -4056,15 +4244,15 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: touche[4] -- NON-UNIQUE
+	ATOM_NAME: touche[6] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 205
+	Atom Id: 214
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
 		0: [PADIN]	DISCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [PADOUT]	touche[4]	LIT INDEX 0 FANOUTS 1
+		0: [PADOUT]	touche[6]	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -4082,9 +4270,72 @@ Chip Device Options:
 	PCI DIODE:       		ON
 
 - ATOM ------------------------
+	ATOM_NAME: touche[5]~input -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 215
+	Atom Type: cycloneiii_io_ibuf
+
+	INPUTS (Driven By):
+		0: [I]	  touche[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [O]	touche[5]~input	LIT INDEX 0 FANOUTS 5
+
+	PARAMETER LIST:
+		bus_hold                       = false
+		simulate_z_as                  = z
+
+
+- ATOM ------------------------
+	ATOM_NAME: touche[5] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 216
+	Atom Type: cycloneiii_io_pad
+
+	INPUTS (Driven By):
+		0: [PADIN]	DISCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [PADOUT]	touche[5]	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		EMPTY!!
+
+	DELAY CHAINS:
+		Input Pin to Logic Array Delay 0:	0
+		Input Pin to Logic Array Delay 1:	0
+		Output Pin Delay:	0
+		Output Enable Register Tco Delay:	0
+		Input Pin to Input Register Delay:	0
+		PCI Clock Delay Chain:	0
+
+	IO STANDARD:			2.5 V
+	CURRENT STRENGTH:		DEFAULT
+	PCI DIODE:       		ON
+
+- ATOM ------------------------
+	ATOM_NAME: ~QUARTUS_CREATED_GND~I -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 217
+	Atom Type: cycloneiii_lcell_comb
+
+	INPUTS (Driven By):
+		0: NO ITERM
+		1: NO ITERM
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	~QUARTUS_CREATED_GND~I	LIT INDEX 0 FANOUTS 0
+		1: NONE
+
+	PARAMETER LIST:
+		(Skipping parameters for lcell or lcell comb with no fanout)
+
+
+- ATOM ------------------------
 	ATOM_NAME: ~ALTERA_ASDO_DATA1~~ibuf -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 207
+	Atom Id: 219
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
@@ -4101,7 +4352,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ALTERA_ASDO_DATA1~ -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 206
+	Atom Id: 218
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -4127,7 +4378,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ALTERA_FLASH_nCE_nCSO~~ibuf -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 209
+	Atom Id: 221
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
@@ -4144,7 +4395,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ALTERA_FLASH_nCE_nCSO~ -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 208
+	Atom Id: 220
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -4170,7 +4421,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ALTERA_DCLK~~obuf -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 211
+	Atom Id: 223
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -4188,7 +4439,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ALTERA_DCLK~ -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 210
+	Atom Id: 222
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -4214,7 +4465,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ALTERA_DATA0~~ibuf -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 213
+	Atom Id: 225
 	Atom Type: cycloneiii_io_ibuf
 
 	INPUTS (Driven By):
@@ -4231,7 +4482,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ALTERA_DATA0~ -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 212
+	Atom Id: 224
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):
@@ -4257,7 +4508,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ALTERA_nCEO~~obuf -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 215
+	Atom Id: 227
 	Atom Type: cycloneiii_io_obuf
 
 	INPUTS (Driven By):
@@ -4275,7 +4526,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ALTERA_nCEO~ -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 214
+	Atom Id: 226
 	Atom Type: cycloneiii_io_pad
 
 	INPUTS (Driven By):

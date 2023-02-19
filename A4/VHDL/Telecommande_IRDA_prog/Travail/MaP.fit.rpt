@@ -1,6 +1,6 @@
 Fitter report for MaP
-Fri Jan 27 17:27:21 2023
-Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
+Sun Feb 19 18:16:45 2023
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
 ---------------------
@@ -40,8 +40,11 @@ Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
  32. Fitter Device Options
  33. Operating Settings and Conditions
  34. Estimated Delay Added for Hold Timing
- 35. Fitter Messages
- 36. Fitter Suppressed Messages
+ 35. Advanced Data - General
+ 36. Advanced Data - Placement Preparation
+ 37. Advanced Data - Placement
+ 38. Advanced Data - Routing
+ 39. Fitter Messages
 
 
 
@@ -64,26 +67,26 @@ applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Fitter Summary                                                                ;
-+------------------------------------+------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jan 27 17:27:21 2023    ;
-; Quartus II 64-Bit Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
-; Revision Name                      ; MaP                                      ;
-; Top-level Entity Name              ; decodeur_IRDA_2MHz                       ;
-; Family                             ; Cyclone III                              ;
-; Device                             ; EP3C5F256C6                              ;
-; Timing Models                      ; Final                                    ;
-; Total logic elements               ; 80 / 5,136 ( 2 % )                       ;
-;     Total combinational functions  ; 66 / 5,136 ( 1 % )                       ;
-;     Dedicated logic registers      ; 59 / 5,136 ( 1 % )                       ;
-; Total registers                    ; 59                                       ;
-; Total pins                         ; 26 / 183 ( 14 % )                        ;
-; Total virtual pins                 ; 0                                        ;
-; Total memory bits                  ; 0 / 423,936 ( 0 % )                      ;
-; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                           ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                            ;
-+------------------------------------+------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Fitter Summary                                                                    ;
++------------------------------------+----------------------------------------------+
+; Fitter Status                      ; Successful - Sun Feb 19 18:16:45 2023        ;
+; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name                      ; MaP                                          ;
+; Top-level Entity Name              ; decodeur_IRDA_2MHz                           ;
+; Family                             ; Cyclone III                                  ;
+; Device                             ; EP3C5F256C6                                  ;
+; Timing Models                      ; Final                                        ;
+; Total logic elements               ; 118 / 5,136 ( 2 % )                          ;
+;     Total combinational functions  ; 118 / 5,136 ( 2 % )                          ;
+;     Dedicated logic registers      ; 50 / 5,136 ( < 1 % )                         ;
+; Total registers                    ; 50                                           ;
+; Total pins                         ; 26 / 183 ( 14 % )                            ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0 / 423,936 ( 0 % )                          ;
+; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                               ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                ;
++------------------------------------+----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -140,21 +143,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     1 processor            ; 100.0%      ;
-;     2-4 processors         ; < 0.1%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +--------------------------------------------+
@@ -177,17 +174,17 @@ applicable agreement for further details.
 ; canal_T[7] ; Incomplete set of assignments ;
 ; canal_T[8] ; Incomplete set of assignments ;
 ; canal_T[9] ; Incomplete set of assignments ;
-; clk_2MHz   ; Incomplete set of assignments ;
-; arazb      ; Incomplete set of assignments ;
 ; new_touche ; Incomplete set of assignments ;
+; touche[5]  ; Incomplete set of assignments ;
 ; touche[7]  ; Incomplete set of assignments ;
 ; touche[6]  ; Incomplete set of assignments ;
-; touche[5]  ; Incomplete set of assignments ;
-; touche[0]  ; Incomplete set of assignments ;
 ; touche[1]  ; Incomplete set of assignments ;
-; touche[2]  ; Incomplete set of assignments ;
-; touche[3]  ; Incomplete set of assignments ;
 ; touche[4]  ; Incomplete set of assignments ;
+; touche[3]  ; Incomplete set of assignments ;
+; touche[0]  ; Incomplete set of assignments ;
+; touche[2]  ; Incomplete set of assignments ;
+; clk_2MHz   ; Incomplete set of assignments ;
+; arazb      ; Incomplete set of assignments ;
 +------------+-------------------------------+
 
 
@@ -197,8 +194,8 @@ applicable agreement for further details.
 ; Type                    ; Value              ;
 +-------------------------+--------------------+
 ; Placement               ;                    ;
-;     -- Requested        ; 0 / 177 ( 0.00 % ) ;
-;     -- Achieved         ; 0 / 177 ( 0.00 % ) ;
+;     -- Requested        ; 0 / 220 ( 0.00 % ) ;
+;     -- Achieved         ; 0 / 220 ( 0.00 % ) ;
 ;                         ;                    ;
 ; Routing (by Connection) ;                    ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )   ;
@@ -220,14 +217,14 @@ applicable agreement for further details.
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 177     ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 220     ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A4/Telecommande DMX/Telecommande_IRDA_prog/Travail/MaP.pin.
+The pin-out file can be found in C:/Users/mario/Desktop/GitHub/CESI_repository/A4/VHDL/Telecommande_IRDA_prog/Travail/MaP.pin.
 
 
 +---------------------------------------------------------------------+
@@ -235,50 +232,50 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 80 / 5,136 ( 2 % )    ;
-;     -- Combinational with no register       ; 21                    ;
-;     -- Register only                        ; 14                    ;
-;     -- Combinational with a register        ; 45                    ;
+; Total logic elements                        ; 118 / 5,136 ( 2 % )   ;
+;     -- Combinational with no register       ; 68                    ;
+;     -- Register only                        ; 0                     ;
+;     -- Combinational with a register        ; 50                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 13                    ;
-;     -- 3 input functions                    ; 17                    ;
-;     -- <=2 input functions                  ; 36                    ;
-;     -- Register only                        ; 14                    ;
+;     -- 4 input functions                    ; 51                    ;
+;     -- 3 input functions                    ; 13                    ;
+;     -- <=2 input functions                  ; 54                    ;
+;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 21                    ;
-;     -- arithmetic mode                      ; 45                    ;
+;     -- normal mode                          ; 78                    ;
+;     -- arithmetic mode                      ; 40                    ;
 ;                                             ;                       ;
-; Total registers*                            ; 59 / 6,000 ( < 1 % )  ;
-;     -- Dedicated logic registers            ; 59 / 5,136 ( 1 % )    ;
+; Total registers*                            ; 50 / 6,000 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 50 / 5,136 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 864 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 8 / 321 ( 2 % )       ;
+; Total LABs:  partially or completely used   ; 9 / 321 ( 3 % )       ;
 ; User inserted logic elements                ; 0                     ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 26 / 183 ( 14 % )     ;
 ;     -- Clock pins                           ; 1 / 4 ( 25 % )        ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )         ;
-; Global signals                              ; 1                     ;
+; Global signals                              ; 2                     ;
 ; M9Ks                                        ; 0 / 46 ( 0 % )        ;
 ; Total block memory bits                     ; 0 / 423,936 ( 0 % )   ;
 ; Total block memory implementation bits      ; 0 / 423,936 ( 0 % )   ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 46 ( 0 % )        ;
 ; PLLs                                        ; 0 / 2 ( 0 % )         ;
-; Global clocks                               ; 1 / 10 ( 10 % )       ;
+; Global clocks                               ; 2 / 10 ( 20 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
+; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%          ;
 ; Maximum fan-out node                        ; clk_2MHz~inputclkctrl ;
-; Maximum fan-out                             ; 59                    ;
-; Highest non-global fan-out signal           ; touche_s[0]~105       ;
-; Highest non-global fan-out                  ; 43                    ;
-; Total fan-out                               ; 445                   ;
-; Average fan-out                             ; 2.29                  ;
+; Maximum fan-out                             ; 50                    ;
+; Highest non-global fan-out signal           ; state.e0              ;
+; Highest non-global fan-out                  ; 36                    ;
+; Total fan-out                               ; 619                   ;
+; Average fan-out                             ; 2.67                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -289,18 +286,18 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; arazb      ; R12   ; 4        ; 23           ; 0            ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; clk_2MHz   ; E2    ; 1        ; 0            ; 11           ; 0            ; 59                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; new_touche ; N2    ; 2        ; 0            ; 7            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; recept     ; A7    ; 8        ; 11           ; 24           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; touche[0]  ; T12   ; 4        ; 25           ; 0            ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; touche[1]  ; F11   ; 7        ; 23           ; 24           ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; touche[2]  ; R1    ; 2        ; 0            ; 5            ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; touche[3]  ; R16   ; 5        ; 34           ; 5            ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; touche[4]  ; N9    ; 4        ; 21           ; 0            ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; touche[5]  ; K5    ; 2        ; 0            ; 6            ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; touche[6]  ; L7    ; 3        ; 11           ; 0            ; 7            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; touche[7]  ; L4    ; 2        ; 0            ; 6            ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; arazb      ; E1    ; 1        ; 0            ; 11           ; 7            ; 50                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; clk_2MHz   ; E2    ; 1        ; 0            ; 11           ; 0            ; 50                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; new_touche ; K6    ; 2        ; 0            ; 9            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; recept     ; R9    ; 4        ; 18           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; touche[0]  ; F13   ; 6        ; 34           ; 17           ; 0            ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; touche[1]  ; J14   ; 5        ; 34           ; 10           ; 0            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; touche[2]  ; J12   ; 5        ; 34           ; 11           ; 7            ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; touche[3]  ; G2    ; 1        ; 0            ; 18           ; 14           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; touche[4]  ; D9    ; 7        ; 18           ; 24           ; 14           ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; touche[5]  ; T11   ; 4        ; 23           ; 0            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; touche[6]  ; L9    ; 4        ; 18           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; touche[7]  ; A12   ; 7        ; 25           ; 24           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -309,41 +306,43 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Load ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+------+
-; canal_T[0] ; B11   ; 7        ; 25           ; 24           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; canal_T[1] ; A11   ; 7        ; 25           ; 24           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; canal_T[2] ; N16   ; 5        ; 34           ; 7            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; canal_T[3] ; N1    ; 2        ; 0            ; 7            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; canal_T[4] ; K11   ; 5        ; 34           ; 6            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; canal_T[5] ; C11   ; 7        ; 23           ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; canal_T[6] ; L2    ; 2        ; 0            ; 8            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; canal_T[0] ; A11   ; 7        ; 25           ; 24           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; canal_T[1] ; C11   ; 7        ; 23           ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; canal_T[2] ; B11   ; 7        ; 25           ; 24           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; canal_T[3] ; B12   ; 7        ; 25           ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; canal_T[4] ; G15   ; 6        ; 34           ; 17           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; canal_T[5] ; R11   ; 4        ; 23           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; canal_T[6] ; L10   ; 4        ; 25           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
 ; canal_T[7] ; K10   ; 4        ; 25           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; canal_T[8] ; L14   ; 5        ; 34           ; 7            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; canal_T[9] ; L10   ; 4        ; 25           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; down       ; R7    ; 3        ; 11           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; s_load_T   ; B5    ; 8        ; 5            ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; up         ; A6    ; 8        ; 9            ; 24           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; valide     ; F6    ; 8        ; 11           ; 24           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; canal_T[8] ; R12   ; 4        ; 23           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; canal_T[9] ; T12   ; 4        ; 25           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; down       ; F15   ; 6        ; 34           ; 18           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; s_load_T   ; G1    ; 1        ; 0            ; 18           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; up         ; B16   ; 6        ; 34           ; 18           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; valide     ; B10   ; 7        ; 21           ; 24           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Dual Purpose and Dedicated Pins                                                                                       ;
-+----------+-----------------------------+------------------------+-------------------------+---------------------------+
-; Location ; Pin Name                    ; Reserved As            ; User Signal Name        ; Pin Type                  ;
-+----------+-----------------------------+------------------------+-------------------------+---------------------------+
-; C1       ; DIFFIO_L1n, DATA1, ASDO     ; As input tri-stated    ; ~ALTERA_ASDO_DATA1~     ; Dual Purpose Pin          ;
-; D2       ; DIFFIO_L2p, FLASH_nCE, nCSO ; As input tri-stated    ; ~ALTERA_FLASH_nCE_nCSO~ ; Dual Purpose Pin          ;
-; F4       ; nSTATUS                     ; -                      ; -                       ; Dedicated Programming Pin ;
-; H2       ; DATA0                       ; As input tri-stated    ; ~ALTERA_DATA0~          ; Dual Purpose Pin          ;
-; H5       ; nCONFIG                     ; -                      ; -                       ; Dedicated Programming Pin ;
-; J3       ; nCE                         ; -                      ; -                       ; Dedicated Programming Pin ;
-; H14      ; CONF_DONE                   ; -                      ; -                       ; Dedicated Programming Pin ;
-; H13      ; MSEL0                       ; -                      ; -                       ; Dedicated Programming Pin ;
-; H12      ; MSEL1                       ; -                      ; -                       ; Dedicated Programming Pin ;
-; G12      ; MSEL2                       ; -                      ; -                       ; Dedicated Programming Pin ;
-; G12      ; MSEL3                       ; -                      ; -                       ; Dedicated Programming Pin ;
-; F16      ; DIFFIO_R3n, nCEO            ; Use as programming pin ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-+----------+-----------------------------+------------------------+-------------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Dual Purpose and Dedicated Pins                                                                                          ;
++----------+-----------------------------+---------------------------+-------------------------+---------------------------+
+; Location ; Pin Name                    ; Reserved As               ; User Signal Name        ; Pin Type                  ;
++----------+-----------------------------+---------------------------+-------------------------+---------------------------+
+; C1       ; DIFFIO_L1n, DATA1, ASDO     ; As input tri-stated       ; ~ALTERA_ASDO_DATA1~     ; Dual Purpose Pin          ;
+; D2       ; DIFFIO_L2p, FLASH_nCE, nCSO ; As input tri-stated       ; ~ALTERA_FLASH_nCE_nCSO~ ; Dual Purpose Pin          ;
+; F4       ; nSTATUS                     ; -                         ; -                       ; Dedicated Programming Pin ;
+; H2       ; DATA0                       ; As input tri-stated       ; ~ALTERA_DATA0~          ; Dual Purpose Pin          ;
+; H5       ; nCONFIG                     ; -                         ; -                       ; Dedicated Programming Pin ;
+; J3       ; nCE                         ; -                         ; -                       ; Dedicated Programming Pin ;
+; H14      ; CONF_DONE                   ; -                         ; -                       ; Dedicated Programming Pin ;
+; H13      ; MSEL0                       ; -                         ; -                       ; Dedicated Programming Pin ;
+; H12      ; MSEL1                       ; -                         ; -                       ; Dedicated Programming Pin ;
+; G12      ; MSEL2                       ; -                         ; -                       ; Dedicated Programming Pin ;
+; G12      ; MSEL3                       ; -                         ; -                       ; Dedicated Programming Pin ;
+; G15      ; DIFFIO_R4p, CRC_ERROR       ; Use as general purpose IO ; canal_T[4]              ; Dual Purpose Pin          ;
+; F16      ; DIFFIO_R3n, nCEO            ; Use as programming pin    ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
+; F15      ; DIFFIO_R3p, CLKUSR          ; Use as general purpose IO ; down                    ; Dual Purpose Pin          ;
++----------+-----------------------------+---------------------------+-------------------------+---------------------------+
 
 
 +-----------------------------------------------------------+
@@ -351,14 +350,14 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 +----------+-----------------+---------------+--------------+
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
-; 1        ; 5 / 18 ( 28 % ) ; 2.5V          ; --           ;
-; 2        ; 6 / 19 ( 32 % ) ; 2.5V          ; --           ;
-; 3        ; 2 / 26 ( 8 % )  ; 2.5V          ; --           ;
-; 4        ; 5 / 27 ( 19 % ) ; 2.5V          ; --           ;
-; 5        ; 4 / 25 ( 16 % ) ; 2.5V          ; --           ;
-; 6        ; 1 / 16 ( 6 % )  ; 2.5V          ; --           ;
-; 7        ; 4 / 26 ( 15 % ) ; 2.5V          ; --           ;
-; 8        ; 4 / 26 ( 15 % ) ; 2.5V          ; --           ;
+; 1        ; 8 / 18 ( 44 % ) ; 2.5V          ; --           ;
+; 2        ; 1 / 19 ( 5 % )  ; 2.5V          ; --           ;
+; 3        ; 0 / 26 ( 0 % )  ; 2.5V          ; --           ;
+; 4        ; 8 / 27 ( 30 % ) ; 2.5V          ; --           ;
+; 5        ; 2 / 25 ( 8 % )  ; 2.5V          ; --           ;
+; 6        ; 5 / 16 ( 31 % ) ; 2.5V          ; --           ;
+; 7        ; 7 / 26 ( 27 % ) ; 2.5V          ; --           ;
+; 8        ; 0 / 26 ( 0 % )  ; 2.5V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
 
@@ -372,13 +371,13 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; A3       ; 200        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A4       ; 196        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A5       ; 192        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A6       ; 188        ; 8        ; up                                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A7       ; 183        ; 8        ; recept                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A6       ; 188        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A7       ; 183        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A8       ; 177        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A9       ; 175        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A10      ; 168        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A11      ; 161        ; 7        ; canal_T[1]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A12      ; 159        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A11      ; 161        ; 7        ; canal_T[0]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A12      ; 159        ; 7        ; touche[7]                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A13      ; 153        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A14      ; 155        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A15      ; 167        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -387,18 +386,18 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; B2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B3       ; 201        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B4       ; 197        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B5       ; 195        ; 8        ; s_load_T                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B5       ; 195        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B6       ; 189        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B7       ; 184        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B8       ; 178        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B9       ; 176        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B10      ; 169        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B11      ; 162        ; 7        ; canal_T[0]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B12      ; 160        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B10      ; 169        ; 7        ; valide                                                    ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 162        ; 7        ; canal_T[2]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B12      ; 160        ; 7        ; canal_T[3]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B13      ; 154        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B14      ; 156        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B15      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B16      ; 141        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; B16      ; 141        ; 6        ; up                                                        ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C1       ; 5          ; 1        ; ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; C2       ; 4          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C3       ; 202        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -409,7 +408,7 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; C8       ; 179        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C9       ; 172        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C10      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; C11      ; 163        ; 7        ; canal_T[5]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C11      ; 163        ; 7        ; canal_T[1]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C12      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C13      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; C14      ; 149        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -423,7 +422,7 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; D6       ; 199        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D7       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D8       ; 180        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D9       ; 173        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D9       ; 173        ; 7        ; touche[4]                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D11      ; 151        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D12      ; 152        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -431,7 +430,7 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; D14      ; 150        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D15      ; 144        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D16      ; 143        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; E1       ; 24         ; 1        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; E1       ; 24         ; 1        ; arazb                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E2       ; 23         ; 1        ; clk_2MHz                                                  ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E3       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E4       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -452,19 +451,19 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; F3       ; 6          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F4       ; 9          ; 1        ; ^nSTATUS                                                  ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; F5       ; 2          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; F6       ; 185        ; 8        ; valide                                                    ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F6       ; 185        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F7       ; 186        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F8       ; 182        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F9       ; 165        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F10      ; 164        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F11      ; 166        ; 7        ; touche[1]                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F11      ; 166        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F12      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; F13      ; 138        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; F13      ; 138        ; 6        ; touche[0]                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F14      ; 142        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; F15      ; 140        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; F15      ; 140        ; 6        ; down                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F16      ; 139        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G1       ; 14         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; G2       ; 13         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G1       ; 14         ; 1        ; s_load_T                                                  ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G2       ; 13         ; 1        ; touche[3]                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G3       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; G4       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G5       ; 10         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -478,7 +477,7 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; G12      ; 133        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; G13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G14      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; G15      ; 137        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G15      ; 137        ; 6        ; canal_T[4]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G16      ; 136        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H1       ; 15         ; 1        ; ~ALTERA_DCLK~                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; H2       ; 16         ; 1        ; ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP          ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
@@ -507,41 +506,41 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; J9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J11      ; 117        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J12      ; 123        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J12      ; 123        ; 5        ; touche[2]                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J13      ; 124        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J14      ; 122        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J14      ; 122        ; 5        ; touche[1]                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J15      ; 121        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J16      ; 120        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K1       ; 33         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K2       ; 32         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K3       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; K4       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; K5       ; 39         ; 2        ; touche[5]                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K6       ; 30         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K5       ; 39         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K6       ; 30         ; 2        ; new_touche                                                ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K7       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K8       ; 60         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; K9       ; 76         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; K10      ; 87         ; 4        ; canal_T[7]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; K11      ; 110        ; 5        ; canal_T[4]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K11      ; 110        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K12      ; 105        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K14      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; K15      ; 119        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K16      ; 118        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L1       ; 35         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L2       ; 34         ; 2        ; canal_T[6]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L2       ; 34         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L3       ; 36         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L4       ; 40         ; 2        ; touche[7]                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L4       ; 40         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L5       ;            ; --       ; VCCA1                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; L6       ; 31         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L7       ; 65         ; 3        ; touche[6]                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; L7       ; 65         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; L8       ; 68         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; L9       ; 77         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; L10      ; 88         ; 4        ; canal_T[9]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; L9       ; 77         ; 4        ; touche[6]                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; L10      ; 88         ; 4        ; canal_T[6]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; L11      ; 99         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; L12      ; 104        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L13      ; 114        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L14      ; 113        ; 5        ; canal_T[8]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L14      ; 113        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L15      ; 116        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L16      ; 115        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M1       ; 26         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -560,22 +559,22 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; M14      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; M15      ; 126        ; 5        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; M16      ; 125        ; 5        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; N1       ; 38         ; 2        ; canal_T[3]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; N2       ; 37         ; 2        ; new_touche                                                ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N1       ; 38         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; N2       ; 37         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N3       ; 45         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N4       ;            ;          ; VCCD_PLL1                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N5       ; 55         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N6       ; 56         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N7       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N8       ; 70         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; N9       ; 79         ; 4        ; touche[4]                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N9       ; 79         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N11      ; 94         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N12      ; 101        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N13      ; 102        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N14      ; 106        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N15      ; 112        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; N16      ; 111        ; 5        ; canal_T[2]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N16      ; 111        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P1       ; 44         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P2       ; 43         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P3       ; 46         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -592,22 +591,22 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; P14      ; 98         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; P15      ; 107        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P16      ; 108        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; R1       ; 42         ; 2        ; touche[2]                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R1       ; 42         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R3       ; 47         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R4       ; 53         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R5       ; 61         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R6       ; 63         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; R7       ; 66         ; 3        ; down                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; R7       ; 66         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R8       ; 72         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; R9       ; 74         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; R9       ; 74         ; 4        ; recept                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; R10      ; 80         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; R11      ; 83         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; R12      ; 85         ; 4        ; arazb                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; R11      ; 83         ; 4        ; canal_T[5]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; R12      ; 85         ; 4        ; canal_T[8]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; R13      ; 91         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R14      ; 97         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R15      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; R16      ; 109        ; 5        ; touche[3]                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R16      ; 109        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; T1       ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; T2       ; 52         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T3       ; 48         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -618,8 +617,8 @@ The pin-out file can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A
 ; T8       ; 73         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T9       ; 75         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T10      ; 81         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; T11      ; 84         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; T12      ; 86         ; 4        ; touche[0]                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; T11      ; 84         ; 4        ; touche[5]                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; T12      ; 86         ; 4        ; canal_T[9]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; T13      ; 92         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T14      ; 95         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T15      ; 96         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -683,7 +682,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |decodeur_IRDA_2MHz        ; 80 (80)     ; 59 (59)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 26   ; 0            ; 21 (21)      ; 14 (14)           ; 45 (45)          ; |decodeur_IRDA_2MHz ; work         ;
+; |decodeur_IRDA_2MHz        ; 118 (118)   ; 50 (50)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 26   ; 0            ; 68 (68)      ; 0 (0)             ; 50 (50)          ; |decodeur_IRDA_2MHz ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -708,90 +707,93 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; canal_T[7] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; canal_T[8] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; canal_T[9] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; clk_2MHz   ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; arazb      ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
 ; new_touche ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; touche[7]  ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; touche[6]  ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
 ; touche[5]  ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; touche[0]  ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; touche[7]  ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; touche[6]  ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
 ; touche[1]  ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; touche[2]  ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; touche[3]  ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
 ; touche[4]  ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; touche[3]  ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; touche[0]  ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; touche[2]  ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
+; clk_2MHz   ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; arazb      ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+-------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                              ;
-+-------------------------------+-------------------+---------+
-; Source Pin / Fanout           ; Pad To Core Index ; Setting ;
-+-------------------------------+-------------------+---------+
-; recept                        ;                   ;         ;
-; clk_2MHz                      ;                   ;         ;
-; arazb                         ;                   ;         ;
-;      - chiffre_conv[6]        ; 0                 ; 6       ;
-;      - chiffre_conv[5]        ; 0                 ; 6       ;
-;      - chiffre_conv[4]        ; 0                 ; 6       ;
-;      - touche_s[0]~104        ; 0                 ; 6       ;
-;      - chiffre_conv[7]        ; 0                 ; 6       ;
-;      - chiffre_conv[3]        ; 0                 ; 6       ;
-;      - chiffre_conv[2]        ; 0                 ; 6       ;
-;      - chiffre_conv[1]        ; 0                 ; 6       ;
-; new_touche                    ;                   ;         ;
-;      - touche_s[0]~105        ; 1                 ; 6       ;
-; touche[7]                     ;                   ;         ;
-;      - chiffre_conv[7]        ; 1                 ; 6       ;
-;      - touche_s[7]            ; 1                 ; 6       ;
-;      - touche_s[7]~119        ; 1                 ; 6       ;
-;      - canal_T[0]~30          ; 1                 ; 6       ;
-; touche[6]                     ;                   ;         ;
-;      - chiffre_conv[6]        ; 1                 ; 6       ;
-;      - touche_s[6]            ; 1                 ; 6       ;
-;      - touche_s[6]~117        ; 1                 ; 6       ;
-;      - canal_T[0]~30          ; 1                 ; 6       ;
-; touche[5]                     ;                   ;         ;
-;      - chiffre_conv[5]        ; 0                 ; 6       ;
-;      - touche_s[5]            ; 0                 ; 6       ;
-;      - touche_s[5]~115        ; 0                 ; 6       ;
-;      - canal_T[0]~30          ; 0                 ; 6       ;
-; touche[0]                     ;                   ;         ;
-;      - canal_T[0]~31          ; 0                 ; 6       ;
-;      - touche_s[0]~106        ; 0                 ; 6       ;
-; touche[1]                     ;                   ;         ;
-;      - chiffre_conv[1]        ; 0                 ; 6       ;
-;      - touche_s[1]            ; 0                 ; 6       ;
-;      - touche_s[1]~107        ; 0                 ; 6       ;
-;      - canal_T[0]~31          ; 0                 ; 6       ;
-; touche[2]                     ;                   ;         ;
-;      - chiffre_conv[2]        ; 1                 ; 6       ;
-;      - touche_s[2]            ; 1                 ; 6       ;
-;      - touche_s[2]~109        ; 1                 ; 6       ;
-;      - canal_T[0]~31          ; 1                 ; 6       ;
-; touche[3]                     ;                   ;         ;
-;      - chiffre_conv[3]        ; 0                 ; 6       ;
-;      - touche_s[3]            ; 0                 ; 6       ;
-;      - touche_s[3]~111        ; 0                 ; 6       ;
-;      - canal_T[0]~31          ; 0                 ; 6       ;
-; touche[4]                     ;                   ;         ;
-;      - touche_s[4]            ; 0                 ; 6       ;
-;      - touche_s[4]~113        ; 0                 ; 6       ;
-;      - canal_T[0]~32          ; 0                 ; 6       ;
-;      - chiffre_conv[4]~feeder ; 0                 ; 6       ;
-+-------------------------------+-------------------+---------+
++----------------------------------------------------+
+; Pad To Core Delay Chain Fanout                     ;
++----------------------+-------------------+---------+
+; Source Pin / Fanout  ; Pad To Core Index ; Setting ;
++----------------------+-------------------+---------+
+; recept               ;                   ;         ;
+; new_touche           ;                   ;         ;
+;      - process_0~7   ; 1                 ; 6       ;
+; touche[5]            ;                   ;         ;
+;      - Add2~10       ; 0                 ; 6       ;
+;      - process_0~7   ; 0                 ; 6       ;
+; touche[7]            ;                   ;         ;
+;      - Add2~14       ; 0                 ; 6       ;
+;      - process_0~7   ; 0                 ; 6       ;
+; touche[6]            ;                   ;         ;
+;      - Add2~12       ; 0                 ; 6       ;
+;      - process_0~7   ; 0                 ; 6       ;
+; touche[1]            ;                   ;         ;
+;      - Add2~2        ; 0                 ; 6       ;
+;      - process_0~8   ; 0                 ; 6       ;
+;      - process_0~10  ; 0                 ; 6       ;
+;      - process_0~11  ; 0                 ; 6       ;
+;      - Selector23~0  ; 0                 ; 6       ;
+;      - process_0~13  ; 0                 ; 6       ;
+;      - Selector11~5  ; 0                 ; 6       ;
+; touche[4]            ;                   ;         ;
+;      - Add2~8        ; 0                 ; 6       ;
+;      - process_0~8   ; 0                 ; 6       ;
+;      - process_0~10  ; 0                 ; 6       ;
+;      - process_0~11  ; 0                 ; 6       ;
+;      - process_0~13  ; 0                 ; 6       ;
+;      - Selector11~5  ; 0                 ; 6       ;
+; touche[3]            ;                   ;         ;
+;      - Add2~6        ; 0                 ; 6       ;
+;      - process_0~9   ; 0                 ; 6       ;
+;      - process_0~11  ; 0                 ; 6       ;
+;      - Selector13~0  ; 0                 ; 6       ;
+;      - Selector21~0  ; 0                 ; 6       ;
+;      - state~38      ; 0                 ; 6       ;
+;      - Add0~36       ; 0                 ; 6       ;
+; touche[0]            ;                   ;         ;
+;      - Add2~0        ; 0                 ; 6       ;
+;      - process_0~9   ; 0                 ; 6       ;
+;      - Selector13~0  ; 0                 ; 6       ;
+;      - Selector24~0  ; 0                 ; 6       ;
+;      - state~38      ; 0                 ; 6       ;
+;      - Add0~36       ; 0                 ; 6       ;
+; touche[2]            ;                   ;         ;
+;      - Add2~4        ; 1                 ; 6       ;
+;      - cpt_2[12]~161 ; 1                 ; 6       ;
+;      - process_0~0   ; 1                 ; 6       ;
+;      - process_0~11  ; 1                 ; 6       ;
+;      - Selector13~1  ; 1                 ; 6       ;
+;      - Selector22~0  ; 1                 ; 6       ;
+; clk_2MHz             ;                   ;         ;
+; arazb                ;                   ;         ;
++----------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                        ;
-+-----------------+-------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; Name            ; Location          ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------+-------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; LessThan0~9     ; LCCOMB_X18_Y5_N2  ; 41      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; arazb           ; PIN_R12           ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; canal_T[0]~32   ; LCCOMB_X26_Y5_N22 ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; clk_2MHz        ; PIN_E2            ; 59      ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; touche_s[0]~105 ; LCCOMB_X26_Y5_N18 ; 43      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-+-----------------+-------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                            ;
++---------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name          ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Add0~37       ; LCCOMB_X25_Y18_N14 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Selector16~1  ; LCCOMB_X25_Y18_N26 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Selector20~2  ; LCCOMB_X25_Y18_N0  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; arazb         ; PIN_E1             ; 50      ; Async. clear ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; clk_2MHz      ; PIN_E2             ; 50      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; cpt_2[12]~164 ; LCCOMB_X28_Y18_N6  ; 23      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; cpt_2[12]~166 ; LCCOMB_X24_Y19_N0  ; 23      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; state.e0      ; FF_X24_Y17_N5      ; 36      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
++---------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------+
@@ -799,7 +801,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk_2MHz ; PIN_E2   ; 59      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; arazb    ; PIN_E1   ; 50      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; clk_2MHz ; PIN_E2   ; 50      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -808,127 +811,127 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+---------------+
 ; Name            ; Fan-Out       ;
 +-----------------+---------------+
-; touche_s[0]~105 ; 43            ;
-; LessThan0~9     ; 41            ;
-; canal_T[0]~32   ; 10            ;
-; arazb~input     ; 8             ;
-; touche[4]~input ; 4             ;
-; touche[3]~input ; 4             ;
-; touche[2]~input ; 4             ;
-; touche[1]~input ; 4             ;
-; touche[5]~input ; 4             ;
-; touche[6]~input ; 4             ;
-; touche[7]~input ; 4             ;
+; state.e0        ; 36            ;
+; state.e2        ; 24            ;
+; cpt_2[12]~166   ; 23            ;
+; cpt_2[12]~164   ; 23            ;
+; Selector25~0    ; 13            ;
+; process_0~12    ; 12            ;
+; Add0~37         ; 10            ;
+; state~38        ; 8             ;
+; touche[3]~input ; 7             ;
+; touche[1]~input ; 7             ;
+; process_0~7     ; 7             ;
+; touche[2]~input ; 6             ;
+; touche[0]~input ; 6             ;
+; touche[4]~input ; 6             ;
+; Equal3~6        ; 5             ;
+; Equal3~4        ; 5             ;
+; Selector14~4    ; 4             ;
+; process_0~9     ; 4             ;
+; process_0~8     ; 4             ;
+; touche_s[7]     ; 4             ;
+; touche_s[3]     ; 4             ;
+; touche_s[2]     ; 4             ;
+; touche_s[1]     ; 4             ;
 ; touche_s[0]     ; 4             ;
-; touche_s[6]     ; 3             ;
-; touche_s[5]     ; 3             ;
-; touche_s[4]     ; 3             ;
-; touche_s[3]     ; 3             ;
-; touche_s[2]     ; 3             ;
-; touche_s[1]     ; 3             ;
-; touche[0]~input ; 2             ;
-; ~GND            ; 2             ;
-; cpt_touche[30]  ; 2             ;
-; cpt_touche[29]  ; 2             ;
-; cpt_touche[28]  ; 2             ;
-; cpt_touche[27]  ; 2             ;
-; cpt_touche[26]  ; 2             ;
-; cpt_touche[25]  ; 2             ;
-; cpt_touche[24]  ; 2             ;
-; cpt_touche[23]  ; 2             ;
-; cpt_touche[22]  ; 2             ;
-; cpt_touche[21]  ; 2             ;
-; cpt_touche[20]  ; 2             ;
-; cpt_touche[19]  ; 2             ;
-; cpt_touche[18]  ; 2             ;
-; cpt_touche[17]  ; 2             ;
-; cpt_touche[16]  ; 2             ;
-; cpt_touche[15]  ; 2             ;
-; cpt_touche[14]  ; 2             ;
-; cpt_touche[13]  ; 2             ;
-; cpt_touche[12]  ; 2             ;
-; cpt_touche[11]  ; 2             ;
-; cpt_touche[10]  ; 2             ;
-; cpt_touche[9]   ; 2             ;
-; cpt_touche[8]   ; 2             ;
-; cpt_touche[7]   ; 2             ;
-; cpt_touche[6]   ; 2             ;
-; cpt_touche[5]   ; 2             ;
-; cpt_touche[4]   ; 2             ;
-; cpt_touche[3]   ; 2             ;
-; cpt_touche[2]   ; 2             ;
-; cpt_touche[31]  ; 2             ;
+; Selector20~2    ; 3             ;
+; Add0~4          ; 3             ;
+; process_0~11    ; 3             ;
+; process_0~0     ; 3             ;
+; touche[6]~input ; 2             ;
+; touche[7]~input ; 2             ;
+; touche[5]~input ; 2             ;
+; Add0~36         ; 2             ;
+; Selector11~5    ; 2             ;
+; Selector16~1    ; 2             ;
+; Selector24~3    ; 2             ;
+; Selector13~1    ; 2             ;
+; Selector14~3    ; 2             ;
+; Selector14~2    ; 2             ;
+; Selector14~1    ; 2             ;
+; Selector14~0    ; 2             ;
+; cpt_2[12]~161   ; 2             ;
+; touche_s[9]     ; 2             ;
+; touche_s[8]     ; 2             ;
+; s_load_T~reg0   ; 2             ;
+; valide~reg0     ; 2             ;
+; down~reg0       ; 2             ;
+; up~reg0         ; 2             ;
+; cpt_2[21]       ; 2             ;
+; cpt_2[22]       ; 2             ;
+; cpt_2[20]       ; 2             ;
 +-----------------+---------------+
 
 
-+----------------------------------------------------+
-; Interconnect Usage Summary                         ;
-+----------------------------+-----------------------+
-; Interconnect Resource Type ; Usage                 ;
-+----------------------------+-----------------------+
-; Block interconnects        ; 88 / 32,401 ( < 1 % ) ;
-; C16 interconnects          ; 7 / 1,326 ( < 1 % )   ;
-; C4 interconnects           ; 53 / 21,816 ( < 1 % ) ;
-; Direct links               ; 19 / 32,401 ( < 1 % ) ;
-; Global clocks              ; 1 / 10 ( 10 % )       ;
-; Local interconnects        ; 63 / 10,320 ( < 1 % ) ;
-; R24 interconnects          ; 10 / 1,289 ( < 1 % )  ;
-; R4 interconnects           ; 54 / 28,186 ( < 1 % ) ;
-+----------------------------+-----------------------+
++-----------------------------------------------------+
+; Interconnect Usage Summary                          ;
++----------------------------+------------------------+
+; Interconnect Resource Type ; Usage                  ;
++----------------------------+------------------------+
+; Block interconnects        ; 146 / 32,401 ( < 1 % ) ;
+; C16 interconnects          ; 10 / 1,326 ( < 1 % )   ;
+; C4 interconnects           ; 92 / 21,816 ( < 1 % )  ;
+; Direct links               ; 31 / 32,401 ( < 1 % )  ;
+; Global clocks              ; 2 / 10 ( 20 % )        ;
+; Local interconnects        ; 74 / 10,320 ( < 1 % )  ;
+; R24 interconnects          ; 8 / 1,289 ( < 1 % )    ;
+; R4 interconnects           ; 85 / 28,186 ( < 1 % )  ;
++----------------------------+------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 10.00) ; Number of LABs  (Total = 8) ;
+; Number of Logic Elements  (Average = 13.11) ; Number of LABs  (Total = 9) ;
 +---------------------------------------------+-----------------------------+
-; 1                                           ; 2                           ;
-; 2                                           ; 0                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 1                           ;
 ; 3                                           ; 0                           ;
-; 4                                           ; 1                           ;
+; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
-; 10                                          ; 1                           ;
+; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
+; 12                                          ; 3                           ;
 ; 13                                          ; 0                           ;
 ; 14                                          ; 0                           ;
 ; 15                                          ; 0                           ;
-; 16                                          ; 4                           ;
+; 16                                          ; 5                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.75) ; Number of LABs  (Total = 8) ;
+; LAB-wide Signals  (Average = 2.89) ; Number of LABs  (Total = 9) ;
 +------------------------------------+-----------------------------+
-; 1 Clock                            ; 6                           ;
-; 1 Clock enable                     ; 5                           ;
-; 1 Sync. clear                      ; 2                           ;
-; 1 Sync. load                       ; 1                           ;
+; 1 Async. clear                     ; 8                           ;
+; 1 Clock                            ; 8                           ;
+; 1 Clock enable                     ; 6                           ;
+; 1 Sync. clear                      ; 4                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 16.38) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced  (Average = 18.67) ; Number of LABs  (Total = 9) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
-; 1                                            ; 1                           ;
+; 1                                            ; 0                           ;
 ; 2                                            ; 1                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
-; 6                                            ; 1                           ;
+; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
-; 10                                           ; 1                           ;
+; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
@@ -936,86 +939,76 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 15                                           ; 0                           ;
 ; 16                                           ; 0                           ;
 ; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
-; 19                                           ; 0                           ;
-; 20                                           ; 0                           ;
-; 21                                           ; 0                           ;
+; 18                                           ; 2                           ;
+; 19                                           ; 1                           ;
+; 20                                           ; 1                           ;
+; 21                                           ; 1                           ;
 ; 22                                           ; 0                           ;
-; 23                                           ; 1                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 1                           ;
-; 26                                           ; 0                           ;
-; 27                                           ; 0                           ;
-; 28                                           ; 0                           ;
-; 29                                           ; 0                           ;
-; 30                                           ; 0                           ;
-; 31                                           ; 0                           ;
-; 32                                           ; 2                           ;
+; 23                                           ; 2                           ;
+; 24                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.75) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced Out  (Average = 9.78) ; Number of LABs  (Total = 9) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 3                           ;
-; 2                                               ; 0                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 1                           ;
 ; 3                                               ; 0                           ;
-; 4                                               ; 1                           ;
+; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
 ; 7                                               ; 0                           ;
-; 8                                               ; 1                           ;
-; 9                                               ; 1                           ;
-; 10                                              ; 0                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 2                           ;
+; 10                                              ; 2                           ;
 ; 11                                              ; 0                           ;
-; 12                                              ; 0                           ;
-; 13                                              ; 0                           ;
-; 14                                              ; 1                           ;
-; 15                                              ; 0                           ;
-; 16                                              ; 1                           ;
+; 12                                              ; 4                           ;
 +-------------------------------------------------+-----------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.38) ; Number of LABs  (Total = 8) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 2                           ;
-; 4                                           ; 1                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 1                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 1                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 0                           ;
-; 17                                          ; 1                           ;
-; 18                                          ; 0                           ;
-; 19                                          ; 0                           ;
-; 20                                          ; 0                           ;
-; 21                                          ; 0                           ;
-; 22                                          ; 0                           ;
-; 23                                          ; 0                           ;
-; 24                                          ; 0                           ;
-; 25                                          ; 0                           ;
-; 26                                          ; 0                           ;
-; 27                                          ; 0                           ;
-; 28                                          ; 0                           ;
-; 29                                          ; 0                           ;
-; 30                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++----------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 15.22) ; Number of LABs  (Total = 9) ;
++----------------------------------------------+-----------------------------+
+; 0                                            ; 0                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 1                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 0                           ;
+; 5                                            ; 2                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 0                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 0                           ;
+; 11                                           ; 0                           ;
+; 12                                           ; 1                           ;
+; 13                                           ; 0                           ;
+; 14                                           ; 0                           ;
+; 15                                           ; 0                           ;
+; 16                                           ; 0                           ;
+; 17                                           ; 0                           ;
+; 18                                           ; 2                           ;
+; 19                                           ; 0                           ;
+; 20                                           ; 0                           ;
+; 21                                           ; 1                           ;
+; 22                                           ; 0                           ;
+; 23                                           ; 0                           ;
+; 24                                           ; 1                           ;
+; 25                                           ; 0                           ;
+; 26                                           ; 0                           ;
+; 27                                           ; 0                           ;
+; 28                                           ; 0                           ;
+; 29                                           ; 0                           ;
+; 30                                           ; 0                           ;
+; 31                                           ; 0                           ;
+; 32                                           ; 1                           ;
++----------------------------------------------+-----------------------------+
 
 
 +------------------------------------------+
@@ -1094,17 +1087,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; canal_T[7]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; canal_T[8]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; canal_T[9]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; clk_2MHz           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; arazb              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; new_touche         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; touche[5]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; touche[7]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; touche[6]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; touche[5]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; touche[0]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; touche[1]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; touche[2]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; touche[3]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; touche[4]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; touche[3]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; touche[0]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; touche[2]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; clk_2MHz           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; arazb              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -1151,19 +1144,114 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 
 
++----------------------------+
+; Advanced Data - General    ;
++--------------------+-------+
+; Name               ; Value ;
++--------------------+-------+
+; Status Code        ; 0     ;
+; Desired User Slack ; 0     ;
+; Fit Attempts       ; 1     ;
++--------------------+-------+
+
+
++--------------------------------------------------------------------------------+
+; Advanced Data - Placement Preparation                                          ;
++------------------------------------------------------------------+-------------+
+; Name                                                             ; Value       ;
++------------------------------------------------------------------+-------------+
+; Auto Fit Point 1 - Fit Attempt 1                                 ; ff          ;
+; Mid Wire Use - Fit Attempt 1                                     ; 1           ;
+; Mid Slack - Fit Attempt 1                                        ; -4893       ;
+; Internal Atom Count - Fit Attempt 1                              ; 169         ;
+; LE/ALM Count - Fit Attempt 1                                     ; 119         ;
+; LAB Count - Fit Attempt 1                                        ; 10          ;
+; Outputs per Lab - Fit Attempt 1                                  ; 8.800       ;
+; Inputs per LAB - Fit Attempt 1                                   ; 12.400      ;
+; Global Inputs per LAB - Fit Attempt 1                            ; 1.600       ;
+; LAB Constraint 'non-global clock + sync load' - Fit Attempt 1    ; 0:10        ;
+; LAB Constraint 'non-global controls' - Fit Attempt 1             ; 0:2;1:1;2:7 ;
+; LAB Constraint 'non-global + aclr' - Fit Attempt 1               ; 0:2;2:1;3:7 ;
+; LAB Constraint 'global non-clock non-aclr' - Fit Attempt 1       ; 0:10        ;
+; LAB Constraint 'global controls' - Fit Attempt 1                 ; 0:2;2:8     ;
+; LAB Constraint 'deterministic LABSMUXA/LABXMUXB' - Fit Attempt 1 ; 0:2;1:8     ;
+; LAB Constraint 'deterministic LABSMUXC/LABXMUXD' - Fit Attempt 1 ; 0:2;1:1;2:7 ;
+; LAB Constraint 'clock / ce pair constraint' - Fit Attempt 1      ; 0:2;1:3;2:5 ;
+; LAB Constraint 'aclr constraint' - Fit Attempt 1                 ; 0:2;1:8     ;
+; LAB Constraint 'true sload_sclear pair' - Fit Attempt 1          ; 0:3;1:7     ;
+; LAB Constraint 'constant sload_sclear pair' - Fit Attempt 1      ; 0:3;1:7     ;
+; LAB Constraint 'has placement constraint' - Fit Attempt 1        ; 0:8;1:2     ;
+; LAB Constraint 'group hierarchy constraint' - Fit Attempt 1      ; 0:1;1:9     ;
+; LEs in Chains - Fit Attempt 1                                    ; 43          ;
+; LEs in Long Chains - Fit Attempt 1                               ; 23          ;
+; LABs with Chains - Fit Attempt 1                                 ; 4           ;
+; LABs with Multiple Chains - Fit Attempt 1                        ; 0           ;
+; Time - Fit Attempt 1                                             ; 0           ;
++------------------------------------------------------------------+-------------+
+
+
++--------------------------------------------+
+; Advanced Data - Placement                  ;
++------------------------------------+-------+
+; Name                               ; Value ;
++------------------------------------+-------+
+; Auto Fit Point 2 - Fit Attempt 1   ; ff    ;
+; Early Wire Use - Fit Attempt 1     ; 0     ;
+; Early Slack - Fit Attempt 1        ; -3422 ;
+; Auto Fit Point 5 - Fit Attempt 1   ; ff    ;
+; Mid Wire Use - Fit Attempt 1       ; 0     ;
+; Mid Slack - Fit Attempt 1          ; -3423 ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 4 - Fit Attempt 1   ; f     ;
+; Auto Fit Point 4 - Fit Attempt 1   ; f     ;
+; Auto Fit Point 4 - Fit Attempt 1   ; f     ;
+; Auto Fit Point 4 - Fit Attempt 1   ; f     ;
+; Auto Fit Point 5 - Fit Attempt 1   ; ff    ;
+; Mid Wire Use - Fit Attempt 1       ; 0     ;
+; Mid Slack - Fit Attempt 1          ; -3423 ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Late Wire Use - Fit Attempt 1      ; 0     ;
+; Late Slack - Fit Attempt 1         ; -3187 ;
+; Peak Regional Wire - Fit Attempt 1 ; 0.000 ;
+; Auto Fit Point 7 - Fit Attempt 1   ; ff    ;
+; Time - Fit Attempt 1               ; 0     ;
++------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Advanced Data - Routing                           ;
++-------------------------------------+-------------+
+; Name                                ; Value       ;
++-------------------------------------+-------------+
+; Auto Fit Point 8 - Fit Attempt 1    ; f0          ;
+; Early Slack - Fit Attempt 1         ; -3105       ;
+; Early Wire Use - Fit Attempt 1      ; 0           ;
+; Peak Regional Wire - Fit Attempt 1  ; 1           ;
+; Mid Slack - Fit Attempt 1           ; -3378       ;
+; Late Slack - Fit Attempt 1          ; -2147483648 ;
+; Late Wire Use - Fit Attempt 1       ; 0           ;
+; Time - Fit Attempt 1                ; 0           ;
+; Time in tsm_tan.dll - Fit Attempt 1 ; 0.031       ;
++-------------------------------------+-------------+
+
+
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Fitter
-    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Fri Jan 27 17:27:13 2023
+Info: Running Quartus II Fitter
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Feb 19 18:16:42 2023
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Mise_au_point -c MaP
-Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Automatically selected device EP3C5F256C6 for design MaP
 Info: high junction temperature operating condition is not set. Assuming a default value of '85'.
 Info: low junction temperature operating condition is not set. Assuming a default value of '0'.
 Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning: Feature LogicLock is not available with your current license
 Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info: Device EP3C10F256C6 is compatible
     Info: Device EP3C16F256C6 is compatible
@@ -1191,17 +1279,17 @@ Warning: No exact pin location assignment(s) for 26 pins of 26 total pins
     Info: Pin canal_T[7] not assigned to an exact location on the device
     Info: Pin canal_T[8] not assigned to an exact location on the device
     Info: Pin canal_T[9] not assigned to an exact location on the device
-    Info: Pin clk_2MHz not assigned to an exact location on the device
-    Info: Pin arazb not assigned to an exact location on the device
     Info: Pin new_touche not assigned to an exact location on the device
+    Info: Pin touche[5] not assigned to an exact location on the device
     Info: Pin touche[7] not assigned to an exact location on the device
     Info: Pin touche[6] not assigned to an exact location on the device
-    Info: Pin touche[5] not assigned to an exact location on the device
-    Info: Pin touche[0] not assigned to an exact location on the device
     Info: Pin touche[1] not assigned to an exact location on the device
-    Info: Pin touche[2] not assigned to an exact location on the device
-    Info: Pin touche[3] not assigned to an exact location on the device
     Info: Pin touche[4] not assigned to an exact location on the device
+    Info: Pin touche[3] not assigned to an exact location on the device
+    Info: Pin touche[0] not assigned to an exact location on the device
+    Info: Pin touche[2] not assigned to an exact location on the device
+    Info: Pin clk_2MHz not assigned to an exact location on the device
+    Info: Pin arazb not assigned to an exact location on the device
 Info: Fitter is using the TimeQuest Timing Analyzer
 Critical Warning: Synopsys Design Constraints File file not found: 'MaP.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info: No user constrained base clocks found in the design.
@@ -1210,15 +1298,23 @@ Critical Warning: The following clock transfers have no clock uncertainty assign
 Info: Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info: Automatically promoted node clk_2MHz~input (placed in PIN E2 (CLK0, DIFFCLK_0p))
     Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
+Info: Automatically promoted node arazb~input (placed in PIN E1 (CLK1, DIFFCLK_0n))
+    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info: Starting register packing
+Extra Info: Performing register packing on registers with non-logic cell location assignments
+Extra Info: Completed register packing on registers with non-logic cell location assignments
+Extra Info: Started Fast Input/Output/OE register processing
+Extra Info: Finished Fast Input/Output/OE register processing
+Extra Info: Moving registers into I/O cells, Multiplier Blocks, and RAM blocks to improve timing and density
+Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM blocks
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
 Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info: Number of I/O pins in group: 25 (unused VREF, 2.5V VCCIO, 11 input, 14 output, 0 bidirectional)
+    Info: Number of I/O pins in group: 24 (unused VREF, 2.5V VCCIO, 10 input, 14 output, 0 bidirectional)
         Info: I/O standards used: 2.5 V.
 Info: I/O bank details before I/O pin placement
     Info: Statistics of I/O banks
-        Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 5 total pin(s) used --  13 pins available
+        Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 6 total pin(s) used --  12 pins available
         Info: I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  19 pins available
         Info: I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  26 pins available
         Info: I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  27 pins available
@@ -1226,113 +1322,15 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  15 pins available
         Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  26 pins available
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  26 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:03
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
-Info: Report Timing: Found 1 setup paths (1 violated).  Worst case slack is -2.112
-    Info: -setup
-    Info: -npaths 1
-Info: Path #1: Setup slack is -2.112 (VIOLATED)
-    Info: ===================================================================
-    Info: From Node    : cpt_touche[0]
-    Info: To Node      : cpt_touche[31]
-    Info: Launch Clock : clk_2MHz
-    Info: Latch Clock  : clk_2MHz
-    Info: 
-    Info: Data Arrival Path:
-    Info: 
-    Info: Total (ns)  Incr (ns)     Type  Element
-    Info: ==========  ========= ==  ====  ===================================
-    Info:      0.000      0.000           launch edge time
-    Info:      2.092      2.092  R        clock network delay
-    Info:      2.291      0.199     uTco  cpt_touche[0]
-    Info:      2.291      0.000 RR  CELL  cpt_touche[0]|q
-    Info:      2.507      0.216 RR    IC  cpt_touche[0]~128|dataa
-    Info:      2.912      0.405 RR  CELL  cpt_touche[0]~128|cout
-    Info:      2.912      0.000 RR    IC  cpt_touche[1]~130|cin
-    Info:      2.970      0.058 RF  CELL  cpt_touche[1]~130|cout
-    Info:      2.970      0.000 FF    IC  cpt_touche[2]~132|cin
-    Info:      3.028      0.058 FR  CELL  cpt_touche[2]~132|cout
-    Info:      3.028      0.000 RR    IC  cpt_touche[3]~134|cin
-    Info:      3.086      0.058 RF  CELL  cpt_touche[3]~134|cout
-    Info:      3.086      0.000 FF    IC  cpt_touche[4]~136|cin
-    Info:      3.144      0.058 FR  CELL  cpt_touche[4]~136|cout
-    Info:      3.144      0.000 RR    IC  cpt_touche[5]~138|cin
-    Info:      3.202      0.058 RF  CELL  cpt_touche[5]~138|cout
-    Info:      3.202      0.000 FF    IC  cpt_touche[6]~140|cin
-    Info:      3.260      0.058 FR  CELL  cpt_touche[6]~140|cout
-    Info:      3.260      0.000 RR    IC  cpt_touche[7]~142|cin
-    Info:      3.318      0.058 RF  CELL  cpt_touche[7]~142|cout
-    Info:      3.318      0.000 FF    IC  cpt_touche[8]~144|cin
-    Info:      3.376      0.058 FR  CELL  cpt_touche[8]~144|cout
-    Info:      3.376      0.000 RR    IC  cpt_touche[9]~146|cin
-    Info:      3.434      0.058 RF  CELL  cpt_touche[9]~146|cout
-    Info:      3.434      0.000 FF    IC  cpt_touche[10]~148|cin
-    Info:      3.492      0.058 FR  CELL  cpt_touche[10]~148|cout
-    Info:      3.492      0.000 RR    IC  cpt_touche[11]~150|cin
-    Info:      3.550      0.058 RF  CELL  cpt_touche[11]~150|cout
-    Info:      3.550      0.000 FF    IC  cpt_touche[12]~152|cin
-    Info:      3.608      0.058 FR  CELL  cpt_touche[12]~152|cout
-    Info:      3.608      0.000 RR    IC  cpt_touche[13]~154|cin
-    Info:      3.666      0.058 RF  CELL  cpt_touche[13]~154|cout
-    Info:      3.666      0.000 FF    IC  cpt_touche[14]~156|cin
-    Info:      3.724      0.058 FR  CELL  cpt_touche[14]~156|cout
-    Info:      3.724      0.000 RR    IC  cpt_touche[15]~158|cin
-    Info:      3.782      0.058 RF  CELL  cpt_touche[15]~158|cout
-    Info:      3.782      0.000 FF    IC  cpt_touche[16]~160|cin
-    Info:      3.840      0.058 FR  CELL  cpt_touche[16]~160|cout
-    Info:      3.840      0.000 RR    IC  cpt_touche[17]~162|cin
-    Info:      3.898      0.058 RF  CELL  cpt_touche[17]~162|cout
-    Info:      3.898      0.000 FF    IC  cpt_touche[18]~164|cin
-    Info:      3.956      0.058 FR  CELL  cpt_touche[18]~164|cout
-    Info:      3.956      0.000 RR    IC  cpt_touche[19]~166|cin
-    Info:      4.014      0.058 RF  CELL  cpt_touche[19]~166|cout
-    Info:      4.014      0.000 FF    IC  cpt_touche[20]~168|cin
-    Info:      4.072      0.058 FR  CELL  cpt_touche[20]~168|cout
-    Info:      4.072      0.000 RR    IC  cpt_touche[21]~170|cin
-    Info:      4.130      0.058 RF  CELL  cpt_touche[21]~170|cout
-    Info:      4.130      0.000 FF    IC  cpt_touche[22]~172|cin
-    Info:      4.188      0.058 FR  CELL  cpt_touche[22]~172|cout
-    Info:      4.188      0.000 RR    IC  cpt_touche[23]~174|cin
-    Info:      4.246      0.058 RF  CELL  cpt_touche[23]~174|cout
-    Info:      4.246      0.000 FF    IC  cpt_touche[24]~176|cin
-    Info:      4.304      0.058 FR  CELL  cpt_touche[24]~176|cout
-    Info:      4.304      0.000 RR    IC  cpt_touche[25]~178|cin
-    Info:      4.362      0.058 RF  CELL  cpt_touche[25]~178|cout
-    Info:      4.362      0.000 FF    IC  cpt_touche[26]~180|cin
-    Info:      4.420      0.058 FR  CELL  cpt_touche[26]~180|cout
-    Info:      4.420      0.000 RR    IC  cpt_touche[27]~182|cin
-    Info:      4.478      0.058 RF  CELL  cpt_touche[27]~182|cout
-    Info:      4.478      0.000 FF    IC  cpt_touche[28]~184|cin
-    Info:      4.536      0.058 FR  CELL  cpt_touche[28]~184|cout
-    Info:      4.536      0.000 RR    IC  cpt_touche[29]~186|cin
-    Info:      4.594      0.058 RF  CELL  cpt_touche[29]~186|cout
-    Info:      4.594      0.000 FF    IC  cpt_touche[30]~188|cin
-    Info:      4.652      0.058 FR  CELL  cpt_touche[30]~188|cout
-    Info:      4.652      0.000 RR    IC  cpt_touche[31]~190|cin
-    Info:      5.107      0.455 RR  CELL  cpt_touche[31]~190|combout
-    Info:      5.107      0.000 RR    IC  cpt_touche[31]|d
-    Info:      5.181      0.074 RR  CELL  cpt_touche[31]
-    Info: 
-    Info: Data Required Path:
-    Info: 
-    Info: Total (ns)  Incr (ns)     Type  Element
-    Info: ==========  ========= ==  ====  ===================================
-    Info:      1.000      1.000           latch edge time
-    Info:      3.054      2.054  R        clock network delay
-    Info:      3.069      0.015     uTsu  cpt_touche[31]
-    Info: 
-    Info: Data Arrival Time  :     5.181
-    Info: Data Required Time :     3.069
-    Info: Slack              :    -2.112 (VIOLATED)
-    Info: ===================================================================
-    Info: 
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X23_Y0 to location X34_Y11
+    Info: Peak interconnect usage is 1% of the available device resources in the region that extends from location X23_Y12 to location X34_Y24
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -1341,22 +1339,10 @@ Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
-Warning: Following 4 pins have nothing, GND, or VCC driving datain port -- changes to this connectivity may change fitting results
-    Info: Pin up has VCC driving its datain port
-    Info: Pin down has VCC driving its datain port
-    Info: Pin valide has VCC driving its datain port
-    Info: Pin s_load_T has VCC driving its datain port
-Info: Generated suppressed messages file R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A4/Telecommande DMX/Telecommande_IRDA_prog/Travail/MaP.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4601 megabytes
-    Info: Processing ended: Fri Jan 27 17:27:23 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:04
-
-
-+----------------------------+
-; Fitter Suppressed Messages ;
-+----------------------------+
-The suppressed messages can be found in R:/cesi/cesi26/escouteloup_marion/Projet_vhdl_A4/Telecommande DMX/Telecommande_IRDA_prog/Travail/MaP.fit.smsg.
+Info: Quartus II Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 320 megabytes
+    Info: Processing ended: Sun Feb 19 18:16:45 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
