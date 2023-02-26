@@ -25,13 +25,12 @@ ARCHITECTURE archi OF monostable_2Mhz IS
 	
      -- Declaration des differents compteur 
 		-- RAPPEL : integer > +2 147 483 648d TO -2 147 483 647d
-	SIGNAL cpt		: INTEGER RANGE 0 TO 400000; 	-- 400 000d = 200 ms
-
+	SIGNAL cpt		: INTEGER RANGE 0 TO 200; 	-- 400 000d = 200 ms (200d = 100 µs pouyr les simulations)
 BEGIN
 	PROCESS(clk, arazb)
 		BEGIN
 			-- RESET : tout est remis a 0
-			IF arazb = '0' THEN 
+			IF arazb = '1' THEN 
 				state 		<= e0 ;
 				up_out 		<= '0';
 				down_out	<= '0'; 
@@ -67,7 +66,7 @@ BEGIN
 					-- DECLARATION DE L ETAT 1 : impulsion cpt 200 ms lors d'une entree a 1 
 						WHEN e1 => 		
 							cpt <= cpt + 1; 
-							IF(cpt = 400000) THEN -- si cpt = 400 000, alos on est a 200ms
+							IF(cpt = 200) THEN -- si cpt = 400 000, alos on est a 200ms (on mets 200d (100µs) pour les simulations)
 								up_out 		<= '0'; 
 								down_out 	<= '0';	
 								valid_out	<= '0'; 

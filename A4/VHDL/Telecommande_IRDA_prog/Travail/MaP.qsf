@@ -76,7 +76,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY monostable_2Mhz
+set_global_assignment -name TOP_LEVEL_ENTITY decodeur_IRDA_2Mhz
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:29:08  JANUARY 19, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION 9.0
@@ -87,12 +87,14 @@ set_global_assignment -name VHDL_FILE Sources/pll.vhd
 set_global_assignment -name VHDL_FILE Sources/reg_univ_n.vhd
 set_global_assignment -name VHDL_FILE Sources/decodeur_IRDA_2Mhz.vhd
 set_global_assignment -name MISC_FILE "H:/Projet_vhdl_A4/Telecommande DMX/Telecommande_IRDA_prog/Travail/MaP.dpf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE Simulations/decodeur_IRDA_2Mhz.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Simulations/decodeur_IRDA_2Mhz.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE MaP.vwf
 set_global_assignment -name VHDL_FILE Sources/monostable_2Mhz.vhd
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name VECTOR_WAVEFORM_FILE monostable_2Mhz.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Simulations/decodeur_IRDA_2Mhz.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Simulations/decodeur_IRDA_2Mhz.vwf

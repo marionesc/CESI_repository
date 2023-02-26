@@ -30,24 +30,25 @@ ARCHITECTURE archi OF decodeur_IRDA_2MHz IS
 	
      -- Declaration des differents compteur 
 		-- RAPPEL : integer > +2 147 483 648d TO -2 147 483 647d
-	SIGNAL cpt_1		: INTEGER RANGE 0 TO 1000; 		-- 1000d = 500µs
-	SIGNAL cpt_2		: INTEGER RANGE 0 TO 6000000; 	-- 6000000d = 3s
+	SIGNAL cpt_1		: INTEGER RANGE 0 TO 1000; 	-- 1000d = 500µs
+	SIGNAL cpt_2		: INTEGER RANGE 0 TO 2000; 	-- 6000000d = 3s on met 2000 pour les simu (1ms)
 
     -- Declaration des differentes variables pour les sorties
-	SIGNAL touche_conv	: INTEGER RANGE 0 TO 999; 		-- utiliser pour application des fonctions de la librairie IEEE.NUMERIC_STD.ALL 
-	SIGNAL touche_s 	: STD_LOGIC_VECTOR(9 DOWNTO 0); -- signal a appliquer ensuite a canal_T après les différents décalages
+	SIGNAL touche_conv	: INTEGER RANGE 0 TO 1000; 			-- utiliser pour application des fonctions de la librairie IEEE.NUMERIC_STD.ALL
+	SIGNAL touche_s 	: STD_LOGIC_VECTOR(9 DOWNTO 0); 	-- signal a appliquer ensuite a canal_T après les différents décalages
 
 BEGIN
 	PROCESS(clk_2MHz, arazb)
 		BEGIN
 			-- RESET : tout est remis a 0
-			IF arazb = '0' THEN 
+			IF arazb = '1' THEN 
 				state 		<= e0 ;
 				down 		<= '0';
 				up			<= '0';  
 				valide 		<= '0';  
 				s_load_T    <= '0';  
-				touche_s 	<= (OTHERS => '0');  
+				touche_s 	<= (OTHERS => '0');
+				--touche_conv <= 0;   
 				cpt_1 		<= 0; 
 				cpt_2		<= 0; 
 			
@@ -73,7 +74,7 @@ BEGIN
 						
 						-- Touche CHIFFRE-- 0x00 TO 0x09
 						ELSIF (((touche >= "00000000") AND (touche <= "00001001")) AND (new_touche = '1')) THEN 
-							touche_s 	<= "00" & touche; -- "00" & touche = combinaison pour passer de 8 bits a 10 bits
+							touche_s 	<=  "0000000000" OR touche; -- "00" & touche = combinaison pour passer de 8 bits a 10 bits
 							s_load_T 	<= '1'; 
 							cpt_2 		<= 0; 
 							state 		<= e2; 
@@ -86,31 +87,32 @@ BEGIN
 						IF cpt_1 = 1000 THEN 	-- si cpt_1 = 1000, alors on est a 500 us
 							down 		<= '0'; 
 							up 			<= '0'; 
-							valide  		<= '0'; 		
+							valide  	<= '0'; 		
 							s_load_T 	<= '0'; 
-							touche_s 	<= (OTHERS => '0'); 
+							touche_s 	<=(OTHERS => '0'); 
 							state 		<= e0; 				
 						END IF; 
 					
 				------------------------------------------------------------------------------------------------
 				-- DECLARATION DE L ETAT 2 : appui sur chiffre
 					WHEN e2 => 
-						cpt_2 <= cpt_2 + 1; 
-						IF cpt_2 = 6000000 THEN -- si cpt_2 = 6 000 000, alors on est a 3s
+						cpt_2 <= cpt_2 + 1;  
+						IF cpt_2 = 2000 THEN -- si cpt_2 = 6 000 000, alors on est a 3s (2000 pour les simusoit 1ms)
 							state 		<= e0; 
 							s_load_T 	<= '0'; 
 							touche_s 	<= (OTHERS => '0'); 
 						
 						-- On ecrit les chiffre au fur et a mesure (on passe en décimal pour le decalage des dizaines)
 						ELSIF (((touche >= "00000000") AND (touche < "00001010")) AND (new_touche = '1')) THEN 
-							touche_conv <= to_integer(unsigned (touche_s)) * 10; 
-							touche_s 	<= std_logic_vector(to_unsigned(touche_conv, 10)); 	-- 10 car on veut une conversion de integer vers std_logic_vector(10 bits)
-							touche_s 	<= touche_s + ("00" & touche); 						-- On décale d une dizaine la valeur de touche_s et on lui ajoute le nouveau chiffre
+							touche_conv <= to_integer(unsigned(touche_s)) * 10;
+							touche_s 	<= std_logic_vector(to_unsigned(touche_conv, 10)); 	-- 10 car on veut une conversion de integer vers std_logic_vector(10 bits)  
+							touche_s 	<= touche_s + ("0000000000" OR touche); 			-- On décale d une dizaine la valeur de touche_s et on lui ajoute le nouveau chiffre
 							cpt_2 		<= 0; 
 						
 						-- On valide donc on repart a e1 pour cpt_1
 						ELSIF ((touche = "00010111") AND (new_touche = '1')) THEN 
 							valide 	<= '1';
+							touche_conv <= 0; 
 							cpt_1 	<= 0; 
 							state 	<= e1; 
 							
@@ -133,7 +135,8 @@ BEGIN
 				END IF; 
 		END PROCESS; 
 		
-		canal_T <= touche_s; 
+		
+		canal_T <= touche_s; --std_logic_vector(to_unsigned(touche_conv, 10)); 
 		
 END ARCHITECTURE archi; 
 

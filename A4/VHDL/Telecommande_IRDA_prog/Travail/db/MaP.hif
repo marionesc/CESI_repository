@@ -19,7 +19,7 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-monostable_2Mhz
+decodeur_IRDA_2Mhz
 # storage
 db|MaP.(0).cnf
 db|MaP.(0).cnf
@@ -29,8 +29,8 @@ ON
 }
 # case_insensitive
 # source_file
-Sources|monostable_2Mhz.vhd
-2aed2340f6f8474cc2736166f2e91eb
+Sources|decodeur_IRDA_2Mhz.vhd
+e74f960bbd7a2efe1bcd61e48d49291
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

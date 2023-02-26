@@ -1,5 +1,5 @@
 Flow report for MaP
-Tue Feb 21 14:05:17 2023
+Sun Feb 26 03:37:59 2023
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Tue Feb 21 14:05:14 2023   ;
+; Flow Status                        ; Successful - Sun Feb 26 03:37:56 2023   ;
 ; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
 ; Revision Name                      ; MaP                                     ;
-; Top-level Entity Name              ; monostable_2Mhz                         ;
+; Top-level Entity Name              ; decodeur_IRDA_2MHz                      ;
 ; Family                             ; Cyclone III                             ;
 ; Met timing requirements            ; N/A                                     ;
-; Total logic elements               ; 36 / 5,136 ( < 1 % )                    ;
-;     Total combinational functions  ; 36 / 5,136 ( < 1 % )                    ;
-;     Dedicated logic registers      ; 24 / 5,136 ( < 1 % )                    ;
-; Total registers                    ; 24                                      ;
-; Total pins                         ; 8 / 183 ( 4 % )                         ;
+; Total logic elements               ; 100 / 5,136 ( 2 % )                     ;
+;     Total combinational functions  ; 100 / 5,136 ( 2 % )                     ;
+;     Dedicated logic registers      ; 38 / 5,136 ( < 1 % )                    ;
+; Total registers                    ; 38                                      ;
+; Total pins                         ; 26 / 183 ( 14 % )                       ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                          ;
@@ -63,24 +63,24 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/21/2023 14:05:04 ;
+; Start date & time ; 02/26/2023 03:37:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MaP                 ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                  ;
-+------------------------------------+---------------------------------------------------------------------------+---------------+-----------------+----------------+
-; Assignment Name                    ; Value                                                                     ; Default Value ; Entity Name     ; Section Id     ;
-+------------------------------------+---------------------------------------------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 53447175085843.167698470414204                                            ; --            ; --              ; --             ;
-; MISC_FILE                          ; H:/Projet_vhdl_A4/Telecommande DMX/Telecommande_IRDA_prog/Travail/MaP.dpf ; --            ; --              ; --             ;
-; PARTITION_COLOR                    ; 16764057                                                                  ; --            ; monostable_2Mhz ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                                                                    ; --            ; monostable_2Mhz ; Top            ;
-; TOP_LEVEL_ENTITY                   ; monostable_2Mhz                                                           ; MaP           ; --              ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                                       ; --            ; --              ; eda_blast_fpga ;
-+------------------------------------+---------------------------------------------------------------------------+---------------+-----------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                     ;
++------------------------------------+---------------------------------------------------------------------------+---------------+--------------------+----------------+
+; Assignment Name                    ; Value                                                                     ; Default Value ; Entity Name        ; Section Id     ;
++------------------------------------+---------------------------------------------------------------------------+---------------+--------------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 53447175085843.167737906622812                                            ; --            ; --                 ; --             ;
+; MISC_FILE                          ; H:/Projet_vhdl_A4/Telecommande DMX/Telecommande_IRDA_prog/Travail/MaP.dpf ; --            ; --                 ; --             ;
+; PARTITION_COLOR                    ; 16764057                                                                  ; --            ; decodeur_IRDA_2Mhz ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                                                    ; --            ; decodeur_IRDA_2Mhz ; Top            ;
+; TOP_LEVEL_ENTITY                   ; decodeur_IRDA_2Mhz                                                        ; MaP           ; --                 ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                                       ; --            ; --                 ; eda_blast_fpga ;
++------------------------------------+---------------------------------------------------------------------------+---------------+--------------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -88,11 +88,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 251 MB              ; 00:00:01                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 303 MB              ; 00:00:04                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 224 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 244 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:08                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 251 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 304 MB              ; 00:00:04                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 223 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 244 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
