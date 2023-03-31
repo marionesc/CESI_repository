@@ -3,7 +3,7 @@ package seance2;
 public class enseignant extends personne{
     public int echelon;
     public int nbheures;
-    public static int[] tauxsalaire = {10,11,12,13,14,15,16,17,18,19};
+    public static int[] tauxsalaire = {12,14,16,18,20,22,24,26,28,30};
 
     public enseignant(String nom, String prenom, String adresse, int echelon, int nbheures) {
         super(nom, prenom, adresse);
@@ -13,22 +13,33 @@ public class enseignant extends personne{
     public static void modiftaux(int echelon, int newtaux){
         tauxsalaire[echelon] = newtaux;
     }
-    
+    public void echelonValide(int newechelon){
+        this.echelon = newechelon;
+    }
 
-    public int getEchelon() {
-        return echelon;
-    }
-    public int getNbheures() {
-        return nbheures;
-    }
-    
-    //Setters
+    // Attribution de nouvelles valeurs de parametres
     public void setEchelon(int echelon) {
         this.echelon = echelon;
     }
     public void setNbheures(int nbheures) {
         this.nbheures = nbheures;
     }
+    
+    // Recuperation des valeurs des parametres 
+    public int getEchelon() {
+        return echelon;
+    }
+    
+    public int getNbheures() {
+        return nbheures;
+    }
+    
+    public String getName() {
+    	String name = this.prenom + " " + this.nom;
+    	return name; 
+    }
+    
+
     
     public String toString() {
         return "enseignant{" +
@@ -39,14 +50,16 @@ public class enseignant extends personne{
                 ", nbheures=" + nbheures +
                 '}';
     }
-    //Calculs
+    // Calculs d'informations 
     public int getprixheure(){
         return tauxsalaire[this.echelon];
     }
     public int getsalaire(){
         return this.nbheures * this.getprixheure();
     }
-    public void modifechelon(int newechelon){
-        this.echelon = newechelon;
+    
+    public int getNbHeure() {
+    	return this.nbheures; 
     }
+
 }
