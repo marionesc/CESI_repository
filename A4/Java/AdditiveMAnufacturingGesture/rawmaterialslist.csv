@@ -1,0 +1,9 @@
+Name,   printType,  Color,  Stock,  Price,  Commentary
+R001,   FDM-PLA,    Rouge,  1   , 29.95,    220/65
+G002,   FDM-ABS,    green,   1.35, 36.49,    345/60
+B003,   FDM-ABS,    blue,   1.35, 36.49,    345/60
+B004,   FDM-ABS,    blue,   1.35, 36.49,    345/60
+B005,   FDM-ABS,    cyan,   1.35, 36.49,    345/60
+B006,   FDM-ABS,    blue-green,   1.35, 36.49,    345/60
+B007,   FDM-ABS,    blue,   1.35, 36.49,    345/60
+B008,   FDM-ABS,    blue,   1.35, 1256.49,    345/60
