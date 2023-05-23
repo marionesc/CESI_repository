@@ -73,4 +73,20 @@ public class RawMaterials {
         this.commentary = commentary;
     }
 
+    public String toCSVString() {
+        StringBuilder sb = new StringBuilder();
+
+        // Concaténer les valeurs des attributs avec des virgules
+        sb.append(name).append(",");
+        sb.append(color).append(",");
+        sb.append(printType).append(",");
+        sb.append(stock).append(",");
+        sb.append(price).append(",");
+        sb.append(commentary).append(",");
+
+
+        // Retourner la chaîne CSV
+        return sb.toString();
+    }
+
 }

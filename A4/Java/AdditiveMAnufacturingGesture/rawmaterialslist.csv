@@ -4,6 +4,7 @@ G002,   FDM-ABS,    green,   1.35, 36.49,    345/60
 B003,   FDM-ABS,    blue,   1.35, 36.49,    345/60
 B004,   FDM-ABS,    blue,   1.35, 36.49,    345/60
 B005,   FDM-ABS,    cyan,   1.35, 36.49,    345/60
-B006,   FDM-ABS,    blue-green,   1.35, 36.49,    345/60
+
 B007,   FDM-ABS,    blue,   1.35, 36.49,    345/60
 B008,   FDM-ABS,    blue,   1.35, 1256.49,    345/60
+R002,SLA,noir mat,1.0,26.95,ext 230°/pla65

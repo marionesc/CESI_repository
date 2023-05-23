@@ -10,15 +10,35 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="164.0" layoutY="165.0" prefHeight="27.0" prefWidth="312.0" style="&#10;" text="Que souhaitez vous faire ? " textAlignment="CENTER">
+        <Label alignment="CENTER" layoutX="164.0" layoutY="50.0" prefHeight="27.0" prefWidth="312.0" style="&#10;" text="De quel service êtes-vous?" textAlignment="CENTER">
           <font>
             <Font size="18.0" />
           </font>
         </Label>
-        <ComboBox layoutX="138.0" layoutY="240.0" prefHeight="25.0" prefWidth="351.0" promptText="Select" fx:id="comboBox">
+        <Label alignment="CENTER" layoutX="164.0" layoutY="90.0" prefHeight="27.0" prefWidth="312.0" style="&#10;" text="Un code est demandé pour le service FA" textAlignment="CENTER">
+          <font>
+            <Font size="12.0" />
+          </font>
+        </Label>
+        <ComboBox layoutX="138.0" layoutY="120.0" prefHeight="25.0" prefWidth="351.0" promptText="Select" fx:id="comboBoxRight">
           <items>
             <FXCollections fx:factory="observableArrayList">
-              <String fx:value="Gestion de matières" />
+              <String fx:value="Fabrication" />
+              <String fx:value="Logistique" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <TextField layoutX="138.0" layoutY="160.0" prefHeight="25.0" prefWidth="351.0" promptText="Code d'identification" fx:id="codeTextField" />
+        <Label layoutX="138.0" layoutY="200.0" prefHeight="20.0" prefWidth="351.0" />
+        <Label alignment="CENTER" layoutX="164.0" layoutY="240.0" prefHeight="27.0" prefWidth="312.0" style="&#10;" text="Que souhaitez-vous faire?" textAlignment="CENTER">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+        <ComboBox layoutX="138.0" layoutY="280.0" prefHeight="25.0" prefWidth="351.0" promptText="Select" fx:id="comboBoxGesture">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Gestion des matieres" />
               <String fx:value="Gestion du parc machine" />
             </FXCollections>
           </items>

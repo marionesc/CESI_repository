@@ -15,6 +15,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 
 import java.io.IOException;
 
@@ -24,6 +25,11 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Gestion De stock de Matière première pour la FA");
+
+        // Chargement de l'icône
+        //Image icon = new Image(HelloApplication.class.getResourceAsStream("3d-printer.png"));
+        //stage.getIcons().add(icon);
+
         stage.setScene(scene);
         stage.show();
     }
